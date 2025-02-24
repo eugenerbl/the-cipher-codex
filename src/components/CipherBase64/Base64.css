@@ -1,0 +1,40 @@
+.base64Table {
+   width: 40%;
+   float: right;
+   margin-left: 15px;
+   margin-bottom: 10px;
+}
+
+.base64TableText {
+   float: right;
+   margin-left: 50px;
+   margin-bottom: 20px;
+   clear: right;
+}
+
+.binary {
+   font-family:'Courier New', Courier, monospace;
+   font-weight: bold;
+}
+
+#b64Example tbody, #b64Example tr, 
+#b64Example th, #b64Example td {
+      border-color: black;
+      border-style: solid;
+      border-width: 2px;
+      overflow-wrap: anywhere;
+}
+#b64Example td {
+   text-align: center;
+   padding: 0px 10px;
+}
+
+@media screen and (max-width: 1060px) {
+   .base64Table {
+       width: 100%;
+   }
+
+   .base64TableText {
+      float: inherit;
+   }
+}

@@ -1,0 +1,40 @@
+.keyBoxLabel {
+    font-family: var(--body-font);
+    font-weight: var(--font-weight-regular);
+}
+
+.keyBox {
+    margin: 0px 20px;
+    border: 1px solid;
+    border-radius: 5px;
+    font-family: var(--body-font);
+    font-weight: var(--font-weight-regular);
+    width: 300px;
+    padding-left: 5px;
+}
+
+.vigenereSquare {
+    width: 40%;
+    float: right;
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+
+.vigenereSquareText {
+    float: right;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    clear: right;
+}
+
+@media screen and (max-width: 800px) {
+    .keyBox {
+        width: 200px !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .keyBox {
+        width: 260px !important;
+    }
+}

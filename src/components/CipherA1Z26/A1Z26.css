@@ -1,0 +1,28 @@
+.keyBox {
+   margin: 0px 20px 0px 10px;
+   border: 1px solid;
+   border-radius: 5px;
+   font-family: var(--body-font);
+   font-weight: var(--font-weight-regular);
+   width: 300px;
+   padding-left: 5px;
+}
+
+.separatorBox {
+   width: 50px;
+}
+
+.spaces {
+   margin-left: 10px;
+   vertical-align: middle;
+}
+
+.azTable {
+   justify-self: center;
+}
+
+.azTable td {
+   text-align: center;
+   width: 25px;
+   border-width: 1px;
+}

@@ -1,0 +1,74 @@
+#root {
+  margin: 50px auto 0px;
+  padding: 2rem;
+  padding-bottom: 0rem;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+
+.header {
+  background-color: burlywood;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}  
+
+.footer {
+  background-color: burlywood;
+  margin: auto -2rem 0rem -2rem;
+  padding: 1rem;
+}  
+
+.textBox {
+  width: 70%;
+  height: 100px;
+  margin: 20px;
+  padding: 5px;
+  border: 1px solid;
+  border-radius: 5px;
+  font-family: var(--body-font);
+  font-weight: var(--font-weight-regular);
+  font-size: 18px;
+}
+
+.learningButton {
+  font-family: var(--header-font);
+  font-weight: var(--font-weight-regular);
+  font-size: 16px;
+  text-transform: none;
+  margin: 10px;
+}
+
+.headerText {
+  font-family: var(--header-font);
+  font-weight: 400;
+  font-style: normal;
+}
+
+.headerTextMedium {
+  font-family: var(--header-font);
+  font-weight: 500;
+  font-style: normal;
+}
+
+.headerTextItalic {
+  font-family: var(--header-font);
+  font-weight: 400;
+  font-style: italic;
+}
+
+.headerTextMediumItalic {
+  font-family: var(--header-font);
+  font-weight: 500;
+  font-style: italic;
+}
+
+.bodyText {
+  font-family: var(--body-font);
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}

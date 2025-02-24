@@ -1,0 +1,79 @@
+.tableDiv {
+    overflow-x: auto;
+    width: 80%;
+    justify-self: center;
+}
+
+.keyBoxLabel {
+    font-family: var(--body-font);
+    font-weight: var(--font-weight-regular);
+}
+
+.keyBox {
+    margin: 0px 20px;
+    border: 1px solid;
+    border-radius: 5px;
+    font-family: var(--body-font);
+    font-weight: var(--font-weight-regular);
+    width: 300px;
+    padding-left: 5px;
+}
+
+.alphabetTable {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+    margin: 30px 0px 15px 0px;
+    font-family: var(--body-font);
+    font-weight: var(--font-weight-regular);
+}
+
+.alphabetTable th,
+.alphabetTable td {
+    border: 1px solid forestgreen;
+    padding: 3px;
+    text-align: center;
+}
+
+.alphabetTable th {
+    background-color: lightgreen;
+}
+
+.smallInput {
+    width: 23px;
+    text-align: center;
+    font-family: var(--body-font);
+    font-weight: var(--font-weight-regular);
+}
+
+.button {
+    font-family: var(--body-font);
+    font-weight: var(--font-weight-regular);
+    font-size: 16px;
+    text-transform: none;
+    margin: 10px;
+    margin-top: 10px;
+}
+
+ol, ul, li {
+    font-family: var(--body-font);
+    font-weight: var(--font-weight-regular);
+}
+
+th {
+    padding-right: 20px;
+}
+td {
+    font-family:'Courier New', Courier, monospace;
+}
+
+@media screen and (max-width: 1060px) {
+    .alphabetTable {
+        width: auto;
+    }
+    .smallInput {
+        width: 30px;
+        height: 35px;
+        margin: 2px;
+    }
+}

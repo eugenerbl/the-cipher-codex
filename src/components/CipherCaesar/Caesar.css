@@ -1,0 +1,41 @@
+.slider {
+    height: 5px;
+    width: 300px;
+    color: forestgreen;
+    padding: 15px 0px;
+}
+
+.sliderLabel {
+    margin-right: 30px;
+    font-family: var(--body-font);
+    font-weight: var(--font-weight-regular);
+}
+
+.slider .MuiSlider-thumb {
+    height: 20px;
+    width: 20px;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 2px 0px rgba(0, 0, 0, 0.1);
+}
+
+.slider .MuiSlider-valueLabel {
+    width: 100px;
+    background-color: forestgreen;
+    font-size: 16px;
+    font-family: monospace;
+    white-space: break-spaces;
+}
+
+.slider .MuiSlider-markLabel {
+    width: 30;
+    font-family: monospace;
+    white-space: pre-wrap;
+}
+
+.button {
+    font-family: var(--body-font);
+    font-weight: var(--font-weight-regular);
+    font-size: 16px;
+    text-transform: none;
+    margin: 10px;
+}
