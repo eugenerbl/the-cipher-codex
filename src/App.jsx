@@ -13,6 +13,7 @@ function App() {
       <div>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/the-cipher-codex" element={<Home />} />
           <Route path="/caesar" element={<Caesar />} />
           <Route path="/atbash" element={<Atbash />} />
           <Route path="/vigènere" element={<Vigenere />} />
