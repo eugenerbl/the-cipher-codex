@@ -12,7 +12,6 @@ function App() {
       <Header />
       <div>
         <Routes>
-          <Route path="/" element={<Home />} />
           <Route path="/the-cipher-codex" element={<Home />} />
           <Route path="/caesar" element={<Caesar />} />
           <Route path="/atbash" element={<Atbash />} />

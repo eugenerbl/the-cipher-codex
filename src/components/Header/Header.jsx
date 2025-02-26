@@ -9,7 +9,7 @@ function Header() {
     
     <Navbar expand="md" fixed="top" className="header" data-bs-theme="light">
       <Container>
-        <Navbar.Brand as={Link} to="/" className="headerText"> The Cipher Codex </Navbar.Brand>
+        <Navbar.Brand as={Link} to="/the-cipher-codex" className="headerText"> The Cipher Codex </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
