@@ -75,10 +75,10 @@ function Atbash() {
             <input type="text" name="keyBox" className="keyBox" value={key}
                onChange={handleKeyChange} placeholder="Enter 26-character key..."
             />
-            <Button className="button" variant="contained" color="primary"
-               onClick={() => handleSubmit(key)}>Encode/Decode with Key
+            <Button className="button" variant="contained" color="blue"
+               onClick={() => handleSubmit(key)}>Encrypt/Decrypt with Key
             </Button>
-            <Button className="button" variant="contained" color="success"
+            <Button className="button" variant="contained" color="brown"
                onClick={keyToTable}> Copy Key Value to Table
             </Button>
 
@@ -91,9 +91,9 @@ function Atbash() {
                   </thead>
                   <tbody>
                      <tr>
-                        {normalAlphabet.split('').map((_, index) => (
+                        {normalAlphabet.split('').map((letter, index) => (
                            <td key={index}>
-                              <input type="text" maxLength="1" value={letters[index]}
+                              <input id={letter} type="text" maxLength="1" value={letters[index]}
                                  onChange={(e) => handleLetterChange(e, index)} className="smallInput"
                               />
                            </td>
@@ -103,22 +103,22 @@ function Atbash() {
                </table>
             </div>
             <div>
-               <Button className="button" variant="contained" color="primary"
-                  onClick={() => handleSubmit(letters)}>Encode/Decode with Table
+               <Button className="button" variant="contained" color="blue"
+                  onClick={() => handleSubmit(letters)}>Encrypt/Decrypt with Table
                </Button>
-               <Button className="button" variant="contained" color="success"
+               <Button className="button" variant="contained" color="brown"
                   onClick={tableToKey}> Copy Table Values to Key
                </Button>
             </div>
 
 
-            <Button className="button" variant="contained" color="secondary"
+            <Button className="button" variant="contained" color="green"
                style={{ marginTop: 30 }} onClick={atbashKey}> Atbash Key (A=Z)
             </Button>
-            <Button className="button" variant="contained" color="primary"
+            <Button className="button" variant="contained" color="green"
                style={{ marginTop: 30 }} onClick={normalKey}> Normal Key (A=A)
             </Button>
-            <Button className="button" variant="contained" color="error"
+            <Button className="button" variant="contained" color="brown"
                style={{ marginTop: 30 }} onClick={clearKey}> Clear Key and Table
             </Button>
          </div>

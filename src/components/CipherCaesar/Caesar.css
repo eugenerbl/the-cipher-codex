@@ -1,7 +1,7 @@
 .slider {
     height: 5px;
     width: 300px;
-    color: forestgreen;
+    color: #4F4CAF;
     padding: 15px 0px;
 }
 
@@ -14,13 +14,13 @@
 .slider .MuiSlider-thumb {
     height: 20px;
     width: 20px;
-    background-color: #FFFFFF;
+    background-color: white;
     box-shadow: 0 0 2px 0px rgba(0, 0, 0, 0.1);
 }
 
 .slider .MuiSlider-valueLabel {
     width: 100px;
-    background-color: forestgreen;
+    background-color: #4F4CAF;
     font-size: 16px;
     font-family: monospace;
     white-space: break-spaces;

@@ -30,7 +30,7 @@
 
 .alphabetTable th,
 .alphabetTable td {
-    border: 1px solid forestgreen;
+    border: 1px solid black;
     padding: 3px;
     text-align: center;
 }

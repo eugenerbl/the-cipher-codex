@@ -52,7 +52,7 @@ function A1Z26() {
             <span className="keyBoxLabel">Alphabet:</span>
             <input type="text" value={alphabet} className="keyBox" onChange={handleAlphabetChange}
                placeholder="Enter alphabet..." name="alphabetBox" />
-            <Button className="button" variant="contained" color="secondary" onClick={resetAlphabet}>
+            <Button className="button" variant="contained" color="brown" onClick={resetAlphabet}>
                Reset Alphabet (A-Z)
             </Button>
          </div>
@@ -65,10 +65,10 @@ function A1Z26() {
                <input type="checkbox" defaultChecked={false} className="spaces" onChange={handleSpaces} />
             </label>
          </div>
-         <Button className="button" variant="contained" color="primary" onClick={handleEncryption}>
+         <Button className="button" variant="contained" color="blue" onClick={handleEncryption}>
             Encrypt
          </Button>
-         <Button className="button" variant="contained" color="primary" onClick={handleDecryption}>
+         <Button className="button" variant="contained" color="blue" onClick={handleDecryption}>
             Decrypt
          </Button>
 

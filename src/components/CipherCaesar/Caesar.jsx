@@ -74,14 +74,14 @@ function Caesar() {
             valueLabelFormat={valueLabelFormat}
           />
         </Box>
-        <Button className="button" variant="contained" color="secondary" onClick={() => preset(13)}> ROT13 (±13) </Button>
-        <Button className="button" variant="contained" color="secondary" onClick={() => preset(3)}> Classic Encryption (+3) </Button>
-        <Button className="button" variant="contained" color="secondary" onClick={() => preset(23)}> Classic Decryption (-3) </Button>
+        <Button className="button" variant="contained" color="green" onClick={() => preset(13)}> ROT13 (±13) </Button>
+        <Button className="button" variant="contained" color="green" onClick={() => preset(3)}> Classic Encryption (+3) </Button>
+        <Button className="button" variant="contained" color="green" onClick={() => preset(23)}> Classic Decryption (-3) </Button>
         <br />
 
-        <Button className="button" variant="contained" color="primary" onClick={swapText}> Swap Text </Button>
-        <Button className="button" variant="contained" color="success" onClick={() => changeCase(1)}> UPPERCASE </Button>
-        <Button className="button" variant="contained" color="success" onClick={() => changeCase(0)}> lowercase </Button>
+        <Button className="button" variant="contained" color="blue" onClick={swapText}> Swap Text </Button>
+        <Button className="button" variant="contained" color="brown" onClick={() => changeCase(1)}> UPPERCASE </Button>
+        <Button className="button" variant="contained" color="brown" onClick={() => changeCase(0)}> lowercase </Button>
       </div>
       <div>
         <textarea value={encode(text, shift)} className="textBox" 

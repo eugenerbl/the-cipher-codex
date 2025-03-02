@@ -47,10 +47,10 @@ function Vigenere() {
             <span className="keyBoxLabel">Key:</span>
             <input type="text" value={key} className="keyBox" onChange={handleKeyChange}
                placeholder="Enter keyword..." name="keyBox" />
-            <Button className="button" variant="contained" color="primary" onClick={() => handleSubmit(1)}>
+            <Button className="button" variant="contained" color="blue" onClick={() => handleSubmit(1)}>
                Encrypt
             </Button>
-            <Button className="button" variant="contained" color="primary" onClick={() => handleSubmit(0)}>
+            <Button className="button" variant="contained" color="blue" onClick={() => handleSubmit(0)}>
                Decrypt
             </Button>
          </div>

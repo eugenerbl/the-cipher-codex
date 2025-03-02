@@ -11,7 +11,7 @@ function Base64() {
       setText(event.target.value);
    };
 
-   const encode = () => {
+   const encrypt = () => {
       try {
          setCiphertext(btoa(text));
       } catch (error) {
@@ -20,7 +20,7 @@ function Base64() {
       }
    }
 
-   const decode = () => {
+   const decrypt = () => {
       try {
          setCiphertext(atob(text));
       } catch (error) {
@@ -37,11 +37,11 @@ function Base64() {
                onChange={handleTextChange} placeholder="Enter plaintext here..." autoFocus={true} />
          </div>
 
-         <Button className="button" variant="contained" color="primary" onClick={encode}>
-            Encode
+         <Button className="button" variant="contained" color="blue" onClick={encrypt}>
+            Encrypt
          </Button>
-         <Button className="button" variant="contained" color="primary" onClick={decode}>
-            Decode
+         <Button className="button" variant="contained" color="blue" onClick={decrypt}>
+            Decrypt
          </Button>
 
          <div>
