@@ -8,7 +8,7 @@ function Home() {
     <> 
       <h1>The Cipher Codex</h1>
       <p>
-        Decrypt, encrypt, and learn about well-known ciphers.
+        Encrypt, decrypt, and learn about well-known ciphers.
       </p>
       <Gallery/>
     </>

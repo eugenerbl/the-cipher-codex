@@ -9,6 +9,6 @@ export const ciphers = [
     { "cipher": 'Atbash', "image": Atbash },
     { "cipher": "Base64", "image": Base64 },
     { "cipher": 'Caesar', "image": Caesar },
-    { "cipher": 'Vigènere', "image": Vigenere }
+    { "cipher": 'Vigenère', "image": Vigenere }
 ];
 export default ciphers;

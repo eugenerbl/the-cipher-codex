@@ -8,25 +8,25 @@ function VigenereAbout() {
     <>
       <h3>How to Use</h3>
       <p>
-        Enter the text you want to encode/decode in the top text box.
-        Then enter the Key string. The Key must have at least 2 characters and must not contain 
-        any numbers or special characters. Finally, choose whether to Encrypt or Decrypt the 
-        plaintext. The result appears in the bottom text box.
+        To encrypt or decrypt a message, start by entering the text in the top box. Next, input the 
+        Key string. The Key must be at least 2 characters long and should not contain any numbers or 
+        special characters. Finally, choose whether to Encrypt or Decrypt the plaintext. The result 
+        will appear in the bottom text box.
       </p>
 
-      <h3>What is the Vigènere Cipher?</h3>
+      <h3>What is the Vigenère Cipher?</h3>
       <p>
-        The Vigenère cipher is a polyalphabetic cipher (meaning it uses multiple alphabets)
-        which encrypts a message by using several <span><Link to="/caesar">Caesar ciphers</Link></span> based on a single keyword.
-        to encrypt the message, making the cipher hard to crack.
+        The Vigenère cipher encrypts a message by using several <span><Link to="/caesar">Caesar ciphers</Link></span> based 
+        on a single keyword. It is a polyalphabetic cipher, meaning it uses multiple alphabets to 
+        encrypt the message, making it harder to break.
       </p>
 
 
-      <h3>Encode It!</h3>
+      <h3>Encrypt It!</h3>
       <p>
-        Encrypting begins by taking the plaintext, choosing a keyword, and repeating the keyword
-        until it matches the length of the plaintext. For example, with the plaintext "secrets" and
-        the keyword "code", the new keyword is "CODECOD":
+        Encrypting begins by taking the plaintext and choosing a keyword. Repeat the keyword until 
+        its length matches the length of the plaintext. For example, for the plaintext "<b>secrets</b>" 
+        and the keyword "<b>code</b>", the new keyword is "<b>CODECOD</b>":
       </p>
 
       <table>
@@ -41,81 +41,90 @@ function VigenereAbout() {
       </table><br/>
 
       <p>
-        Next, we can use a table of alphabets known as a <em>tabula recta</em>, <em>Vigenère square</em>,
-        or <em>Vigenère table</em>. It writes the alphabet 26 times in 26 rows, and each row is the
-        previous row shifted by one, to match one of the possible Caesar ciphers.<br />
+        Next, we can use a table of alphabets known as a <em>tabula recta</em>, <em>Vigenère square</em>, 
+        or <em>Vigenère table</em>. This table writes the alphabet 26 times in 26 rows, with each row 
+        shifted by one letter compared to the row above it. Each of the 26 rows represents one of the 
+        possible Caesar ciphers.<br />
       </p>
 
       <figure>
         <img src={VigenereSquare} className="vigenereSquare" alt="Vigenère Square" />
-        <figcaption className="vigenereSquareText">A 26x26 Vigènere Square. Image source: Wikipedia.</figcaption>
+        <figcaption className="vigenereSquareText">Table 1: A 26x26 Vigenère Square. Image source: Wikipedia.</figcaption>
       </figure>
 
       <p>
-        Pair each letter of the plaintext with the letter of the key in the same position. Then locate
-        the column for the plaintext letter and the row for the key letter, or vice versa (you get
-        the same letter regardless of what you use the column and row for). The intersection of the row
-        and the column returns the encrypted letter. For example, the intersection of column S and row
-        C gives the letter U.
+        Pair each letter of the plaintext with the letter of the key in the same position. Then locate 
+        the column for the plaintext letter and the row for the key letter (or vice versa; either way 
+        will yield the same result). The intersection of the selected row and column will return the 
+        encrypted letter. For example, the intersection of column S and row C is the letter U.
       </p>
       <p>
-        Repeat with the next letter of the message and the next letter of the key, and so on until the
-        end of the message. Therefore, here the encrypted message is USFVGHV.
+        Continue this process for the remaining letters of the message and the key until the entire 
+        message has been encrypted. In this example, the encrypted message is <b>USFVGHV</b>.
       </p>
 
-      <h3>Decode It!</h3>
+      <h3>Decrypt It!</h3>
       <p>
-        If you know the key used to encrypt the message, then decrypting using the Vigènere Square
-        is basically the same process as encrypting. Repeat the key over and over until the length
-        matches the ciphertext. Then pair the letters in the key and ciphertext, and find the
-        intersection of each pair in the Vigènere Square to get the plaintext letter.
+        The process for decrypting is the same as for encrypting. If you know the key used to encrypt 
+        a message, you can easily decrypt it using the Vigenère Square. Simply repeat the key until 
+        its length matches that of the ciphertext. Then pair each letter from the key with the 
+        corresponding letter from the ciphertext, and find the intersection of each pair in the 
+        Vigenère Square to get the plaintext letter.
+      </p>
+      <p>
+        However, if you do not know the key used for encryption, then decrypting becomes more 
+        complicated. Luckily, there have been methods developed over the years to find the key 
+        and decrypt the message. Read the next section below for one such method.
       </p>
 
       <h3>How Easy is it to Break?</h3>
 
       <p>
-        While the Vigenère cipher was first described in 1553, it resisted all attempts to break
-        it until 1863. This earned it the title <em>le chiffrage indéchiffrable</em> (French for 'the
-        indecipherable cipher'). But eventually, cryptanalysts developed methods to finally break
+        While the Vigenère cipher was first described in 1553, it resisted all attempts to break 
+        it until 1863. This earned it the title <em>le chiffrage indéchiffrable</em> (French for 'the 
+        indecipherable cipher'). Eventually, codebreakers developed methods to finally break 
         the cipher.
       </p>
       <p>
-        In 1863, Friedrich Kasiski published a general method of deciphering
-        Vigenère ciphers. Although several others had managed to break the Vigènere previously,
-        Kasiski was the first to publish a decrypting method.<br />
-
-        The Kasiski Test is based on the observation that, in a ciphertext with a repeated key,
-        there is a chance that repeated words are encrypted using the same key letters,
-        thus creating the same sequence of encrypted letters in the ciphertext. Thus, it is possible
-        to determine the length of the key. For example, consider the following ciphertext:
+        In 1863, Friedrich Kasiski published one such method for deciphering Vigenère ciphers. 
+        Although several others had managed to break the Vigenère cipher before him, Kasiski was 
+        the first to publish a decryption method.
+      </p>
+      <p>
+        The Kasiski Test is based on the observation that in a ciphertext with a repeated key, 
+        repeated words are likely to be encrypted using the same key letters, resulting in identical 
+        sequences of encrypted letters in the ciphertext. This observation can help determine the 
+        length of the key. For example, consider the following ciphertext:
       </p>
       <p>
         <b>ABC</b>XYZ<b>ABC</b>KLM<b>ABC</b>
       </p>
       <p>
-        First we must calculate the distance (in number of characters) between occurrences of the
-        repeated groups. In this case, it is 6 characters. Then take all common divisors of this
-        distance; these correspond to possible lengths for the key. The number 6 is evenly divisible
-        by 1, 2, 3 and 6. A key of length one is just a Caesar cipher, and usually a key of length 2
-        is not used as it is too short, so the key has a high probability of being of length 3 or 6.<br />
-
-        From there, methods such as frequency analysis can be used to find words of that length that
-        could be the key to the cipher.
+        First, we calculate the distance (in number of characters) between occurrences of the 
+        repeated groups. In this case, the distance is 6 characters. Then, take all common divisors 
+        of this distance; these correspond to possible key lengths. The number 6 is evenly divisible 
+        by 1, 2, 3, and 6. A key of length 1 is basically a Caesar cipher and a key of length 2 is 
+        usually avoided as it is too short. Thus, the key is likely 3 or 6 letters long.
+      </p>
+      <p>
+        From there, methods such as frequency analysis can be used to identify potential words of 
+        that length that could be the keyword.
       </p>
 
       <h3>Origins</h3>
       <p>
-        The cipher known today as the Vigènere cipher was originally described by Italian cryptologist 
-        Giovan Battista Bellaso in his 1553 book <em>La cifra del Sig. Giovan Battista Bellaso</em>. 
-        He describes a polyalphabetic cipher based on the work of Johannes Trithemius, but introduced 
-        a repeating "countersign" (a key) to switch the cipher alphabet on every letter. Unlike today's 
-        Vigenère cipher, Bellaso didn't use 26 different Caesar ciphers, instead using 13 shifts for 
-        pairs of letters (such as 'AB' and 'CD').
+        The cipher known today as the Vigenère cipher was originally described by Italian 
+        cryptographer Giovan Battista Bellaso in his 1553 book <em>La cifra del Sig. Giovan Battista 
+        Bellaso</em>. He introduced a polyalphabetic cipher (based on the work of Johannes Trithemius) 
+        but featured a repeating "countersign" (a key) to switch the cipher alphabet for each letter. 
+        Unlike today's Vigenère cipher, Bellaso didn't use 26 different Caesar ciphers. Instead, he 
+        used 13 shifts for letter pairs (such as 'AB' and 'CD').
       </p>
       <p>
-        In 1586 Blaise de Vigenère published a polyalphabetic cipher called an autokey cipher, where 
-        the key is based on letters from the original plaintext. However, in the 19th century, 
-        Vigenère was misattributed as the inventor of Bellaso's cipher, but the name stuck.
+        In 1586, French cryptographer Blaise de Vigenère described a similar polyalphabetic cipher 
+        known as an autokey cipher, where the key is based on letters from the original plaintext. 
+        However, Vigenère was misattributed as the inventor of Bellaso's cipher in the 19th century, 
+        and the name has remained since.
       </p>
     </>
   )
