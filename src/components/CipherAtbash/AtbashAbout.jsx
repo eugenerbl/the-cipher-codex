@@ -6,74 +6,71 @@ function AtbashAbout() {
     <>
       <h3>How to Use</h3>
       <p>
-        This Monoalphabetic Substitution cipher is designed for use with the <strong>English
-        Alphabet.</strong> Enter the text to encrypt/decrypt in the top text box.
-        There are two ways to enter the key value that indentifies which symbol represents each
-        alphabet letter:
+        This Monoalphabetic Substitution cipher is designed for use with the English alphabet. Enter 
+        the message you want to encrypt or decrypt in the top box. There are two ways to input the 
+        key value that specifies which symbol represents each letter of the alphabet:
       </p>
 
       <ol>
         <li style={{ marginBottom: 10 }}>
-          The "Key" Field: Enter the entire substitution alphabet here. <strong> For best results, 
-          this key should be 26 characters long, and no character should be used more than 
-          once.</strong> Letters, numbers, and symbols are allowed. Click "Encode/Decode with Key" 
-          to transform your text using this key value.
+          The "Key" Field: Enter the entire substitution alphabet here. <b> For best results, this 
+          key should be 26 characters long, and no character should be used more than once. </b>
+          Letters, numbers, and symbols are allowed. Click "Encrypt/Decrypt with Key" to transform 
+          your text using this key.
         </li>
         <li>
-          The Alphabet Table: Enter a character for each letter of the alphabet. Each input box
-          takes only one character, but letters, numbers, and symbols are allowed. Click
-          "Encode/Decode with Table" to transform your text using the values in this table.
+          The Alphabet Table: Enter a character for each letter. Each input box accepts only one 
+          character, but letters, numbers, and symbols are allowed. Click "Encrypt/Decrypt with Table" 
+          to transform your text based on these values.
         </li>
       </ol>
 
       <p><b>
-        Hint: If you don't know the symbol that matches to a particular character, try using
-        an underscore "_" as a wild card.
+        Hint: You can use symbols like an underscore "_" as a wildcard for unknown symbols.
       </b></p>
 
       <p>
-        In addition, there are buttons that allow you to copy the key values between the two methods, 
-        allowing you to easily map each letter to a character:
+        You can also copy key values between the two methods, making it easier to map each letter to 
+        a character:
       </p>
       <ul>
         <li>
-          Copy Key Value to Table: Maps the characters in the Key Field into the Alphabet Table,
-          with the first character in the Key assigned to 'A', the second to 'B', and so on. 
-          Any text in the Alphabet Table will be overriden.
+          Copy Key Value to Table: Maps the characters in the Key Field to the Alphabet Table, 
+          assigning the Key's first character to 'A', the second to 'B', and so on. Any text in 
+          the Alphabet Table will be overridden.
         </li>
         <li>
-          Copy Table Values to Key: Condenses all characters in the Table into a single string 
-          and inserts it in the Key Field. Any blank values in the table will be replaced with 
-          underscores "_". Any text in the Key Field will be overriden.
+          Copy Table Values to Key: Combines all characters in the Table into a single string and 
+          inserts it into the Key Field, replacing any blank values with underscores "_". Any text in 
+          the Key Field will be overridden.
         </li>
       </ul>
 
       <p>
-        Finally, there are buttons to set the Key value to the classic Atbash cipher (where Z=A), 
-        the normal English Alphabet (where A=A), and a button to clear the values of both the 
-        Key Field and Table.
+        Finally, you can set the Key value to the classic Atbash cipher (where Z=A), reset to the 
+        English Alphabet (where A=A), or clear the values from both the Key Field and Table.
       </p>
 
       <h3>What is the Monoalphabetic Substitution Cipher?</h3>
       <p>
-        A substitution cipher is where the letters of the alphabet are replaced by others according 
-        to a set of rules. There are several different types of substitution ciphers, each of which 
-        use varying numbers of alphabets and substitutions. A monoalphabetic cipher, for instance, 
-        is called that because it uses only one alphabet. There is also a 1-1 correspondence, 
-        meaning each plain letter always translates to the same cipher letter.
+        A substitution cipher is a method of encrypting text by replacing the letters of the alphabet 
+        according to specific rules. There are various types of substitution ciphers, each one 
+        utilizing different alphabets and substitutions. A monoalphabetic cipher, for instance, is 
+        named as such because it uses only one alphabet. It has a 1-1 correspondence, meaning each 
+        plaintext letter always translates to the same ciphertext letter.
       </p>
 
       <h3>What is the Atbash Cipher?</h3>
       <p>
-        The Atbash cipher is a monoalphabetic cipher where each letter is replaced with the letter 
-        in the opposite position in the alphabet. That is, the first letter A becomes the last letter Z, 
+        The Atbash cipher is a monoalphabetic substitution cipher where each letter is replaced by the letter in 
+        the opposite position in the alphabet. That is, the first letter A becomes the last letter Z; 
         the second, B, becomes the second to last, Y, and so on.
       </p>
 
 
-      <h3>Encode It!</h3>
+      <h3>Encrypt It!</h3>
       <p>
-        The monoalphabetical substitution cipher is used by taking the normal alphabet and replacing
+        The monoalphabetic substitution cipher is used by taking the standard alphabet and replacing 
         each letter with one from a randomized alphabet. One example is shown below:
       </p>
 
@@ -91,9 +88,9 @@ function AtbashAbout() {
       </table><br/>
 
       <p>
-        To encode the plaintext, replace all letters in the first row with their corresponding ones 
-        in the second row. So here, all 'A's turn into 'Y's, 'B's become 'N's, and so on.<br/>
-        So here, 'CIPHER' is encrypted into 'UXAGPW'.
+        To encrypt the plaintext, replace all letters in the first row with their corresponding ones 
+        in the second row. Here, all 'A's turn into 'Y's, 'B's become 'N's, and so on. Therefore, the 
+        word 'CIPHER' is encrypted into 'UXAGPW'.
       </p>
       <p>
         The Atbash cipher uses the reverse of the standard alphabet:
@@ -111,40 +108,40 @@ function AtbashAbout() {
         </tbody>
       </table><br/>
       <p>
-        So with this substition, 'CIPHER' becomes 'XRKSVI'.
+        With this substition, 'CIPHER' becomes 'XRKSVI'.
       </p>
 
 
-      <h3>Decode It!</h3>
+      <h3>Decrypt It!</h3>
       <p>
-        Decoding a monoalphabetical substitution and Atbash cipher is fairly straightforward.
-        Assuming you already know the key alphabet used to encrypt the plaintext, you can use the 
-        same tables as shown above to decrypt, this time replacing each letter in the bottom row
-        with the matching letter in the top row.
+        Decrypting a monoalphabetic substitution cipher is very straightforward. If you know the key 
+        alphabet used to encrypt the plaintext, you can use the same tables (like those shown above) 
+        to decrypt it. This time, replace each letter in the bottom row with the matching letter in 
+        the top row.
       </p>
       <p>
-        Breaking the Atbash cipher is even easier because there is only one way to encrypt the text. 
+        Decrypting the Atbash cipher is even easier because there is only one way to encrypt the text. 
         Simply replace each letter with its opposite, as seen in the Atbash Alphabet table above.
       </p>
 
       <h3>How Easy is it to Break?</h3>
       <p>
-        Although the number of possible substitution alphabets is very large this cipher is not 
-        very strong, and can be easily broken. Provided the message is of reasonable length, 
-        frequency analysis can be used to deduce the meaning of the most common symbols. Then words 
-        can be partially formed and can be filled in progressively.
+        Despite the large number of possible substitution alphabets, this cipher is not very strong 
+        and can be easily broken. If the message is of reasonable length, frequency analysis can be 
+        used to deduce the meanings of the most common symbols. From there, words can be partially 
+        formed and can be filled in gradually.
       </p>
       <p>
-        Because the Atbash cipher has only one possible key, it can be instantly broken, so Atbash 
-        provides basically no security for messages.
+        The Atbash cipher, which has only one possible key, can be instantly broken, so it provides 
+        no real security for messages.
       </p>
 
       <h3>Atbash Cipher: Origins</h3>
       <p>
-        The Atbash Cipher takes its origins from the Hebrew alphabet. In the alphabet, the first 
-        letter, aleph (א) was replaced by the last letter, tav (ת), and the second letter, bet (ב) 
-        was replaced with the second last, shin (ש). When combined, the letters become 
-        Aleph-Tav-Bet-Shin, then A-T-B-SH.
+        The Atbash Cipher originates from the Hebrew alphabet. In the alphabet, the first letter, 
+        aleph (א) is replaced with the last letter, tav (ת); the second letter, bet (ב) is replaced 
+        with the second-to-last, shin (ש). These letters create the sequence Aleph-Tav-Bet-Shin, 
+        which becomes A-T-B-SH.
       </p>
     </>
   )

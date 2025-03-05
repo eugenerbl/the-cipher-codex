@@ -5,39 +5,56 @@ function CaesarAbout() {
     <>
       <h3>How to Use</h3>
       <p>
-        Enter the text you want to encode/decode in the top text box. Then drag the slider to set 
-        the number of letters to shift each letter by. Positive and negative values are matched 
-        together for convenience. The ciphertext will appear instantly in the bottom text box.
+        To encrypt or decrypt a message, type it in the top box. Then, adjust the slider to set the 
+        number of places to shift each letter. Positive and negative values are paired together for 
+        convenience. The ciphertext will appear instantly in the bottom box.
       </p>
       <p>
-        There are buttons that will move the slider to common shift values: one for the ROT13
-        cipher (±13), and two for Julius Caesar's preferred encoding (+3) and decoding (-3) values.
+        Three buttons are available to automatically set the slider to common shift values: the 
+        ROT13 cipher (±13), and Julius Caesar's preferred encrypting (+3) and decrypting (-3) values.
       </p>
       <p>
-        Use the "Swap Text" button to switch the contents of the two text boxes. The shift value 
-        will adjust automatically, allowing an easy way to switch between encoding and decoding.
-        Two buttons are also available to switch between all-uppercase or all-lowercase text.
+        Use the "Swap Text" button to switch the contents of the two text boxes. The shift value will 
+        change automatically, making it easy to switch between encrypting and decrypting. Additionally, 
+        there are buttons to display all text in uppercase or lowercase.
       </p>
 
       <h3>What is the Caesar Cipher?</h3>
       <p>
         The Caesar Cipher is one of the simplest and oldest encryption techniques.
-        It is a type of substitution cipher in which each letter in the plaintext is shifted
-        a certain number of places forward or backward in the alphabet. For example, with a left
-        (backward) shift of 3, D would be replaced by A, E would become B, and so on.
+        It is a type of substitution cipher where each letter in the plaintext is shifted
+        a certain number of places forward or backward in the alphabet. For example, with a right 
+        (forward) shift of 10, the letter A is replaced by K, B becomes L, and so on.
+      </p>
+      <p>
+        The ROT13 cipher is a special case of the Caesar cipher, rotating each letter 13 places 
+        forward (or backward) in the alphabet. Since the English alphabet has 26 letters, applying 
+        ROT13 twice returns the original text, making it a reversible cipher.
       </p>
       
+      <table>
+        <tbody>
+          <tr>
+            <th style={{paddingRight: 20}}>Plain</th>
+            <td>ABCDEFGHIJKLMNOPQRSTUVWXYZ</td>
+          </tr>
+          <tr>
+            <th style={{paddingRight: 20}}>ROT13 (±13)</th>
+            <td>NOPQRSTUVWXYZABCDEFGHIJKLM</td>
+          </tr>
+        </tbody>
+      </table>
 
-      <h3>Encode It!</h3>
+      <h3>Encrypt It!</h3>
       <p>
-        Encryption with Caesar code is based on shifting the alphabet.
-        The cipher alphabet is the plain alphabet rotated left (-) or right (+) by some
-        number of positions (this shift is the key to breaking the cipher).
+        Encrypting a message with the Caesar cipher involves a simple shift of the alphabet. The 
+        cipher alphabet is the plain alphabet shifted left or right by a certain number of positions. 
+        This shift acts as the key to breaking the cipher.
       </p>
       <p>
-        The most commonly used shift is moving forward 3 letters such that A becomes D.
-        Here is what the encrypted alphabet would look like for such a shift; this is a right
-        shift of three places (-3), equivalent to a left shift of 23 (+23):
+        The most common shift involves moving forward 3 letters so that A becomes D (Read "Origins" to 
+        see why). Here's what the encrypted alphabet looks like for a right shift of 3 places (+3), 
+        equivalent to a left shift of 23 (-23): 
       </p>
 
       <table>
@@ -55,36 +72,37 @@ function CaesarAbout() {
       <br />
 
       <p>
-        We can then match each plain letter with the Caesar letter directly below it to get the 
-        ciphertext. For example, using this shift, <strong>HELLO</strong>, would be transformed 
-        into <strong>KHOOR</strong>.
+        By matching each letter in the plain alphabet with the corresponding letter in the 
+        Caesar-shifted alphabet, we can generate the ciphertext. For example, the word "<b>HELLO</b>" 
+        is transformed into "<b>KHOOR</b>."
       </p>
 
-      <h3>Decode It!</h3>
+      <h3>Decrypt It!</h3>
       <p>
-        The first step to decoding a Caesar ciphertext is determining the shift used to encode the 
-        plaintext. This is relatively easy (see How Easy is it to Break?), but let's say you already 
-        know the shift used is 3 letters forward. Now decoding goes in the other direction, in this 
-        case, 3 letters backward.
+        The first step in decrypting a Caesar ciphertext is determining the shift used to encrypt the 
+        plaintext. This step is relatively straightforward (see "How Easy is it to Break?"). To 
+        decrypt, simply go in the opposite direction of the shift. For example, if you know that the 
+        shift is eight letters forward, you decrypt it by shifting eight letters backward.
       </p>
 
       <h3>How Easy is it to Break?</h3>
       <p>
-        The Caesar cipher is very easy to crack. There are only 25 possible ways to
-        shift the letters, so a decoder can use brute force and try every possible shift. This will
-        reveal the message shortly as the right shift will be the only one that makes coherent text.
-        Using frequency analysis of the letters is also a fast approach to finding the correct shift.
+        The Caesar cipher is very easy to crack. There are only 26 possible letter shifts, so a decoder 
+        can use brute force and try all of them. This will reveal the message quickly as the correct 
+        shift will be the only one to create a readable text. Additionally, frequency analysis of the 
+        letters provides a fast alternative for finding the correct shift.
       </p>
 
       <h3>Origins</h3>
       <p>
-        The Caesar cipher is named after Julius Caesar, who, according to Suetonius,
-        used it with a shift of three letters forward (A becoming D when encrypting, and D becoming A
-        when decrypting) to protect messages of military significance.
+        The Caesar cipher is named after the famed Roman general and dictator, Julius Caesar. 
+        According to the historian Suetonius, Caesar used the cipher with a shift of three letters 
+        forward to protect military messages (meaning A becomes D when encrypting, and D becomes A 
+        when decrypting).
       </p>
       <p>
-        His nephew, Augustus, also used the cipher, but with a forward shift of one.
-        Also, Z did not wrap around back to A; instead, AA was used to represent Z.
+        His nephew, Augustus, also used the cipher, but with a shift of one letter forward. Notably, 
+        Z did not wrap around back to A; instead, AA was used to represent Z.
       </p>
     </>
   )

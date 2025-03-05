@@ -5,7 +5,7 @@ import './Vigenere.css';
 import VigenereAbout from './VigenereAbout';
 
 function Vigenere() {
-   useEffect(() => { document.title = 'Vigènere Cipher - The Cipher Codex'; }, []);
+   useEffect(() => { document.title = 'Vigenère Cipher - The Cipher Codex'; }, []);
    const [text, setText] = useState('');
    const [key, setKey] = useState('');
    const [ciphertext, setCiphertext] = useState('');
@@ -38,7 +38,7 @@ function Vigenere() {
    return (
       <>
          <div>
-            <h1> Vigènere Cipher </h1>
+            <h1> Vigenère Cipher </h1>
             <textarea type="text" value={text} className="textBox" onChange={handleChange}
                placeholder="Enter plaintext here..." autoFocus={true} />
             {errorMessage && (<Typography color="error" style={{ marginBottom: 20 }}>{errorMessage}</Typography>)}

@@ -25,7 +25,7 @@ function Header() {
 
 // Adds '/', converts text to lowercase, and removes spaces for use in a URL
 function URLText(item) {
-  return "/" + item.toLowerCase().replace(/\s+/g, '');
+  return "/" + (item === "Vigenère" ? "vigenere" : item.toLowerCase().replace(/\s+/g, ''));
 }
 
 export default Header;

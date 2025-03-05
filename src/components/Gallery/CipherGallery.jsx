@@ -26,7 +26,7 @@ function Gallery() {
 }
 
 function URLText(item) {
-    return "/" + item.toLowerCase().replace(/\s+/g, '');
+    return "/" + (item === "Vigenère" ? "vigenere" : item.toLowerCase().replace(/\s+/g, ''));
 }
 
 export default Gallery;

@@ -21,9 +21,16 @@
 #b64Example th, #b64Example td {
       border-color: black;
       border-style: solid;
-      border-width: 2px;
+      border-width: 1px;
       overflow-wrap: anywhere;
+      background-color: snow;
 }
+
+#b64Example th {
+   padding-left: 5px;
+   padding-right: 20px;
+}
+
 #b64Example td {
    text-align: center;
    padding: 0px 10px;

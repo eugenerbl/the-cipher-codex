@@ -19,7 +19,7 @@ function App() {
             <Route path="/the-cipher-codex" element={<Home />} />
             <Route path="/caesar" element={<Caesar />} />
             <Route path="/atbash" element={<Atbash />} />
-            <Route path="/vigènere" element={<Vigenere />} />
+            <Route path="/vigenere" element={<Vigenere />} />
             <Route path="/a1z26" element={<A1Z26 />} />
             <Route path="/base64" element={<Base64 />} />
             <Route path="/*" element={<PageNotFound />} />

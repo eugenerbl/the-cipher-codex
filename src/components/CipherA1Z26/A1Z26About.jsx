@@ -6,69 +6,68 @@ function A1Z26About() {
       <>
          <h3>How to Use</h3>
          <p>
-            Enter the text you want to encode/decode in the top text box.
-            Then enter the alphabet to be used for encoding and decoding. By default, the English
-            alphabet is provided, but alphabets in other languages and even symbols can be used. All
-            non-alphabetic characters in the text will not be transformed. You can reset back to 
-            the English alphabet at any time by clicking "Reset Alphabet (A-Z)".
+            To encrypt or decrypt a message, type it in the top box. Then, specify
+            the alphabet for encrypting and decrypting. The default is the English alphabet, but you can
+            use alphabets from other languages and even symbols. Any non-alphabetic characters in your
+            message will remain unchanged. You can go back to the English alphabet anytime by clicking
+            "Reset Alphabet (A-Z)".
          </p>
          <p>
-            You can enter the separator character that appears between numbers. Typically this is a
-            dash "-" or space " ". It is NOT recommended to leave this blank. Note that if you are 
-            decrypting, ensure that the separator character used in the top text box matches the 
-            character entered here for accurate results.
+            Next, enter a separator character to appear between numbers. Common choices are a dash
+            ("-") or a space. It's best not to leave this blank! If you are decrypting, ensure the
+            separator you use in the top box matches the one you enter here.
          </p>
          <p>
-            You also have the option to include spaces when encrypting. If this is checked,
-            spaces will appear in the result box (for example, with dash separator, "- -"). Finally,
-            choose whether to Encrypt or Decrypt and see your results in the result box.
+            You can also choose to include spaces when encrypting. If you check this option, spaces
+            will appear in the result box (for example, with a dash separator, you will see "- -").
+            Finally, choose whether to Encrypt or Decrypt and view your results in the bottom box.
          </p>
 
          <h3>What is the A1Z26 Cipher?</h3>
          <p>
-            The A1Z26 Cipher is a very simple substitution cipher, where each letter is replaced by
+            The A1Z26 Cipher is a very simple substitution cipher in which each letter is replaced by
             its position in the alphabet. For example, A=1, B=2, and Z=26, hence the name.
          </p>
 
-         <h3>Encode It!</h3>
+         <h3>Encrypt It!</h3>
          <p>
             Encrypting your message with A1Z26 involves knowing the indexes (positions) of the
-            letters in the alphabet. For example, with the 26-character English alphabet, these are
-            the values that map to each letter:
+            letters in the alphabet. For the 26-character English alphabet, here are the values that
+            map to each letter:
          </p>
          <Table />
          <p style={{ marginTop: '1rem' }}>
-            Simply replace each letter with its position in the alphabet (don't forget the separator
-            between each number!). For example, the word "PASSWORD" with a dash separator becomes
-            "16-1-19-19-23-15-18-4".
+            Simply replace each letter with its position in the alphabet, making sure to include a
+            separator between each number. For example, the word "PASSWORD" with a dash separator
+            becomes "16-1-19-19-23-15-18-4".
          </p>
 
-         <h3>Decode It!</h3>
+         <h3>Decrypt It!</h3>
          <p>
-            Decoding is the inverse of encoding. Just replace each number with the letter in the
+            Decrypting is the inverse of encrypting. Simply replace each number with the letter in the
             corresponding position in the alphabet. For example, "3-18-25-16-20-15-7-18-1-16-8-25"
             translates to "CRYPTOGRAPHY".
          </p>
 
          <h3>How Easy is it to Break?</h3>
          <p>
-            As it is a simple substitution cipher, the A1Z26 cipher is very easy to break as long
-            as you know the alphabet used.
+            As a simple substitution cipher, the A1Z26 cipher is very easy to break if you know the 
+            alphabet used.
          </p>
          <p>
-            Variants of the cipher exist which could make it a little more difficult to decode.
-            One such variant is shifting the numbers for each letter, for example using
-            A=0 up to Z=25, or perhaps using ASCII code where A=65 or 97.
+            Variants of the cipher can add a bit more difficulty to the decrypting process. One variant 
+            shifts the numbers for each letter, such as using A=0 through Z=25 or using ASCII codes 
+            where A is either 65 or 97.
          </p>
          <p>
-            Using another number as a separator, such as 0 or 27, may help disguise the message
-            as a long string of numbers. However, codebreakers could easily see the highly
-            repeated numbers and assume that for a space.
+            Using another number as a separator, such as 0 or 27, can help disguise the message as a 
+            long string of numbers. However, codebreakers can easily identify highly repeated numbers 
+            and assume they represent spaces.
          </p>
          <p>
-            Custom or mixed alphabets can also be used to increase complexity. Alphabets
-            that add a few additional characters along with the normal letters would increase
-            the numbers being used and may hide the message better.
+            Custom or mixed alphabets can also increase complexity. These alphabets might include 
+            extra characters along with the standard letters, which would increase the range of 
+            numbers being used and make it harder to uncover the message.
          </p>
       </>
    );
