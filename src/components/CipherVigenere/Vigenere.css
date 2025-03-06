@@ -31,6 +31,16 @@
     .keyBox {
         width: 200px !important;
     }
+
+    .vigenereSquare {
+        width: 100%;
+    }
+
+    .vigenereSquareText {
+        float: inherit;
+        margin: 0px;
+        text-align: center;
+    }
 }
 
 @media screen and (max-width: 600px) {

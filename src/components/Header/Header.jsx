@@ -7,14 +7,15 @@ import { ciphers } from '../cipher-list';
 function Header() {
   return (
     
-    <Navbar expand="md" fixed="top" className="header" data-bs-theme="light">
+    <Navbar expand="lg" collapseOnSelect fixed="top" className="header" data-bs-theme="light">
       <Container>
-        <Navbar.Brand as={Link} to="/the-cipher-codex" className="headerText"> The Cipher Codex </Navbar.Brand>
+        <Navbar.Brand href="/the-cipher-codex" className="headerFont"> The Cipher Codex </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             {ciphers.map((item, index) => (
-              <Nav.Link as={Link} to={URLText(item.cipher)} key={index} className="bodyText"> {item.cipher} </Nav.Link>
+              <Nav.Link as={Link} to={URLText(item.cipher)} key={index} eventKey={index} 
+                className="headerFooterText"> {item.cipher} </Nav.Link>
             ))}
           </Nav>
         </Navbar.Collapse>

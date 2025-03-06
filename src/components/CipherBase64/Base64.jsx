@@ -49,7 +49,7 @@ function Base64() {
                value={ciphertext} placeholder="Ciphertext appears here..."
                readOnly />
          </div>
-         <div style={{ width: '80%', textAlign: 'initial', display: 'inline-block' }}><Base64About /></div>
+         <div className="cipherInfo"><Base64About /></div>
       </>);
 }
 

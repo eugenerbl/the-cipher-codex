@@ -39,50 +39,54 @@ function Base64About() {
             Take the following example with the plaintext "word":
          </p>
 
-         <table id="b64Example">
-            <tbody>
-               <tr>
-                  <th style={{ paddingRight: 20 }}>Letter</th>
-                  <td>w</td>
-                  <td>o</td>
-                  <td>r</td>
-                  <td>d</td>
-               </tr>
-               <tr>
-                  <th style={{ paddingRight: 20 }}>Binary</th>
-                  <td>01110111</td>
-                  <td>01101111</td>
-                  <td>01110010</td>
-                  <td>01100100</td>
-               </tr>
-            </tbody>
-         </table>
+         <div style={{ overflowX: "auto" }}>
+            <table id="b64Example">
+               <tbody>
+                  <tr>
+                     <th style={{ paddingRight: 20 }}>Letter</th>
+                     <td>w</td>
+                     <td>o</td>
+                     <td>r</td>
+                     <td>d</td>
+                  </tr>
+                  <tr>
+                     <th style={{ paddingRight: 20 }}>Binary</th>
+                     <td>01110111</td>
+                     <td>01101111</td>
+                     <td>01110010</td>
+                     <td>01100100</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
          <br />
 
          <p>
             The binary digits are grouped into sets of 6 bits, adding extra zeros at the end if necessary.
          </p>
 
-         <table id="b64Example">
-            <tbody>
-               <tr>
-                  <th style={{ paddingRight: 20 }}>8-bit Binary</th>
-                  <td colSpan={2}>01110111</td>
-                  <td colSpan={2}>01101111</td>
-                  <td colSpan={2}>01110010</td>
-                  <td colSpan={2}>01100100</td>
-               </tr>
-               <tr>
-                  <th style={{ paddingRight: 20 }}>6-bit Binary</th>
-                  <td>011101</td>
-                  <td colSpan={2}>110110</td>
-                  <td colSpan={2}>111101</td>
-                  <td>110010</td>
-                  <td>011001</td>
-                  <td>00(0000)</td>
-               </tr>
-            </tbody>
-         </table>
+         <div style={{ overflowX: "auto" }}>
+            <table id="b64Example">
+               <tbody>
+                  <tr>
+                     <th style={{ paddingRight: 20 }}>8-bit Binary</th>
+                     <td colSpan={2}>01110111</td>
+                     <td colSpan={2}>01101111</td>
+                     <td colSpan={2}>01110010</td>
+                     <td colSpan={2}>01100100</td>
+                  </tr>
+                  <tr>
+                     <th style={{ paddingRight: 20 }}>6-bit Binary</th>
+                     <td>011101</td>
+                     <td colSpan={2}>110110</td>
+                     <td colSpan={2}>111101</td>
+                     <td>110010</td>
+                     <td>011001</td>
+                     <td>00(0000)</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
          <br />
 
          <p>
@@ -91,28 +95,30 @@ function Base64About() {
             encoding standard.
          </p>
 
-         <table id="b64Example">
-            <tbody>
-               <tr>
-                  <th style={{ paddingRight: 20 }}>6-bit Binary</th>
-                  <td>011101</td>
-                  <td>110110</td>
-                  <td>111101</td>
-                  <td>110010</td>
-                  <td>011001</td>
-                  <td>000000</td>
-               </tr>
-               <tr>
-                  <th style={{ paddingRight: 20 }}>Base64 Value</th>
-                  <td>d</td>
-                  <td>2</td>
-                  <td>9</td>
-                  <td>y</td>
-                  <td>Z</td>
-                  <td>A</td>
-               </tr>
-            </tbody>
-         </table>
+         <div style={{ overflowX: "auto" }}>
+            <table id="b64Example">
+               <tbody>
+                  <tr>
+                     <th style={{ paddingRight: 20 }}>6-bit Binary</th>
+                     <td>011101</td>
+                     <td>110110</td>
+                     <td>111101</td>
+                     <td>110010</td>
+                     <td>011001</td>
+                     <td>000000</td>
+                  </tr>
+                  <tr>
+                     <th style={{ paddingRight: 20 }}>Base64 Value</th>
+                     <td>d</td>
+                     <td>2</td>
+                     <td>9</td>
+                     <td>y</td>
+                     <td>Z</td>
+                     <td>A</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
          <br />
 
          <figure>

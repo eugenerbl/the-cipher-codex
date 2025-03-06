@@ -87,7 +87,7 @@ function Caesar() {
         <textarea value={encode(text, shift)} className="textBox" 
           placeholder="Ciphertext appears here..." readOnly />
       </div>
-      <div style={{width: '80%', textAlign: 'initial', display: 'inline-block'}}><CaesarAbout/></div>
+      <div className="cipherInfo"><CaesarAbout/></div>
     </>
   );
 }

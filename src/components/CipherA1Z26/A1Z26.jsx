@@ -76,7 +76,7 @@ function A1Z26() {
             <textarea value={ciphertext} className="textBox"
                placeholder="Ciphertext appears here..." readOnly />
          </div>
-         <div style={{ width: '80%', textAlign: 'initial', display: 'inline-block' }}><A1Z26About /></div>
+         <div className="cipherInfo"><A1Z26About /></div>
       </>
    );
 }
