@@ -58,7 +58,7 @@ function Vigenere() {
             <textarea value={ciphertext} className="textBox"
                placeholder="Ciphertext appears here..." readOnly />
          </div>
-         <div style={{ width: '80%', textAlign: 'initial', display: 'inline-block' }}><VigenereAbout/></div>
+         <div className="cipherInfo"><VigenereAbout/></div>
       </>
    );
 };

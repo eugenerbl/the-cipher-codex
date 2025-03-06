@@ -21,9 +21,28 @@
   padding: 1rem;
 }  
 
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+  color: var(--bs-navbar-active-color);
+  font-weight: bold;
+  background-color: blanchedalmond;
+}
+
+.nav-link:hover {
+  background-color: blanchedalmond;
+}
+
+.headerFooterText {
+  font-family: var(--body-font);
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
 .textBox {
-  width: 70%;
-  height: 100px;
+  width: 90%;
+  max-width: 100%;
+  height: 15vh;
   margin: 20px;
   padding: 5px;
   border: 1px solid;
@@ -41,34 +60,39 @@
   margin: 10px;
 }
 
-.headerText {
+.cipherInfo {
+  width: 95%;
+  text-align: initial;
+  display: inline-block;
+  padding: 0rem 1rem 2rem;
+}
+
+.headerFont {
   font-family: var(--header-font);
   font-weight: 400;
   font-style: normal;
 }
 
-.headerTextMedium {
+.headerFontMedium {
   font-family: var(--header-font);
   font-weight: 500;
   font-style: normal;
 }
 
-.headerTextItalic {
+.headerFontItalic {
   font-family: var(--header-font);
   font-weight: 400;
   font-style: italic;
 }
 
-.headerTextMediumItalic {
+.headerFontMediumItalic {
   font-family: var(--header-font);
   font-weight: 500;
   font-style: italic;
 }
 
-.bodyText {
-  font-family: var(--body-font);
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings: "wdth" 100;
+@media screen and (min-width: 800px) {
+  .textBox {
+    width: 80%;
+  }
 }

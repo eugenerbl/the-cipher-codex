@@ -27,3 +27,13 @@
    border-width: 1px;
    background-color: snow;
 }
+
+@media screen and (max-width: 800px) {
+   .azTable {
+      justify-self: flex-start;
+   }
+
+   .separatorBox {
+      width: 50px !important;
+   }
+}

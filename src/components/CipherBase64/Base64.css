@@ -17,6 +17,11 @@
    font-weight: bold;
 }
 
+#b64Example {
+   width: max-content;
+   min-width: 300px;
+}
+
 #b64Example tbody, #b64Example tr, 
 #b64Example th, #b64Example td {
       border-color: black;
@@ -36,12 +41,14 @@
    padding: 0px 10px;
 }
 
-@media screen and (max-width: 1060px) {
+@media screen and (max-width: 800px) {
    .base64Table {
        width: 100%;
    }
 
    .base64TableText {
       float: inherit;
-   }
+      margin: 0px;
+      text-align: center;
+  }
 }

@@ -102,7 +102,7 @@ function Atbash() {
                   </tbody>
                </table>
             </div>
-            <div>
+            <div style={{ marginBottom: 30 }}>
                <Button className="button" variant="contained" color="blue"
                   onClick={() => handleSubmit(letters)}>Encrypt/Decrypt with Table
                </Button>
@@ -112,14 +112,14 @@ function Atbash() {
             </div>
 
 
-            <Button className="button" variant="contained" color="green"
-               style={{ marginTop: 30 }} onClick={atbashKey}> Atbash Key (A=Z)
+            <Button className="button helperButton" variant="contained" color="green"
+               onClick={atbashKey}> Atbash Key (A=Z)
             </Button>
-            <Button className="button" variant="contained" color="green"
-               style={{ marginTop: 30 }} onClick={normalKey}> Normal Key (A=A)
+            <Button className="button helperButton" variant="contained" color="green"
+               onClick={normalKey}> Normal Key (A=A)
             </Button>
-            <Button className="button" variant="contained" color="brown"
-               style={{ marginTop: 30 }} onClick={clearKey}> Clear Key and Table
+            <Button className="button helperButton" variant="contained" color="brown"
+               onClick={clearKey}> Clear Key and Table
             </Button>
          </div>
 
@@ -128,7 +128,7 @@ function Atbash() {
                value={ciphertext} placeholder="Ciphertext appears here..."
                readOnly />
          </div>
-         <div style={{ width: '80%', textAlign: 'initial', display: 'inline-block' }}><AtbashAbout /></div>
+         <div className="cipherInfo"><AtbashAbout /></div>
 
       </>
    )
