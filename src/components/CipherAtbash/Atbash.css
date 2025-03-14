@@ -2,11 +2,13 @@
     overflow-x: auto;
     width: 80%;
     justify-self: center;
+    margin: 25px 0px;
 }
 
 .keyBoxLabel {
     font-family: var(--body-font);
     font-weight: var(--font-weight-regular);
+    margin-left: 10px;
 }
 
 .keyBox {
@@ -23,7 +25,6 @@
     border-collapse: collapse;
     width: 100%;
     table-layout: fixed;
-    margin: 30px 0px 15px 0px;
     font-family: var(--body-font);
     font-weight: var(--font-weight-regular);
 }
@@ -81,12 +82,10 @@ td {
         height: 35px;
         margin: 2px;
     }
+}
 
+@media screen and (max-width: 700px) {
     .keyBox {
         margin-bottom: 20px !important;
-    }
-
-    .helperButton {
-        margin-top: 10px;
     }
 }

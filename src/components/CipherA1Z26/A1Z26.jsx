@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid2';
 import Button from '@mui/material/Button';
 import './A1Z26.css';
 import A1Z26About from './A1Z26About';
@@ -48,29 +50,40 @@ function A1Z26() {
             <textarea type="text" value={text} className="textBox" onChange={handleTextChange}
                placeholder="Enter plaintext here..." autoFocus={true} />
          </div>
-         <div>
-            <span className="keyBoxLabel">Alphabet:</span>
-            <input type="text" value={alphabet} className="keyBox" onChange={handleAlphabetChange}
-               placeholder="Enter alphabet..." name="alphabetBox" />
-            <Button className="button" variant="contained" color="brown" onClick={resetAlphabet}>
-               Reset Alphabet (A-Z)
-            </Button>
-         </div>
-         <div style={{ margin: "10px 0px" }}>
-            <span className="keyBoxLabel">Separator between numbers:</span>
-            <input type="text" value={separator} className="keyBox separatorBox"
-               onChange={handleSeparatorChange} name="separatorBox" />
-            <label>
-               <span className="keyBoxLabel">Include Spaces when Encrypting</span>
-               <input type="checkbox" defaultChecked={false} className="spaces" onChange={handleSpaces} />
-            </label>
-         </div>
-         <Button className="button" variant="contained" color="blue" onClick={handleEncryption}>
-            Encrypt
-         </Button>
-         <Button className="button" variant="contained" color="blue" onClick={handleDecryption}>
-            Decrypt
-         </Button>
+         
+         <Box sx={{ flexGrow: 1 }}>
+            <Grid container direction="row" sx={{ justifyContent: "center", alignItems: "center", marginBottom: "20px" }}>
+               <Grid>
+                  <span className="keyBoxLabel">Alphabet:</span>
+                  <input type="text" value={alphabet} className="keyBox" onChange={handleAlphabetChange}
+                     placeholder="Enter alphabet..." name="alphabetBox" />
+               </Grid>
+            </Grid>
+
+            <Grid container direction="row" spacing={{ sm: 1, md: 2 }} sx={{ justifyContent: "center", alignItems: "center", marginBottom: "20px" }}>
+               <Grid>
+                  <span className="keyBoxLabel">Separator between numbers:</span>
+                  <input type="text" value={separator} className="keyBox separatorBox"
+                     onChange={handleSeparatorChange} name="separatorBox" />
+               </Grid>
+               <Grid>
+                  <span className="keyBoxLabel">Include Spaces when Encrypting</span>
+                  <input type="checkbox" defaultChecked={false} onChange={handleSpaces} style={{ marginLeft: "10px"}}/>
+               </Grid>
+            </Grid>
+
+            <Grid container direction="row" sx={{ justifyContent: "center", alignItems: "center" }}>
+               <Grid>
+                  <Button className="button" variant="contained" color="blue" onClick={handleEncryption}>Encrypt</Button>
+               </Grid>
+               <Grid>
+                  <Button className="button" variant="contained" color="blue" onClick={handleDecryption}>Decrypt</Button>
+               </Grid>
+               <Grid>
+                  <Button className="button" variant="contained" color="brown" onClick={resetAlphabet}>Reset Alphabet (A-Z)</Button>
+               </Grid>
+            </Grid>
+         </Box>
 
          <div>
             <textarea value={ciphertext} className="textBox"

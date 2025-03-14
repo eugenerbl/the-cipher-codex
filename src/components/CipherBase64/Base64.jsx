@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import Base64About from './Base64About';
 
@@ -37,12 +38,14 @@ function Base64() {
                onChange={handleTextChange} placeholder="Enter plaintext here..." autoFocus={true} />
          </div>
 
-         <Button className="button" variant="contained" color="blue" onClick={encode}>
-            Encode
-         </Button>
-         <Button className="button" variant="contained" color="blue" onClick={decode}>
-            Decode
-         </Button>
+         <Container>
+            <Button className="button" variant="contained" color="blue" onClick={encode}>
+               Encode
+            </Button>
+            <Button className="button" variant="contained" color="blue" onClick={decode}>
+               Decode
+            </Button>
+         </Container>
 
          <div>
             <textarea name="ciphertext" type="text" className="textBox"
@@ -50,7 +53,8 @@ function Base64() {
                readOnly />
          </div>
          <div className="cipherInfo"><Base64About /></div>
-      </>);
+      </>
+   );
 }
 
 export default Base64;

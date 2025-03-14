@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid2';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import './Atbash.css';
@@ -70,58 +72,78 @@ function Atbash() {
             {errorMessage && (<Typography color="error" style={{ marginBottom: 20 }}>{errorMessage}</Typography>)}
          </div>
 
-         <div>
-            <span className="keyBoxLabel">Key:</span>
-            <input type="text" name="keyBox" className="keyBox" value={key}
-               onChange={handleKeyChange} placeholder="Enter 26-character key..."
-            />
-            <Button className="button" variant="contained" color="blue"
-               onClick={() => handleSubmit(key)}>Encrypt/Decrypt with Key
-            </Button>
-            <Button className="button" variant="contained" color="brown"
-               onClick={keyToTable}> Copy Key Value to Table
-            </Button>
+         <Box sx={{ flexGrow: 1 }}>
+            <Grid container direction="row" sx={{ justifyContent: "center", alignItems: "center" }}>
+               <Grid>
+                  <span className="keyBoxLabel">Key:</span>
+                  <input type="text" name="keyBox" className="keyBox" value={key}
+                     onChange={handleKeyChange} placeholder="Enter 26-character key..." />
+               </Grid>
+               <Grid>
+                  <Button className="button" variant="contained" color="blue"
+                     onClick={() => handleSubmit(key)}>Encrypt/Decrypt with Key
+                  </Button>
+               </Grid>
+               <Grid>
+                  <Button className="button" variant="contained" color="brown"
+                     onClick={keyToTable}> Copy Key Value to Table
+                  </Button>
+               </Grid>
+            </Grid>
+         </Box>
 
-            <div className="tableDiv">
-               <table className="alphabetTable">
-                  <thead>
-                     <tr>
-                        {normalAlphabet.split('').map((letter, index) => (<th key={index}>{letter}</th>))}
-                     </tr>
-                  </thead>
-                  <tbody>
-                     <tr>
-                        {normalAlphabet.split('').map((letter, index) => (
-                           <td key={index}>
-                              <input id={letter} type="text" maxLength="1" value={letters[index]}
-                                 onChange={(e) => handleLetterChange(e, index)} className="smallInput"
-                              />
-                           </td>
-                        ))}
-                     </tr>
-                  </tbody>
-               </table>
-            </div>
-            <div style={{ marginBottom: 30 }}>
-               <Button className="button" variant="contained" color="blue"
-                  onClick={() => handleSubmit(letters)}>Encrypt/Decrypt with Table
-               </Button>
-               <Button className="button" variant="contained" color="brown"
-                  onClick={tableToKey}> Copy Table Values to Key
-               </Button>
-            </div>
-
-
-            <Button className="button helperButton" variant="contained" color="green"
-               onClick={atbashKey}> Atbash Key (A=Z)
-            </Button>
-            <Button className="button helperButton" variant="contained" color="green"
-               onClick={normalKey}> Normal Key (A=A)
-            </Button>
-            <Button className="button helperButton" variant="contained" color="brown"
-               onClick={clearKey}> Clear Key and Table
-            </Button>
+         <div className="tableDiv">
+            <table className="alphabetTable">
+               <thead>
+                  <tr>
+                     {normalAlphabet.split('').map((letter, index) => (<th key={index}>{letter}</th>))}
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     {normalAlphabet.split('').map((letter, index) => (
+                        <td key={index}>
+                           <input id={letter} type="text" maxLength="1" value={letters[index]}
+                              onChange={(e) => handleLetterChange(e, index)} className="smallInput"
+                           />
+                        </td>
+                     ))}
+                  </tr>
+               </tbody>
+            </table>
          </div>
+
+         <Box sx={{ flexGrow: 1 }}>
+            <Grid container direction="row" sx={{ justifyContent: "center", alignItems: "center", marginBottom: "20px" }}>
+               <Grid>
+                  <Button className="button" variant="contained" color="blue"
+                     onClick={() => handleSubmit(letters)}>Encrypt/Decrypt with Table
+                  </Button>
+               </Grid>
+               <Grid>
+                  <Button className="button" variant="contained" color="brown"
+                     onClick={tableToKey}> Copy Table Values to Key
+                  </Button>
+               </Grid>
+            </Grid>
+            <Grid container direction="row" sx={{ justifyContent: "center", alignItems: "center" }}>
+               <Grid>
+                  <Button className="button" variant="contained" color="green"
+                     onClick={atbashKey}> Atbash Key (A=Z)
+                  </Button>
+               </Grid>
+               <Grid>
+                  <Button className="button" variant="contained" color="green"
+                     onClick={normalKey}> Normal Key (A=A)
+                  </Button>
+               </Grid>
+               <Grid>
+                  <Button className="button" variant="contained" color="brown"
+                     onClick={clearKey}> Clear Key and Table
+                  </Button>
+               </Grid>
+            </Grid>
+         </Box>
 
          <div>
             <textarea name="ciphertext" type="text" className="textBox"
@@ -129,7 +151,6 @@ function Atbash() {
                readOnly />
          </div>
          <div className="cipherInfo"><AtbashAbout /></div>
-
       </>
    )
 }
