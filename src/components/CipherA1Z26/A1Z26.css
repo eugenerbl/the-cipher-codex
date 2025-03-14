@@ -10,11 +10,7 @@
 
 .separatorBox {
    width: 50px;
-}
-
-.spaces {
-   margin-left: 10px;
-   vertical-align: middle;
+   margin-right: 0px;
 }
 
 .azTable {

@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid2';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import './Vigenere.css';
@@ -43,17 +45,27 @@ function Vigenere() {
                placeholder="Enter plaintext here..." autoFocus={true} />
             {errorMessage && (<Typography color="error" style={{ marginBottom: 20 }}>{errorMessage}</Typography>)}
          </div>
-         <div>
-            <span className="keyBoxLabel">Key:</span>
-            <input type="text" value={key} className="keyBox" onChange={handleKeyChange}
-               placeholder="Enter keyword..." name="keyBox" />
-            <Button className="button" variant="contained" color="blue" onClick={() => handleSubmit(1)}>
-               Encrypt
-            </Button>
-            <Button className="button" variant="contained" color="blue" onClick={() => handleSubmit(0)}>
-               Decrypt
-            </Button>
-         </div>
+
+         <Box sx={{ flexGrow: 1 }}>
+            <Grid container direction="row" sx={{ justifyContent: "center", alignItems: "center" }}>
+               <Grid>
+                  <span className="keywordBoxLabel">Key:</span>
+                  <input type="text" value={key} className="keywordBox" onChange={handleKeyChange}
+                     placeholder="Enter keyword..." name="keywordBox" />
+               </Grid>
+               <Grid>
+                  <Button className="button" variant="contained" color="blue" onClick={() => handleSubmit(1)}>
+                     Encrypt
+                  </Button>
+               </Grid>
+               <Grid>
+                  <Button className="button" variant="contained" color="blue" onClick={() => handleSubmit(0)}>
+                     Decrypt
+                  </Button>
+               </Grid>
+            </Grid>
+         </Box>
+
          <div>
             <textarea value={ciphertext} className="textBox"
                placeholder="Ciphertext appears here..." readOnly />

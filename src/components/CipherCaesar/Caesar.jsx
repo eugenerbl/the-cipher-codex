@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import Container from '@mui/material/Container';
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid2';
 import Button from '@mui/material/Button';
 import Slider from '@mui/material/Slider';
-import Box from '@mui/material/Box';
 import './Caesar.css';
 import CaesarAbout from './CaesarAbout';
 
-// Labels to make using slider easier
+// Labels for shift slider
 const marks = [
   { value: 0, label: '+0\n-0' },
   { value: 5, label: '+ 5\n-21' },
@@ -60,29 +62,33 @@ function Caesar() {
         <textarea type="text" value={text} className="textBox" onChange={handleChange}
           placeholder="Enter plaintext here..." autoFocus={true} />
       </div>
-      <div>
-        <Box display="flex" alignItems="center" style={{placeSelf: "center", margin: "20px 0px"}}>
-          <span className="sliderLabel">Shift Value:</span>
-          <Slider
-            name="Caesar Shift Value" className="slider"
-            aria-label="Shift Value" getAriaValueText={shiftText} aria-labelledby="shift-label"
-            valueLabelDisplay="on" defaultValue={0} value={shift}
-            marks={marks} track={false}
-            shiftStep={5} step={1}        
-            min={0} max={25}
-            onChange={handleShiftChange}
-            valueLabelFormat={valueLabelFormat}
-          />
-        </Box>
-        <Button className="button" variant="contained" color="green" onClick={() => preset(13)}> ROT13 (±13) </Button>
-        <Button className="button" variant="contained" color="green" onClick={() => preset(3)}> Classic Encryption (+3) </Button>
-        <Button className="button" variant="contained" color="green" onClick={() => preset(23)}> Classic Decryption (-3) </Button>
-        <br />
+      <Container className="sliderContainer">
+        <span className="sliderLabel">Shift Value:</span>
+        <Slider
+          name="Caesar Shift Value" className="slider"
+          aria-label="Shift Value" getAriaValueText={shiftText} aria-labelledby="shift-label"
+          valueLabelDisplay="on" defaultValue={0} value={shift}
+          marks={marks} track={false}
+          shiftStep={5} step={1}
+          min={0} max={25}
+          onChange={handleShiftChange}
+          valueLabelFormat={valueLabelFormat}
+        />
+      </Container>
 
-        <Button className="button" variant="contained" color="blue" onClick={swapText}> Swap Text </Button>
-        <Button className="button" variant="contained" color="brown" onClick={() => changeCase(1)}> UPPERCASE </Button>
-        <Button className="button" variant="contained" color="brown" onClick={() => changeCase(0)}> lowercase </Button>
-      </div>
+      <Box sx={{ flexGrow: 1 }}>
+        <Grid container direction="row" sx={{ justifyContent: "center", alignItems: "center" }}>
+          <Grid> <Button className="button" variant="contained" color="green" onClick={() => preset(13)}> ROT13 (±13) </Button> </Grid>
+          <Grid> <Button className="button" variant="contained" color="green" onClick={() => preset(3)}> Classic Encryption (+3) </Button> </Grid>
+          <Grid> <Button className="button" variant="contained" color="green" onClick={() => preset(23)}> Classic Decryption (-3) </Button> </Grid>
+        </Grid>
+        <Grid container direction="row" sx={{ justifyContent: "center", alignItems: "center" }}>
+          <Grid> <Button className="button" variant="contained" color="blue" onClick={swapText}> Swap Text </Button> </Grid>
+          <Grid> <Button className="button" variant="contained" color="brown" onClick={() => changeCase(1)}> UPPERCASE </Button> </Grid>
+          <Grid> <Button className="button" variant="contained" color="brown" onClick={() => changeCase(0)}> lowercase </Button> </Grid>
+        </Grid>
+      </Box>
+      
       <div>
         <textarea value={encode(text, shift)} className="textBox" 
           placeholder="Ciphertext appears here..." readOnly />

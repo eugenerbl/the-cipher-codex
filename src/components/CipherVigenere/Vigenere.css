@@ -1,10 +1,10 @@
-.keyBoxLabel {
+.keywordBoxLabel {
     font-family: var(--body-font);
     font-weight: var(--font-weight-regular);
 }
 
-.keyBox {
-    margin: 0px 20px;
+.keywordBox {
+    margin: 0px 10px;
     border: 1px solid;
     border-radius: 5px;
     font-family: var(--body-font);
@@ -28,8 +28,8 @@
 }
 
 @media screen and (max-width: 800px) {
-    .keyBox {
-        width: 200px !important;
+    .keywordBox {
+        width: 200px;
     }
 
     .vigenereSquare {
@@ -44,7 +44,8 @@
 }
 
 @media screen and (max-width: 600px) {
-    .keyBox {
-        width: 260px !important;
+    .keywordBox {
+        width: 260px;
+        margin-bottom: 20px;
     }
 }

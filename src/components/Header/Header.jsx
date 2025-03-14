@@ -1,10 +1,11 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { ciphers } from '../cipher-list';
 
 function Header() {
+  const location = useLocation();
   return (
     
     <Navbar expand="lg" collapseOnSelect fixed="top" className="header" data-bs-theme="light">
@@ -15,7 +16,9 @@ function Header() {
           <Nav className="me-auto">
             {ciphers.map((item, index) => (
               <Nav.Link as={Link} to={URLText(item.cipher)} key={index} eventKey={index} 
-                className="headerFooterText"> {item.cipher} </Nav.Link>
+                className={`headerFooterText ${location.pathname === URLText(item.cipher) ? 'active' : ''}`}> 
+                {item.cipher} 
+              </Nav.Link>
             ))}
           </Nav>
         </Navbar.Collapse>

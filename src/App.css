@@ -21,22 +21,22 @@
   padding: 1rem;
 }  
 
-.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
-  color: var(--bs-navbar-active-color);
-  font-weight: bold;
-  background-color: blanchedalmond;
-}
-
-.nav-link:hover {
-  background-color: blanchedalmond;
-}
-
 .headerFooterText {
   font-family: var(--body-font);
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   font-variation-settings: "wdth" 100;
+  transition: all 0.3s ease;
+}
+
+.headerFooterText.active {
+  background-color: blanchedalmond;
+  font-weight: bold;
+}
+
+.headerFooterText:hover {
+  background-color: blanchedalmond;
 }
 
 .textBox {
@@ -65,6 +65,15 @@
   text-align: initial;
   display: inline-block;
   padding: 0rem 1rem 2rem;
+}
+
+a {
+  font-weight: bold;
+  color: darkblue;
+}
+
+a:hover {
+  color: slateblue;
 }
 
 .headerFont {
