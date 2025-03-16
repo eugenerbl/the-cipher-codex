@@ -1,13 +1,3 @@
-.keyBox {
-   margin: 0px 20px 0px 10px;
-   border: 1px solid;
-   border-radius: 5px;
-   font-family: var(--body-font);
-   font-weight: var(--font-weight-regular);
-   width: 300px;
-   padding-left: 5px;
-}
-
 .separatorBox {
    width: 50px;
    margin-right: 0px;
@@ -28,8 +18,16 @@
    .azTable {
       justify-self: flex-start;
    }
+   .keyBox {
+      margin-right: 0px;
+   }
+}
 
-   .separatorBox {
-      width: 50px !important;
+@media (prefers-color-scheme: dark) {
+   .azTable td {
+      color: var(--dark-mode-white);
+      background-color: var(--dark-mode-primary);
+      border: 2px solid var(--dark-mode-secondary);
+      font-weight: 600;
    }
 }

@@ -49,9 +49,9 @@ function Vigenere() {
          <Box sx={{ flexGrow: 1 }}>
             <Grid container direction="row" sx={{ justifyContent: "center", alignItems: "center" }}>
                <Grid>
-                  <span className="keywordBoxLabel">Key:</span>
-                  <input type="text" value={key} className="keywordBox" onChange={handleKeyChange}
-                     placeholder="Enter keyword..." name="keywordBox" />
+                  <span className="keyBoxLabel">Key:</span>
+                  <input type="text" value={key} className="keyBox" onChange={handleKeyChange}
+                     placeholder="Enter keyword..." name="keyBox" />
                </Grid>
                <Grid>
                   <Button className="button" variant="contained" color="blue" onClick={() => handleSubmit(1)}>

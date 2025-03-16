@@ -54,3 +54,13 @@
         padding-right: 20px;
     }
 }
+
+@media (prefers-color-scheme: dark) {
+    .slider {
+        color: #ABA8FF;
+    }
+
+    .slider .MuiSlider-markLabel {
+       color: var(--dark-mode-white);
+    }
+ }

@@ -52,3 +52,16 @@
       text-align: center;
   }
 }
+
+@media (prefers-color-scheme: dark) {
+   #b64Example th, #b64Example td {
+      color: var(--dark-mode-white);
+      background-color: var(--dark-mode-primary);
+      border: 2px solid var(--dark-mode-secondary);
+      font-weight: 500;
+   }
+
+   .base64Table {
+      opacity: 0.8;
+  }
+}
