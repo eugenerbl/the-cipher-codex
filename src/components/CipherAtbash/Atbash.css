@@ -5,20 +5,8 @@
     margin: 25px 0px;
 }
 
-.keyBoxLabel {
-    font-family: var(--body-font);
-    font-weight: var(--font-weight-regular);
-    margin-left: 10px;
-}
-
 .keyBox {
     margin: 0px 20px;
-    border: 1px solid;
-    border-radius: 5px;
-    font-family: var(--body-font);
-    font-weight: var(--font-weight-regular);
-    width: 300px;
-    padding-left: 5px;
 }
 
 .alphabetTable {
@@ -68,6 +56,7 @@ ol, ul, li {
 th {
     padding-right: 20px;
 }
+
 td {
     font-family:'Courier New', Courier, monospace;
 }
@@ -86,6 +75,16 @@ td {
 
 @media screen and (max-width: 700px) {
     .keyBox {
-        margin-bottom: 20px !important;
+        margin-bottom: 20px;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .alphabetTable th {
+        background-color: #187D30;
+    }
+
+    .alphabetTable td {
+        border: 1px solid var(--dark-mode-secondary);
     }
 }

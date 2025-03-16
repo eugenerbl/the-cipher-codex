@@ -34,3 +34,23 @@
         font-size: 30px;
     }
 }
+
+@media (prefers-color-scheme: dark) {
+    .card {
+        background-color: var(--dark-mode-secondary);
+        border-color: #3F3F3F;
+    }
+
+    .card:hover {
+        box-shadow: 0px 0px 20px gray;
+        border: 1px solid black;
+    }
+
+    .cardImage {
+        opacity: 0.8;
+    }
+
+    .title {
+        color: var(--dark-mode-white);
+    }
+}

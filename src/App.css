@@ -52,6 +52,20 @@
   font-size: 18px;
 }
 
+.keyBoxLabel {
+  font-family: var(--body-font);
+  font-weight: var(--font-weight-regular);
+}
+
+.keyBox {
+  border: 1px solid;
+  border-radius: 5px;
+  font-family: var(--body-font);
+  font-weight: var(--font-weight-regular);
+  width: 300px;
+  padding-left: 5px;
+}
+
 .learningButton {
   font-family: var(--header-font);
   font-weight: var(--font-weight-regular);
@@ -103,5 +117,48 @@ a:hover {
 @media screen and (min-width: 800px) {
   .textBox {
     width: 80%;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .header, .footer {
+    background-color: var(--dark-mode-secondary);
+  }
+
+  .headerFont, .headerFooterText {
+    color: var(--dark-mode-white);
+  }
+
+  .headerFont:hover {
+    color: var(--dark-mode-white);
+  }
+
+  .headerFooterText.active {
+    background-color: var(--dark-mode-primary);
+    color: var(--dark-mode-white) !important;
+    font-weight: bold;
+  }
+
+  .headerFooterText:hover {
+    background-color: var(--dark-mode-primary);
+    color: var(--dark-mode-white);
+  }
+
+  .textBox {
+    background-color: #2A2A2A;
+  }
+
+  .textBox::placeholder {
+    color: var(--dark-mode-white);
+    opacity: 0.8;
+  }
+
+  .keyBox {
+    background-color: #2A2A2A;
+  }
+
+  .keyBox::placeholder {
+    color: var(--dark-mode-white);
+    opacity: 0.8;
   }
 }
