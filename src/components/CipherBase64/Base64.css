@@ -54,6 +54,14 @@
 }
 
 @media (prefers-color-scheme: dark) {
+   .encodingLabel {
+      color: var(--dark-mode-white);
+   }
+
+   .MuiSvgIcon-root {
+      color: var(--dark-mode-white);
+   }
+
    #b64Example th, #b64Example td {
       color: var(--dark-mode-white);
       background-color: var(--dark-mode-primary);
