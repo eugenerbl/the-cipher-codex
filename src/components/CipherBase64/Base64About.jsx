@@ -7,8 +7,24 @@ function Base64About() {
          <h3>How to Use</h3>
          <p>
             Enter your message in the top box. Click 'Encode' or 'Decode' to see the transformed 
-            text in the results box below. This tool uses the standard UTF-8 encoding.
+            text in the results box below. You can also switch between three common encodings:
          </p>
+         <ul>
+            <li>
+               <b>Standard</b> - The current standard Base64 encoding, described in <a href="https://datatracker.ietf.org/doc/html/rfc4648#section-4" target="_blank">RFC 4648</a>. 
+               Uses a 64-character set consisting of letters (A-Z, a-z), numbers (0-9), 
+               and the '+' and '/' symbols, with '=' used for padding. 
+            </li>
+            <li>
+               <b>URL Safe</b> - A version of the Standard encoding that replaces '+' with '-' 
+               and replaces '/' with '_'. Allows the output to be safely used as a filename or 
+               URL. Described in <a href="https://datatracker.ietf.org/doc/html/rfc4648#section-5" target="_blank">RFC 4648</a>.</li>
+            <li>
+               <b>MIME</b> - Multipurpose Internet Mail Extensions, described in <a href="https://datatracker.ietf.org/doc/html/rfc2045" target="_blank">RFC 2045</a>. 
+               Uses the same character set as Standard, but the output is split into lines 
+               with a maximum length of 76 characters.
+            </li>
+         </ul>
 
          <h3>What is Base64 Encoding?</h3>
          <p>
