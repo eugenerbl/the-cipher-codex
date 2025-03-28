@@ -18,7 +18,7 @@ function A1Z26About() {
             separator you use in the top box matches the one you enter here.
          </p>
          <p>
-            You can also choose to include spaces when encrypting. If you check this option, spaces
+            You can also choose to include spaces when encrypting. If this is checked, spaces
             will appear in the result box (for example, with a dash separator, you will see "- -").
             Finally, choose whether to Encrypt or Decrypt and view your results in the bottom box.
          </p>

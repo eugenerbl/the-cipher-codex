@@ -5,31 +5,25 @@ import Navbar from 'react-bootstrap/Navbar';
 import { ciphers } from '../cipher-list';
 
 function Header() {
-  const location = useLocation();
-  return (
-    
-    <Navbar expand="lg" collapseOnSelect fixed="top" className="header" data-bs-theme="light">
-      <Container>
-        <Navbar.Brand href="/the-cipher-codex" className="headerFont"> The Cipher Codex </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            {ciphers.map((item, index) => (
-              <Nav.Link as={Link} to={URLText(item.cipher)} key={index} eventKey={index} 
-                className={`headerFooterText ${location.pathname === URLText(item.cipher) ? 'active' : ''}`}> 
-                {item.cipher} 
-              </Nav.Link>
-            ))}
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
-  );
-}
-
-// Adds '/', converts text to lowercase, and removes spaces for use in a URL
-function URLText(item) {
-  return "/" + (item === "Vigenère" ? "vigenere" : item.toLowerCase().replace(/\s+/g, ''));
+   const location = useLocation();
+   return (
+      <Navbar expand="lg" collapseOnSelect fixed="top" className="header" data-bs-theme="light">
+         <Container>
+            <Navbar.Brand href="/the-cipher-codex" className="headerFont"> The Cipher Codex </Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+               <Nav className="me-auto">
+                  {ciphers.map((item, index) => (
+                     <Nav.Link as={Link} to={item.path} key={index} eventKey={index}
+                        className={`headerFooterText ${location.pathname === item.path ? 'active' : ''}`}>
+                        {item.displayName}
+                     </Nav.Link>
+                  ))}
+               </Nav>
+            </Navbar.Collapse>
+         </Container>
+      </Navbar>
+   );
 }
 
 export default Header;

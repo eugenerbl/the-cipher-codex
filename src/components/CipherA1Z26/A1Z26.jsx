@@ -54,21 +54,22 @@ function A1Z26() {
          <Box sx={{ flexGrow: 1 }}>
             <Grid container direction="row" sx={{ justifyContent: "center", alignItems: "center", marginBottom: "20px" }}>
                <Grid>
-                  <span className="keyBoxLabel">Alphabet:</span>
-                  <input type="text" value={alphabet} className="keyBox" onChange={handleAlphabetChange}
-                     placeholder="Enter alphabet..." name="alphabetBox" />
+                  <label htmlFor="alphabet" className="keyBoxLabel">Alphabet:</label>
+                  <input type="text" id="alphabet" value={alphabet} className="keyBox" 
+                     onChange={handleAlphabetChange} placeholder="Enter alphabet..." name="alphabetBox" />
                </Grid>
             </Grid>
 
             <Grid container direction="row" spacing={{ sm: 1, md: 2 }} sx={{ justifyContent: "center", alignItems: "center", marginBottom: "20px" }}>
                <Grid>
-                  <span className="keyBoxLabel">Separator between numbers:</span>
-                  <input type="text" value={separator} className="keyBox separatorBox"
+                  <label htmlFor="separator" className="keyBoxLabel">Separator between numbers:</label>
+                  <input type="text" id="separator" value={separator} className="keyBox separatorBox"
                      onChange={handleSeparatorChange} name="separatorBox" />
                </Grid>
                <Grid>
-                  <span className="keyBoxLabel">Include Spaces when Encrypting</span>
-                  <input type="checkbox" defaultChecked={false} onChange={handleSpaces} style={{ marginLeft: "10px"}}/>
+                  <label htmlFor="spaces" className="keyBoxLabel">Include Spaces when Encrypting</label>
+                  <input type="checkbox" id="spaces" defaultChecked={false} className="checkBox"
+                     onChange={handleSpaces} name="includeSpaces"/>
                </Grid>
             </Grid>
 
