@@ -3,6 +3,18 @@
    margin-right: 0px;
 }
 
+.checkBox {
+   margin-left: 10px;
+   height: 18px;
+   width: 18px;
+   vertical-align: text-bottom;
+   accent-color: #4F4CAF;
+}
+
+.checkBox:hover {
+   cursor: pointer;
+}
+
 .azTable {
    justify-self: center;
 }

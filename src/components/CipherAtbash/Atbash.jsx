@@ -75,8 +75,8 @@ function Atbash() {
          <Box sx={{ flexGrow: 1 }}>
             <Grid container direction="row" sx={{ justifyContent: "center", alignItems: "center" }}>
                <Grid>
-                  <span className="keyBoxLabel">Key:</span>
-                  <input type="text" name="keyBox" className="keyBox" value={key}
+                  <label htmlFor="key" className="keyBoxLabel">Key:</label>
+                  <input type="text" id="key" name="keyBox" className="keyBox" value={key}
                      onChange={handleKeyChange} placeholder="Enter 26-character key..." />
                </Grid>
                <Grid>
@@ -96,7 +96,11 @@ function Atbash() {
             <table className="alphabetTable">
                <thead>
                   <tr>
-                     {normalAlphabet.split('').map((letter, index) => (<th key={index}>{letter}</th>))}
+                     {normalAlphabet.split('').map((letter, index) => (
+                        <th key={index}>
+                           <label htmlFor={letter}>{letter}</label>
+                        </th>
+                     ))}
                   </tr>
                </thead>
                <tbody>
