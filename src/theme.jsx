@@ -14,6 +14,10 @@ export default createTheme({
          main: '#795548',
          contrastText: '#FFFFFF',
       },
+      red: {
+         main: '#B22222',
+         contrastText: '#FFFFFF',
+      },
       contrastThreshold: 4.5
    },
 });

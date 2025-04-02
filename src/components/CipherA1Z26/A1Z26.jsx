@@ -81,7 +81,7 @@ function A1Z26() {
                   <Button className="button" variant="contained" color="blue" onClick={handleDecryption}>Decrypt</Button>
                </Grid>
                <Grid>
-                  <Button className="button" variant="contained" color="brown" onClick={resetAlphabet}>Reset Alphabet (A-Z)</Button>
+                  <Button className="button" variant="contained" color="red" onClick={resetAlphabet}>Reset Alphabet (A-Z)</Button>
                </Grid>
             </Grid>
          </Box>
