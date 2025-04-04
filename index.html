@@ -13,11 +13,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Spectral+SC:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <title>The Cipher Codex</title>
-    <script type="module" crossorigin src="/the-cipher-codex/assets/index-DYNvf7sw.js"></script>
-    <link rel="stylesheet" crossorigin href="/the-cipher-codex/assets/index-DkKwIz60.css">
+    <script type="module" crossorigin src="/the-cipher-codex/assets/index-BD1bSa8O.js"></script>
+    <link rel="stylesheet" crossorigin href="/the-cipher-codex/assets/index-CulktvZF.css">
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <!-- This script prevents a flash of the light theme from occuring during page load when
+     dark mode theme is on (due to browser initially rendering the page with default styles 
+     before dark theme is applied)  -->
+    <script>
+      (function() {
+        const theme = localStorage.getItem('DARK_MODE') === "true";
+        if (theme) {
+          document.body.classList.add("dark");
+        }
+        else {
+          document.body.classList.remove("dark");
+        }
+      })();
+    </script>
   </body>
 </html>
