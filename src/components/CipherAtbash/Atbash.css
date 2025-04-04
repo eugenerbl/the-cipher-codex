@@ -71,7 +71,7 @@ td {
     }
 }
 
-@media (prefers-color-scheme: dark) {
+body.dark {
     .alphabetTable th {
         background-color: #187D30;
     }

@@ -55,7 +55,7 @@
     }
 }
 
-@media (prefers-color-scheme: dark) {
+body.dark {
     .slider {
         color: #ABA8FF;
     }

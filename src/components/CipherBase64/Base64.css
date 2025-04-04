@@ -53,7 +53,7 @@
   }
 }
 
-@media (prefers-color-scheme: dark) {
+body.dark {
    .encodingLabel {
       color: var(--dark-mode-white);
    }
