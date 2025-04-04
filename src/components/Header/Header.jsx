@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { ciphers } from '../cipher-list';
+import { DarkToggle } from '../DarkToggle/DarkToggle';
 
 function Header() {
    const location = useLocation();
@@ -20,6 +21,7 @@ function Header() {
                      </Nav.Link>
                   ))}
                </Nav>
+               <DarkToggle />
             </Navbar.Collapse>
          </Container>
       </Navbar>

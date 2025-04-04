@@ -18,5 +18,19 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <!-- This script prevents a flash of the light theme from occuring during page load when
+     dark mode theme is on (due to browser initially rendering the page with default styles 
+     before dark theme is applied)  -->
+    <script>
+      (function() {
+        const theme = localStorage.getItem('DARK_MODE') === "true";
+        if (theme) {
+          document.body.classList.add("dark");
+        }
+        else {
+          document.body.classList.remove("dark");
+        }
+      })();
+    </script>
   </body>
 </html>

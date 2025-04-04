@@ -142,7 +142,7 @@ function Atbash() {
                   </Button>
                </Grid>
                <Grid>
-                  <Button className="button" variant="contained" color="brown"
+                  <Button className="button" variant="contained" color="red"
                      onClick={clearKey}> Clear Key and Table
                   </Button>
                </Grid>

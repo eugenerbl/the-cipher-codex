@@ -3,8 +3,6 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: white;
-  background-color: #2A2A2A;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -15,6 +13,9 @@
   --body-font: "Open Sans", sans-serif;
   --font-weight-regular: 400;
   --font-weight-bold: 500;
+
+  --light-color: black;
+  --light-background-color: blanchedalmond;
 
   --dark-mode-primary: #121212;
   --dark-mode-secondary: #575757;
@@ -28,7 +29,17 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background-color: blanchedalmond;
+  color: var(--light-color);
+  background-color: var(--light-background-color);
+}
+
+:root.dark, body.dark {
+  color: var(--dark-mode-white);
+  background-color: var(--dark-mode-primary);
+
+  h1, h2, h3 {
+    color: burlywood;
+  }
 }
 
 a {
@@ -80,28 +91,4 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: black;
-    background-color: blanchedalmond;
-  }
-  a:hover {
-    color: #747BFF;
-  }
-  button {
-    background-color: #F9F9F9;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  body {
-    color: var(--dark-mode-white);
-    background-color: var(--dark-mode-primary);
-  }
-
-  h2, h3 {
-    color: burlywood;
-  }
 }
