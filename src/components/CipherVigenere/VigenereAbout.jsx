@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Vigenere.css';
 import VigenereSquare from '../../assets/Info/VigenèreSquare.svg';
 
@@ -15,7 +16,7 @@ function VigenereAbout() {
 
       <h3>What is the Vigenère Cipher?</h3>
       <p>
-        The Vigenère cipher encrypts a message by using several <span><a href="/caesar">Caesar ciphers</a></span> based 
+        The Vigenère cipher encrypts a message by using several <span><Link to="/caesar">Caesar ciphers</Link></span> based 
         on a single keyword. It is a polyalphabetic cipher, meaning it uses multiple alphabets to 
         encrypt the message, making it harder to break.
       </p>
