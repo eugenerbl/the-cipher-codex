@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <Header />
-      <div>
+      <div style={{minHeight: '100vh'}}>
         <ThemeProvider theme={theme}>
           <Routes>
             <Route path="/" element={<Home />} />

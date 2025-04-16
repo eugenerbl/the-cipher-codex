@@ -1,0 +1,2 @@
+#  direct all requests to index.html so server serves index.html file
+/* /index.html 200

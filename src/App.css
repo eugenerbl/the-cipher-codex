@@ -1,5 +1,5 @@
 #root {
-  margin: 50px auto 0px;
+  margin: 60px auto 0px;
   padding: 2rem;
   padding-bottom: 0rem;
   text-align: center;
@@ -123,6 +123,11 @@ a:hover {
   font-style: italic;
 }
 
+.hiddenText {
+  color: var(--light-background-color);
+  cursor: default;
+}
+
 @media screen and (min-width: 800px) {
   .textBox {
     width: 80%;
@@ -171,5 +176,9 @@ body.dark {
   .keyBox::placeholder {
     color: var(--dark-mode-white);
     opacity: 0.8;
+  }
+
+  .hiddenText {
+    color: var(--dark-mode-primary);
   }
 }
