@@ -89,10 +89,10 @@ function Base64() {
          </FormControl>
 
          <Container>
-            <Button className="button" variant="contained" color="blue" onClick={encode}>
+            <Button className="button" variant="contained" disableElevation color="blue" onClick={encode}>
                Encode
             </Button>
-            <Button className="button" variant="contained" color="blue" onClick={decode}>
+            <Button className="button" variant="contained" disableElevation color="blue" onClick={decode}>
                Decode
             </Button>
          </Container>

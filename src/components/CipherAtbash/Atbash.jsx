@@ -80,12 +80,12 @@ function Atbash() {
                      onChange={handleKeyChange} placeholder="Enter 26-character key..." />
                </Grid>
                <Grid>
-                  <Button className="button" variant="contained" color="blue"
+                  <Button className="button" variant="contained" disableElevation color="blue"
                      onClick={() => handleSubmit(key)}>Encrypt/Decrypt with Key
                   </Button>
                </Grid>
                <Grid>
-                  <Button className="button" variant="contained" color="brown"
+                  <Button className="button" variant="contained" disableElevation color="brown"
                      onClick={keyToTable}> Copy Key Value to Table
                   </Button>
                </Grid>
@@ -120,29 +120,29 @@ function Atbash() {
          <Box sx={{ flexGrow: 1 }}>
             <Grid container direction="row" sx={{ justifyContent: "center", alignItems: "center", marginBottom: "20px" }}>
                <Grid>
-                  <Button className="button" variant="contained" color="blue"
+                  <Button className="button" variant="contained" disableElevation color="blue"
                      onClick={() => handleSubmit(letters)}>Encrypt/Decrypt with Table
                   </Button>
                </Grid>
                <Grid>
-                  <Button className="button" variant="contained" color="brown"
+                  <Button className="button" variant="contained" disableElevation color="brown"
                      onClick={tableToKey}> Copy Table Values to Key
                   </Button>
                </Grid>
             </Grid>
             <Grid container direction="row" sx={{ justifyContent: "center", alignItems: "center" }}>
                <Grid>
-                  <Button className="button" variant="contained" color="green"
+                  <Button className="button" variant="contained" disableElevation color="green"
                      onClick={atbashKey}> Atbash Key (A=Z)
                   </Button>
                </Grid>
                <Grid>
-                  <Button className="button" variant="contained" color="green"
+                  <Button className="button" variant="contained" disableElevation color="green"
                      onClick={normalKey}> Normal Key (A=A)
                   </Button>
                </Grid>
                <Grid>
-                  <Button className="button" variant="contained" color="red"
+                  <Button className="button" variant="contained" disableElevation color="red"
                      onClick={clearKey}> Clear Key and Table
                   </Button>
                </Grid>

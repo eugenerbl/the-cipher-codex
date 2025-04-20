@@ -78,14 +78,14 @@ function Caesar() {
 
       <Box sx={{ flexGrow: 1 }}>
         <Grid container direction="row" sx={{ justifyContent: "center", alignItems: "center" }}>
-          <Grid> <Button className="button" variant="contained" color="green" onClick={() => preset(13)}> ROT13 (±13) </Button> </Grid>
-          <Grid> <Button className="button" variant="contained" color="green" onClick={() => preset(3)}> Classic Encryption (+3) </Button> </Grid>
-          <Grid> <Button className="button" variant="contained" color="green" onClick={() => preset(23)}> Classic Decryption (-3) </Button> </Grid>
+          <Grid> <Button className="button" variant="contained" disableElevation color="green" onClick={() => preset(13)}> ROT13 (±13) </Button> </Grid>
+          <Grid> <Button className="button" variant="contained" disableElevation color="green" onClick={() => preset(3)}> Classic Encryption (+3) </Button> </Grid>
+          <Grid> <Button className="button" variant="contained" disableElevation color="green" onClick={() => preset(23)}> Classic Decryption (-3) </Button> </Grid>
         </Grid>
         <Grid container direction="row" sx={{ justifyContent: "center", alignItems: "center" }}>
-          <Grid> <Button className="button" variant="contained" color="blue" onClick={swapText}> Swap Text </Button> </Grid>
-          <Grid> <Button className="button" variant="contained" color="brown" onClick={() => changeCase(1)}> UPPERCASE </Button> </Grid>
-          <Grid> <Button className="button" variant="contained" color="brown" onClick={() => changeCase(0)}> lowercase </Button> </Grid>
+          <Grid> <Button className="button" variant="contained" disableElevation color="blue" onClick={swapText}> Swap Text </Button> </Grid>
+          <Grid> <Button className="button" variant="contained" disableElevation color="brown" onClick={() => changeCase(1)}> UPPERCASE </Button> </Grid>
+          <Grid> <Button className="button" variant="contained" disableElevation color="brown" onClick={() => changeCase(0)}> lowercase </Button> </Grid>
         </Grid>
       </Box>
       
