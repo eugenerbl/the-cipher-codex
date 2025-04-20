@@ -54,12 +54,12 @@ function Vigenere() {
                      placeholder="Enter keyword..." name="keyBox" />
                </Grid>
                <Grid>
-                  <Button className="button" variant="contained" color="blue" onClick={() => handleSubmit(1)}>
+                  <Button className="button" variant="contained" disableElevation color="blue" onClick={() => handleSubmit(1)}>
                      Encrypt
                   </Button>
                </Grid>
                <Grid>
-                  <Button className="button" variant="contained" color="blue" onClick={() => handleSubmit(0)}>
+                  <Button className="button" variant="contained" disableElevation color="blue" onClick={() => handleSubmit(0)}>
                      Decrypt
                   </Button>
                </Grid>

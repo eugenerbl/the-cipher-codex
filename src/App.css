@@ -75,8 +75,8 @@
   cursor: pointer;
 }
 
-.learningButton {
-  font-family: var(--header-font);
+.button {
+  font-family: var(--body-font);
   font-weight: var(--font-weight-regular);
   font-size: 16px;
   text-transform: none;

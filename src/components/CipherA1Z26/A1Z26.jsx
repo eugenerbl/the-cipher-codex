@@ -75,13 +75,13 @@ function A1Z26() {
 
             <Grid container direction="row" sx={{ justifyContent: "center", alignItems: "center" }}>
                <Grid>
-                  <Button className="button" variant="contained" color="blue" onClick={handleEncryption}>Encrypt</Button>
+                  <Button className="button" variant="contained" disableElevation color="blue" onClick={handleEncryption}>Encrypt</Button>
                </Grid>
                <Grid>
-                  <Button className="button" variant="contained" color="blue" onClick={handleDecryption}>Decrypt</Button>
+                  <Button className="button" variant="contained" disableElevation color="blue" onClick={handleDecryption}>Decrypt</Button>
                </Grid>
                <Grid>
-                  <Button className="button" variant="contained" color="red" onClick={resetAlphabet}>Reset Alphabet (A-Z)</Button>
+                  <Button className="button" variant="contained" disableElevation color="red" onClick={resetAlphabet}>Reset Alphabet (A-Z)</Button>
                </Grid>
             </Grid>
          </Box>

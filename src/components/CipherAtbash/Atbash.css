@@ -31,15 +31,6 @@
     font-weight: var(--font-weight-regular);
 }
 
-.button {
-    font-family: var(--body-font);
-    font-weight: var(--font-weight-regular);
-    font-size: 16px;
-    text-transform: none;
-    margin: 10px;
-    margin-top: 10px;
-}
-
 ol, ul, li {
     font-family: var(--body-font);
     font-weight: var(--font-weight-regular);

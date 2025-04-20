@@ -9,7 +9,7 @@
 .slider {
     height: 5px;
     width: 300px;
-    color: #4F4CAF;
+    color: #4F4CC4;
     padding: 15px 0px;
 }
 
@@ -28,7 +28,7 @@
 
 .slider .MuiSlider-valueLabel {
     width: 100px;
-    background-color: #4F4CAF;
+    background-color: #4F4CC4;
     font-size: 16px;
     font-family: monospace;
     white-space: break-spaces;
@@ -38,14 +38,6 @@
     width: 30px;
     font-family: monospace;
     white-space: pre-wrap;
-}
-
-.button {
-    font-family: var(--body-font);
-    font-weight: var(--font-weight-regular);
-    font-size: 16px;
-    text-transform: none;
-    margin: 10px;
 }
 
 @media screen and (max-width: 600px) {
