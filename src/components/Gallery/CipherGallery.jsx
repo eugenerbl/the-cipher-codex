@@ -9,7 +9,7 @@ import './CipherGallery.css';
 
 function Gallery() {
    return (
-      <Container>
+      <Container className="galleryContainer">
          <Row xs={1} md={2} lg={3} className="g-4 gallery">
             {Array.from({ length: ciphers.length }).map((_, index) => (
                <Col key={index}>

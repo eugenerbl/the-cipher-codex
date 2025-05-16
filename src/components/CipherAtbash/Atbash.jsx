@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid2';
 import Button from '@mui/material/Button';
@@ -40,18 +40,14 @@ function Atbash() {
       setKey(underscores.join(''));
    };
 
-   const handleSubmit = (value) => {
-      let errors = [];
+   const transformText = (letters) => {
       if (!text) {
-         errors.push('Plaintext input cannot be blank. ');
-      }
-
-      if (errors.length > 0) {
-         setErrorMessage(errors.join(' '));
+         setErrorMessage('Plaintext input cannot be blank.');
          setCiphertext('');
-      } else {
+      }
+      else {
          setErrorMessage('');
-         setCiphertext(substitution(text, value, normalAlphabet));
+         setCiphertext(substitution(text, letters, normalAlphabet));
       }
    };
 
@@ -81,7 +77,7 @@ function Atbash() {
                </Grid>
                <Grid>
                   <Button className="button" variant="contained" disableElevation color="blue"
-                     onClick={() => handleSubmit(key)}>Encrypt/Decrypt with Key
+                     onClick={() => transformText(key)}>Encrypt/Decrypt with Key
                   </Button>
                </Grid>
                <Grid>
@@ -121,7 +117,7 @@ function Atbash() {
             <Grid container direction="row" sx={{ justifyContent: "center", alignItems: "center", marginBottom: "20px" }}>
                <Grid>
                   <Button className="button" variant="contained" disableElevation color="blue"
-                     onClick={() => handleSubmit(letters)}>Encrypt/Decrypt with Table
+                     onClick={() => transformText(letters)}>Encrypt/Decrypt with Table
                   </Button>
                </Grid>
                <Grid>
