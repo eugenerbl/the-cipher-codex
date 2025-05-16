@@ -26,7 +26,8 @@ function AtbashAbout() {
       </ol>
 
       <p><b>
-        Hint: You can use symbols like an underscore "_" as a wildcard for unknown symbols.
+        Hint: You can use symbols like an underscore "_" as a wildcard for unknown symbols. An underscore 
+        will be used in the bottom box if a letter does not have a character mapped to it.
       </b></p>
 
       <p>

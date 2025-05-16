@@ -1,6 +1,10 @@
+.galleryContainer {
+    display: flex;
+    justify-content: center;
+}
+
 .gallery {
     width: 80%;
-    place-self: center;
     margin-bottom: 30px;
 }
 
