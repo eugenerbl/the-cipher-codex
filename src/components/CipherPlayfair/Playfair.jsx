@@ -1,0 +1,189 @@
+import { useEffect, useState } from 'react';
+import Box from '@mui/material/Box';
+import Stack from '@mui/material/Stack';
+import Grid from '@mui/material/Grid2';
+import Button from '@mui/material/Button';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
+import Typography from '@mui/material/Typography';
+
+import { encrypt, decrypt } from './playfairCipher';
+import './Playfair.css';
+import PlayfairAbout from './PlayfairAbout';
+
+
+function Playfair() {
+   useEffect(() => { document.title = 'Playfair Cipher - The Cipher Codex'; }, []);
+   const [text, setText] = useState('');
+   const [keyword, setKeyword] = useState('');
+   const [alphabet, setAlphabet] = useState('ABCDEFGHIKLMNOPQRSTUVWXYZ');  // J is omitted
+
+   const [omittedLetter, setOmittedLetter] = useState('J');
+   const [repLetter, setRepLetter] = useState('I');
+   const [padLetter, setPadLetter] = useState('X');
+
+   const [ciphertext, setCiphertext] = useState('');
+   const [errorMessage, setErrorMessage] = useState('');
+
+   const normalAlphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+   const resetKeyword = () => {
+      setKeyword('');
+      // omitted letter doesn't change, so must take that into account
+      setAlphabet(completeKeyword('', omittedLetter, normalAlphabet));
+   }
+
+   const resetLetters = () => {
+      setOmittedLetter('J');
+      setRepLetter('I');
+      setPadLetter('X');
+      // keyword doesn't change, so must keep keyword in front of alphabet
+      setAlphabet(completeKeyword(keyword, 'J', 'ABCDEFGHIKLMNOPQRSTUVWXYZ'));
+   }
+
+   const handleKeywordChange = (event) => {
+      setKeyword(event.target.value);
+      setAlphabet(completeKeyword(event.target.value, omittedLetter, normalAlphabet));
+   }
+
+   const handleOmitLtrChange = (event) => {
+      setOmittedLetter(event.target.value);
+      setAlphabet(completeKeyword(keyword, event.target.value, normalAlphabet));
+   }
+
+   const handleEncryption = () => {
+      let [notes, encryptedText] = encrypt(text, alphabet, omittedLetter, repLetter, padLetter);
+
+      setErrorMessage(notes.join('\n'));
+      setCiphertext(encryptedText);
+   };
+
+   const handleDecryption = () => {
+      let [notes, decryptedText] = decrypt(text, alphabet, omittedLetter, repLetter, padLetter);
+
+      setErrorMessage(notes.join('\n'));
+      setCiphertext(decryptedText);
+   };
+
+   return (
+      <>
+         <div>
+            <h1> Playfair Cipher </h1>
+            <textarea type="text" value={text} className="textBox"
+               onChange={(event) => {setText(event.target.value);}}
+               placeholder="Enter plaintext here..." autoFocus={true} 
+            />
+         </div>
+         
+         <Box sx={{ flexGrow: 1 }}>
+            <Grid container direction="row" sx={{ justifyContent: "center", alignItems: "center", marginBottom: "20px" }}>
+               <Grid>
+                  <Stack>
+                     <label htmlFor="keyword" className="keyBoxLabel">Keyword:</label>
+                     <input type="text" id="keyword" value={keyword} className="keyBox" 
+                        onChange={handleKeywordChange} 
+                        placeholder="Enter keyword..." name="keywordBox"
+                     />
+                     <label htmlFor="completeKeyword" className="keyBoxLabel">Playfair Alphabet:</label>
+                     <input readOnly type="text" id="completeKeyword" value={alphabet}
+                        className="keyBox completeKey" name="completeKeywordBox"
+                     />
+                  </Stack>
+               </Grid>
+            </Grid>
+
+            <Grid container className="optionContainer">
+               <FormControl className="letterOption" sx={{ m: 1 }}>
+                  <label htmlFor="omitted-letter-select" className="keyBoxLabel">Letter to omit:</label>
+                  <Select
+                     labelId="omitted-letter-select"
+                     id="omitted-letter-select"
+                     className="letterOptionBox"
+                     value={omittedLetter}
+                     onChange={handleOmitLtrChange}
+                  >
+                     {normalAlphabet.split('').map((letter) => (
+                        <MenuItem key={letter} value={letter} disabled={letter === repLetter || letter === padLetter}> 
+                           {letter}
+                        </MenuItem>
+                     ))}
+                  </Select>
+               </FormControl>
+               <FormControl className="letterOption" sx={{ m: 1 }}>
+                  <label htmlFor="replace-letter-select" className="keyBoxLabel">Replace omitted letter with:</label>
+                  <Select
+                     labelId="replace-letter-select"
+                     id="replace-letter-select"
+                     value={repLetter}
+                     className="letterOptionBox"
+                     onChange={(event) => {setRepLetter(event.target.value);}}
+                  >
+                     {normalAlphabet.split('').map((letter) => (
+                        <MenuItem key={letter} value={letter} disabled={letter === omittedLetter}> {letter} </MenuItem>
+                     ))}
+                  </Select>
+               </FormControl>
+               <FormControl className="letterOption" sx={{ m: 1 }}>
+                  <label htmlFor="padding-letter-select" className="keyBoxLabel">Padding letter:</label>
+                  <Select
+                     labelId="padding-letter-select"
+                     id="padding-letter-select"
+                     value={padLetter}
+                     className="letterOptionBox"
+                     onChange={(event) => {setPadLetter(event.target.value);}}
+                  >
+                     {normalAlphabet.split('').map((letter) => (
+                        <MenuItem key={letter} value={letter} disabled={letter === omittedLetter}> {letter} </MenuItem>
+                     ))}
+                  </Select>
+               </FormControl>
+            </Grid>
+
+            <Grid container direction="row" sx={{ justifyContent: "center", alignItems: "center" }}>
+               <Grid>
+                  <Button className="button" variant="contained" disableElevation color="blue" onClick={handleEncryption}>Encrypt</Button>
+               </Grid>
+               <Grid>
+                  <Button className="button" variant="contained" disableElevation color="blue" onClick={handleDecryption}>Decrypt</Button>
+               </Grid>
+               <Grid>
+                  <Button className="button" variant="contained" disableElevation color="red" onClick={resetKeyword}>Clear Keyword</Button>
+               </Grid>
+               <Grid>
+                  <Button className="button" variant="contained" disableElevation color="brown" onClick={resetLetters}>Reset Letter Options</Button>
+               </Grid>
+            </Grid>
+         </Box>
+
+         <div>
+            {errorMessage && (<Typography color="error" style={{ marginTop: 20, whiteSpace: "pre" }}>{errorMessage}</Typography>)}
+            <textarea value={ciphertext} className="textBox"
+               placeholder="Ciphertext appears here..." readOnly />
+         </div>
+         <div className="cipherInfo"><PlayfairAbout /></div>
+      </>
+   );
+}
+
+// Translates a keyword into a 25-character cipher key
+function completeKeyword(keyword, omitLetter, alphabet) {
+
+   // remove omitted letter from keyword, if applicable
+   if (keyword.toUpperCase().includes(omitLetter.toUpperCase())) {
+      keyword = keyword.toUpperCase().replaceAll(omitLetter, "");
+   }
+
+   // convert keyword to uppercase and remove non-letters
+   keyword = keyword.toUpperCase().replace(/[^A-Z]/g, "");
+
+   // create new Set to remove duplicate letters; spread (...) converts to array
+   let usedChars = [...new Set(keyword)];
+
+   // get remaining characters by filtering out omitted letter and letters already in keyword
+   let remainingChars = alphabet.split("").filter(letter => !usedChars.includes(letter) && letter !== omitLetter);
+
+   return usedChars.concat(remainingChars).join("");
+}
+
+export default Playfair;
