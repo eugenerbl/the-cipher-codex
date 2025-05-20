@@ -6,7 +6,7 @@ import PageNotFound from './components/PageNotFound';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from './theme';
 import './App.css';
-import { Caesar, Vigenere, Atbash, A1Z26, Base64 } from './components/index';
+import { Caesar, Vigenere, Atbash, A1Z26, Base64, Playfair } from './components/index';
 
 function App() {
   return (
@@ -16,11 +16,12 @@ function App() {
         <ThemeProvider theme={theme}>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/caesar" element={<Caesar />} />
-            <Route path="/atbash" element={<Atbash />} />
-            <Route path="/vigenere" element={<Vigenere />} />
             <Route path="/a1z26" element={<A1Z26 />} />
+            <Route path="/atbash" element={<Atbash />} />
             <Route path="/base64" element={<Base64 />} />
+            <Route path="/caesar" element={<Caesar />} />
+            <Route path="/playfair" element={<Playfair />} />
+            <Route path="/vigenere" element={<Vigenere />} />
             <Route path="/*" element={<PageNotFound />} />
           </Routes>
         </ThemeProvider>

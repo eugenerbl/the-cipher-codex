@@ -1,0 +1,53 @@
+.completeKey {
+   background-color: lightgray;
+}
+
+.optionContainer {
+   justify-content: center;
+   margin-bottom: 20px;
+}
+
+.letterOptionBox {
+   background-color: white;
+   width: 100px;
+   align-self: center;
+
+   & .MuiInputBase-input {
+      border: 1px solid black;
+      padding: 5px 0px 5px 26px;
+   }
+}
+
+@media screen and (max-width: 600px) {
+   .optionContainer {
+      width: 80%;
+      justify-content: right;
+      justify-self: center;
+   }
+
+   .letterOption {
+      flex-direction: row;
+      align-items: center;
+      gap: 10px;
+   }
+}
+
+body.dark {
+   .letterOptionBox {
+      background-color: var(--dark-mode-secondary);
+      color: var(--dark-mode-white);
+
+      & .MuiInputBase-input {
+         padding: 5px 32px 5px 26px;
+      }
+   }
+
+   .completeKey {
+      background-color: darkgray;
+      color: black;
+   }
+
+   .completeKey::placeholder {
+      color: black;
+   }
+}
