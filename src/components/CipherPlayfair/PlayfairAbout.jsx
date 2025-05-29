@@ -2,11 +2,11 @@ import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid2';
 import './Playfair.css';
-import PlayfairGrids from '../../assets/info/Playfair1Grids.png';
-import PlayfairRow   from '../../assets/info/Playfair2Row.png';
-import PlayfairCol   from '../../assets/info/Playfair2Column.png';
-import PlayfairRect  from '../../assets/info/Playfair2Rectangle.png';
-import PlayfairEx    from '../../assets/info/Playfair3Example.png';
+import PlayfairGrids from '../../assets/Info/Playfair1Grids.png';
+import PlayfairRow   from '../../assets/Info/Playfair2Row.png';
+import PlayfairCol   from '../../assets/Info/Playfair2Column.png';
+import PlayfairRect  from '../../assets/Info/Playfair2Rectangle.png';
+import PlayfairEx    from '../../assets/Info/Playfair3Example.png';
 
 function PlayfairAbout() {
   return (
