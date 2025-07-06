@@ -6,7 +6,7 @@ function Footer() {
         <footer className="footer">
             <Container fluid className="headerFooterText">
                 <Row style={{justifyContent: "center", fontSize: "18px"}} >
-                    &copy; {new Date().getFullYear()} The Cipher Codex
+                    <span>&copy; {new Date().getFullYear()} The Cipher Codex</span>
                 </Row>
             </Container>
         </footer>

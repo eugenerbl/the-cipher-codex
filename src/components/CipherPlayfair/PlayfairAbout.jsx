@@ -15,14 +15,14 @@ function PlayfairAbout() {
         <p>
           To encrypt or decrypt a message, enter the text in the top box, then input the keyword and 
           choose letters for three different options. Click "Encrypt" or "Decrypt" to see the transformed 
-          text in the bottom box. <i>Note that numbers, spaces, and non-letter characters will be 
-          ignored; however, you may see padding letters.</i>
+          text in the bottom box. <i>Numbers, spaces, and non-letter characters will be ignored; 
+          however, you may see padding letters.</i>
         </p>
         <p>
           You'll find the complete 25-letter alphabet in the Playfair Alphabet box. This alphabet will 
-          be arranged in a 5x5 Playfair grid for encryption and decryption. <i>This cipher uses the 
-          English alphabet. The omitted letter, all numbers, and all non-letter characters in the 
-          Keyword box will be ignored.</i>
+          be arranged in the 5x5 Playfair Grid to the right of the input box for encryption and 
+          decryption. <i>This cipher uses the English alphabet. The omitted letter, all numbers, and 
+          all non-letter characters in the Keyword box will be ignored.</i>
         </p>
         <p>
           Three letter options are provided to customize your cipher:
@@ -34,8 +34,8 @@ function PlayfairAbout() {
             cannot be the same as the replacement or padding letter.
           </li>
           <li>
-            <b>Replace omitted letter with (Replacement letter)</b>: All instances of the omitted letter 
-            in the message will be replaced with this letter.
+            <b>Replacement letter</b>: All instances of the omitted letter in the message will be 
+            replaced with this letter.
           </li>
           <li>
             <b>Padding letter</b>: This letter is used to either split pairs of double letters or 
