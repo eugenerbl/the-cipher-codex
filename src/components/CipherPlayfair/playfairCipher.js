@@ -35,7 +35,7 @@ function cleanText(text, omitLetter, repLetter) {
     let plaintext = text.toUpperCase().replace(/[^A-Z]/g, "");
 
     if (plaintext.toUpperCase().includes(omitLetter.toUpperCase())) {
-        addNote("Note: Found omitted letter '" + omitLetter + "' in text. Replaced with '" + repLetter + "'.");
+        addNote(`Note: Found omitted letter ${omitLetter} in text. Replaced with ${repLetter}.`);
     }
 
     return plaintext.replaceAll(omitLetter, repLetter);
@@ -46,8 +46,7 @@ function cleanText(text, omitLetter, repLetter) {
 function choosePadChar(omitLetter, padLetter) {
     for (let ltr of COMMON_PADDING_LETTERS) {
         if (ltr !== padLetter && ltr !== omitLetter) {
-            addNote("Note: Double padding letter '" + padLetter + padLetter + "' was created. Used '" +
-                ltr + "' as padding letter here to make '" + padLetter + ltr + " " + padLetter + "'.");
+            addNote(`Note: Double padding letter '${padLetter}${padLetter}' was created. Used '${ltr}' as padding letter here to make '${padLetter}${ltr} ${padLetter}'.`);
             return ltr;
         }
     }

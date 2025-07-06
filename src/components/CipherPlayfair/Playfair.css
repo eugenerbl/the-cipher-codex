@@ -2,9 +2,8 @@
    background-color: lightgray;
 }
 
-.optionContainer {
-   justify-content: center;
-   margin-bottom: 20px;
+.letterOption {
+   margin-top: 20px;
 }
 
 .letterOptionBox {
@@ -30,6 +29,21 @@
     width: 90%;
 }
 
+.grid {
+   border: 1px solid black;
+   place-self: center;
+   background-color: white;
+}
+
+.gridLetter {
+   padding: 5px;
+   text-align: center;
+   width: 30px;
+   height: 20px;
+   aspect-ratio: 1;
+   font-family: var(--body-font);
+}
+
 @media screen and (max-width: 600px) {
    .optionContainer {
       width: 80%;
@@ -41,6 +55,12 @@
       flex-direction: row;
       align-items: center;
       gap: 10px;
+      margin-top: 10px;
+   }
+
+   .gridLetter {
+      padding: 6px;
+      font-size: 18px;
    }
 }
 
@@ -65,5 +85,10 @@ body.dark {
 
    .playfairGrids, .playfairRules {
       opacity: 0.8;
+   }
+
+   .grid {
+      border: 1px solid var(--dark-mode-white);
+      background-color: var(--dark-mode-primary);
    }
 }

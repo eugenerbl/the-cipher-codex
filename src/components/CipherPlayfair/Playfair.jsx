@@ -30,7 +30,7 @@ function Playfair() {
 
    const resetKeyword = () => {
       setKeyword('');
-      // omitted letter doesn't change, so must take that into account
+      // omitted letter doesn't change, so must keep existing letter
       setAlphabet(completeKeyword('', omittedLetter, normalAlphabet));
    }
 
@@ -77,8 +77,8 @@ function Playfair() {
          </div>
          
          <Box sx={{ flexGrow: 1 }}>
-            <Grid container direction="row" sx={{ justifyContent: "center", alignItems: "center", marginBottom: "20px" }}>
-               <Grid>
+            <Grid container direction="row" sx={{ justifyContent: "center", margin: "0px 10vw 20px" }}>
+               <Grid size={{ xs: 12, sm: 8, lg: 6 }} sx={{ placeItems: "center"}}>
                   <Stack>
                      <label htmlFor="keyword" className="keyBoxLabel">Keyword:</label>
                      <input type="text" id="keyword" value={keyword} className="keyBox" 
@@ -90,54 +90,57 @@ function Playfair() {
                         className="keyBox completeKey" name="completeKeywordBox"
                      />
                   </Stack>
+               
+                  <FormControl className="letterOption" sx={{ m: 1 }}>
+                     <label htmlFor="omitted-letter-select" className="keyBoxLabel">Letter to omit:</label>
+                     <Select
+                        labelId="omitted-letter-select"
+                        id="omitted-letter-select"
+                        className="letterOptionBox"
+                        value={omittedLetter}
+                        onChange={handleOmitLtrChange}
+                     >
+                        {normalAlphabet.split('').map((letter) => (
+                           <MenuItem key={letter} value={letter} disabled={letter === repLetter || letter === padLetter}> 
+                              {letter}
+                           </MenuItem>
+                        ))}
+                     </Select>
+                  </FormControl>
+                  <FormControl className="letterOption" sx={{ m: 1 }}>
+                     <label htmlFor="replace-letter-select" className="keyBoxLabel">Replacement letter:</label>
+                     <Select
+                        labelId="replace-letter-select"
+                        id="replace-letter-select"
+                        value={repLetter}
+                        className="letterOptionBox"
+                        onChange={(event) => {setRepLetter(event.target.value);}}
+                     >
+                        {normalAlphabet.split('').map((letter) => (
+                           <MenuItem key={letter} value={letter} disabled={letter === omittedLetter}> {letter} </MenuItem>
+                        ))}
+                     </Select>
+                  </FormControl>
+                  <FormControl className="letterOption" sx={{ m: 1 }}>
+                     <label htmlFor="padding-letter-select" className="keyBoxLabel">Padding letter:</label>
+                     <Select
+                        labelId="padding-letter-select"
+                        id="padding-letter-select"
+                        value={padLetter}
+                        className="letterOptionBox"
+                        onChange={(event) => {setPadLetter(event.target.value);}}
+                     >
+                        {normalAlphabet.split('').map((letter) => (
+                           <MenuItem key={letter} value={letter} disabled={letter === omittedLetter}> {letter} </MenuItem>
+                        ))}
+                     </Select>
+                  </FormControl>
                </Grid>
-            </Grid>
-
-            <Grid container className="optionContainer">
-               <FormControl className="letterOption" sx={{ m: 1 }}>
-                  <label htmlFor="omitted-letter-select" className="keyBoxLabel">Letter to omit:</label>
-                  <Select
-                     labelId="omitted-letter-select"
-                     id="omitted-letter-select"
-                     className="letterOptionBox"
-                     value={omittedLetter}
-                     onChange={handleOmitLtrChange}
-                  >
-                     {normalAlphabet.split('').map((letter) => (
-                        <MenuItem key={letter} value={letter} disabled={letter === repLetter || letter === padLetter}> 
-                           {letter}
-                        </MenuItem>
-                     ))}
-                  </Select>
-               </FormControl>
-               <FormControl className="letterOption" sx={{ m: 1 }}>
-                  <label htmlFor="replace-letter-select" className="keyBoxLabel">Replace omitted letter with:</label>
-                  <Select
-                     labelId="replace-letter-select"
-                     id="replace-letter-select"
-                     value={repLetter}
-                     className="letterOptionBox"
-                     onChange={(event) => {setRepLetter(event.target.value);}}
-                  >
-                     {normalAlphabet.split('').map((letter) => (
-                        <MenuItem key={letter} value={letter} disabled={letter === omittedLetter}> {letter} </MenuItem>
-                     ))}
-                  </Select>
-               </FormControl>
-               <FormControl className="letterOption" sx={{ m: 1 }}>
-                  <label htmlFor="padding-letter-select" className="keyBoxLabel">Padding letter:</label>
-                  <Select
-                     labelId="padding-letter-select"
-                     id="padding-letter-select"
-                     value={padLetter}
-                     className="letterOptionBox"
-                     onChange={(event) => {setPadLetter(event.target.value);}}
-                  >
-                     {normalAlphabet.split('').map((letter) => (
-                        <MenuItem key={letter} value={letter} disabled={letter === omittedLetter}> {letter} </MenuItem>
-                     ))}
-                  </Select>
-               </FormControl>
+            
+               <Grid size={{ xs: 12, sm: 4, lg: 4 }}>
+                  <label className="keyBoxLabel">Playfair Grid:</label>
+                  <LetterTable inputString={alphabet} />
+               </Grid>
             </Grid>
 
             <Grid container direction="row" sx={{ justifyContent: "center", alignItems: "center" }}>
@@ -157,7 +160,7 @@ function Playfair() {
          </Box>
 
          <div>
-            {errorMessage && (<Typography color="error" style={{ marginTop: 20, whiteSpace: "pre" }}>{errorMessage}</Typography>)}
+            {errorMessage && (<Typography color="error" style={{ marginTop: 20, whiteSpace: "pre-wrap" }}>{errorMessage}</Typography>)}
             <textarea value={ciphertext} className="textBox"
                placeholder="Ciphertext appears here..." readOnly />
          </div>
@@ -185,5 +188,33 @@ function completeKeyword(keyword, omitLetter, alphabet) {
 
    return usedChars.concat(remainingChars).join("");
 }
+
+// Builds a 5x5 Playfair Grid
+const LetterTable = ({ inputString }) => {
+   const gridSize = 5;
+
+   // Convert string into a 2D array
+   const tableData = [];
+   for (let i = 0; i < gridSize; i++) {
+      const row = inputString.slice(i * gridSize, (i + 1) * gridSize).split('');
+      tableData.push(row);
+   }
+
+   return (
+      <table className="grid" style={{ borderCollapse: 'collapse' }}>
+         <tbody>
+            {tableData.map((row, rowIndex) => (
+               <tr key={rowIndex}>
+                  {row.map((char, colIndex) => (
+                     <td className="gridLetter" key={colIndex}>
+                        {char}
+                     </td>
+                  ))}
+               </tr>
+            ))}
+         </tbody>
+      </table>
+   );
+};
 
 export default Playfair;
