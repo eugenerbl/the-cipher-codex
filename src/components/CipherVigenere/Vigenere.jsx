@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid2';
 import Typography from '@mui/material/Typography';
@@ -98,10 +98,10 @@ function encrypt(message, key) {
          } else {
             result += String.fromCharCode((c.charCodeAt(0) + key.toLowerCase().charCodeAt(j) - 2 * 97) % 26 + 97); // a: 97
          }
+         j = ++j % key.length;
       } else {
          result += c;
       }
-      j = ++j % key.length;
    }
    return result;
 }
@@ -118,10 +118,10 @@ function decrypt(message, key) {
          } else {
             result += String.fromCharCode(122 - (25 - (c.charCodeAt(0) - key.toLowerCase().charCodeAt(j))) % 26);
          }
+         j = ++j % key.length;
       } else {
          result += c;
       }
-      j = ++j % key.length;
    }
    return result;
 }
