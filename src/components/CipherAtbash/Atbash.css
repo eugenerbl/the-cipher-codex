@@ -31,13 +31,10 @@
     font-weight: var(--font-weight-regular);
 }
 
-ol, ul, li {
-    font-family: var(--body-font);
-    font-weight: var(--font-weight-regular);
-}
-
 th {
     padding-right: 20px;
+    font-family: var(--body-font);
+    font-weight: var(--font-weight-bold);
 }
 
 td {

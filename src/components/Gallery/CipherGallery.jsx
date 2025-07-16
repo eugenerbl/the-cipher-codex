@@ -18,7 +18,7 @@ function Gallery() {
                         <Card.Body className="titleBody">
                            <Card.Title className="title">{ciphers[index].displayName}</Card.Title>
                         </Card.Body>
-                        <Card.Img variant="bottom" className="cardImage" src={ciphers[index].image} alt={ciphers[index].displayName}/>
+                        <Card.Img variant="bottom" className="cardImage" src={ciphers[index].image} alt=""/>
                      </Card>
                   </Link>
                </Col>

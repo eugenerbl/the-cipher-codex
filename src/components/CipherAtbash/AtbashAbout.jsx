@@ -4,7 +4,7 @@ import './Atbash.css';
 function AtbashAbout() {
   return (
     <>
-      <h3>How to Use</h3>
+      <h2>How to Use</h2>
       <p>
         This Monoalphabetic Substitution cipher is designed for use with the English alphabet. Enter 
         the message you want to encrypt or decrypt in the top box. There are two ways to input the 
@@ -52,7 +52,7 @@ function AtbashAbout() {
         English Alphabet (where A=A), or clear the values from both the Key Field and Table.
       </p>
 
-      <h3>What is the Monoalphabetic Substitution Cipher?</h3>
+      <h2>What is the Monoalphabetic Substitution Cipher?</h2>
       <p>
         A substitution cipher is a method of encrypting text by replacing the letters of the alphabet 
         according to specific rules. There are various types of substitution ciphers, each one 
@@ -61,7 +61,7 @@ function AtbashAbout() {
         plaintext letter always translates to the same ciphertext letter.
       </p>
 
-      <h3>What is the Atbash Cipher?</h3>
+      <h2>What is the Atbash Cipher?</h2>
       <p>
         The Atbash cipher is a monoalphabetic substitution cipher where each letter is replaced by the letter in 
         the opposite position in the alphabet. That is, the first letter A becomes the last letter Z; 
@@ -69,7 +69,7 @@ function AtbashAbout() {
       </p>
 
 
-      <h3>Encrypt It!</h3>
+      <h2>Encrypt It!</h2>
       <p>
         The monoalphabetic substitution cipher is used by taking the standard alphabet and replacing 
         each letter with one from a randomized alphabet. One example is shown below:
@@ -113,7 +113,7 @@ function AtbashAbout() {
       </p>
 
 
-      <h3>Decrypt It!</h3>
+      <h2>Decrypt It!</h2>
       <p>
         Decrypting a monoalphabetic substitution cipher is very straightforward. If you know the key 
         alphabet used to encrypt the plaintext, you can use the same tables (like those shown above) 
@@ -125,7 +125,7 @@ function AtbashAbout() {
         Simply replace each letter with its opposite, as seen in the Atbash Alphabet table above.
       </p>
 
-      <h3>How Easy is it to Break?</h3>
+      <h2>How Easy is it to Break?</h2>
       <p>
         Despite the large number of possible substitution alphabets, this cipher is not very strong 
         and can be easily broken. If the message is of reasonable length, frequency analysis can be 
@@ -137,7 +137,7 @@ function AtbashAbout() {
         no real security for messages.
       </p>
 
-      <h3>Atbash Cipher: Origins</h3>
+      <h2>Atbash Cipher: Origins</h2>
       <p>
         The Atbash Cipher originates from the Hebrew alphabet. In the alphabet, the first letter, 
         aleph (א) is replaced with the last letter, tav (ת); the second letter, bet (ב) is replaced 

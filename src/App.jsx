@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <Header />
-      <div style={{minHeight: '100vh'}}>
+      <main style={{minHeight: '100vh'}}>
         <ThemeProvider theme={theme}>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -26,7 +26,7 @@ function App() {
             <Route path="/*" element={<PageNotFound />} />
           </Routes>
         </ThemeProvider>
-      </div>
+      </main>
       <Footer />
     </>
   );

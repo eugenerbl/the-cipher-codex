@@ -11,18 +11,18 @@ import PlayfairEx    from '../../assets/Info/Playfair3Example.png';
 function PlayfairAbout() {
   return (
     <>
-      <h3>How to Use</h3>
+      <h2>How to Use</h2>
         <p>
           To encrypt or decrypt a message, enter the text in the top box, then input the keyword and 
           choose letters for three different options. Click "Encrypt" or "Decrypt" to see the transformed 
-          text in the bottom box. <i>Numbers, spaces, and non-letter characters will be ignored; 
-          however, you may see padding letters.</i>
+          text in the bottom box. Numbers, spaces, and non-letter characters will be ignored; 
+          however, you may see padding letters.
         </p>
         <p>
           You'll find the complete 25-letter alphabet in the Playfair Alphabet box. This alphabet will 
-          be arranged in the 5x5 Playfair Grid to the right of the input box for encryption and 
-          decryption. <i>This cipher uses the English alphabet. The omitted letter, all numbers, and 
-          all non-letter characters in the Keyword box will be ignored.</i>
+          be arranged in the Playfair Grid (5 rows and 5 columns) to the right of the input box for 
+          encryption and decryption. This cipher uses the English alphabet. The omitted letter, all 
+          numbers, and all non-letter characters in the Keyword box will be ignored.
         </p>
         <p>
           Three letter options are provided to customize your cipher:
@@ -49,7 +49,7 @@ function PlayfairAbout() {
         </p>
 
 
-      <h3>What is the Playfair Cipher?</h3>
+      <h2>What is the Playfair Cipher?</h2>
         <p>
           The Playfair cipher is an encryption method that transforms text using pairs of letters. 
           It is classified as a polygraphic substitution cipher, meaning it encrypts pairs of letters 
@@ -58,7 +58,7 @@ function PlayfairAbout() {
         </p>
 
 
-      <h3>Encrypt It!</h3>
+      <h2>Encrypt It!</h2>
         <p>
           Encryption starts with a 5x5 grid of letters. Since there are only 25 spots, one letter must 
           be omitted - usually, this is J, and all instances of J in the plaintext are replaced 
@@ -137,7 +137,7 @@ function PlayfairAbout() {
             <img src={PlayfairEx} className="playfairGrids" alt="The complete Playfair cipher example, illustrated" />
         </Container>
 
-      <h3>Decrypt It!</h3>
+      <h2>Decrypt It!</h2>
         <p>
           Decrypting a message is almost the same process as encrypting one. Create a 5x5 grid with 
           the keyword and split the message into bigrams (padding letters are not necessary this 
@@ -164,7 +164,7 @@ function PlayfairAbout() {
         </p>
 
 
-      <h3>How Easy is it to Break?</h3>
+      <h2>How Easy is it to Break?</h2>
         <p>
           Playfair, compared to other classical ciphers, is significantly harder to break since the 
           frequency analysis technique used to break simple substitution ciphers is more difficult. 
@@ -188,7 +188,7 @@ function PlayfairAbout() {
         </p>
 
 
-      <h3>Origins</h3>
+      <h2>Origins</h2>
         <p>
           The Playfair cipher was invented in 1854 by Charles Wheatstone, an English physicist and 
           inventor. He named the cipher after his friend, Lord Playfair, who strongly promoted its 

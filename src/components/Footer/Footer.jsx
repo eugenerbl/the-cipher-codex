@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container';
 function Footer() {
     return(
         <footer className="footer">
-            <Container fluid className="headerFooterText">
+            <Container fluid className="footerText">
                 <Row style={{justifyContent: "center", fontSize: "18px"}} >
                     <span>&copy; {new Date().getFullYear()} The Cipher Codex</span>
                 </Row>
