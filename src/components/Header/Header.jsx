@@ -10,13 +10,13 @@ function Header() {
    return (
       <Navbar expand="lg" collapseOnSelect fixed="top" className="header" data-bs-theme="light">
          <Container>
-            <Navbar.Brand href="/" className="headerFont"> The Cipher Codex </Navbar.Brand>
+            <Navbar.Brand href="/" className="headerLogo"> The Cipher Codex </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                <Nav className="me-auto">
                   {ciphers.map((item, index) => (
                      <Nav.Link as={Link} to={item.path} key={index} eventKey={index}
-                        className={`headerFooterText ${location.pathname === item.path ? 'active' : ''}`}>
+                        className={`cipherNavLink ${location.pathname === item.path ? 'active' : ''}`}>
                         {item.displayName}
                      </Nav.Link>
                   ))}

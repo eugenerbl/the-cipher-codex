@@ -4,7 +4,7 @@ import './A1Z26.css';
 function A1Z26About() {
    return (
       <>
-         <h3>How to Use</h3>
+         <h2>How to Use</h2>
          <p>
             To encrypt or decrypt a message, type it in the top box. Then, specify
             the alphabet for encrypting and decrypting. The default is the English alphabet, but you can
@@ -23,13 +23,13 @@ function A1Z26About() {
             Finally, choose whether to Encrypt or Decrypt and view your results in the bottom box.
          </p>
 
-         <h3>What is the A1Z26 Cipher?</h3>
+         <h2>What is the A1Z26 Cipher?</h2>
          <p>
             The A1Z26 Cipher is a very simple substitution cipher in which each letter is replaced by
             its position in the alphabet. For example, A=1, B=2, and Z=26, hence the name.
          </p>
 
-         <h3>Encrypt It!</h3>
+         <h2>Encrypt It!</h2>
          <p>
             Encrypting your message with A1Z26 involves knowing the indexes (positions) of the
             letters in the alphabet. For the 26-character English alphabet, here are the values that
@@ -42,14 +42,14 @@ function A1Z26About() {
             becomes "16-1-19-19-23-15-18-4".
          </p>
 
-         <h3>Decrypt It!</h3>
+         <h2>Decrypt It!</h2>
          <p>
             Decrypting is the inverse of encrypting. Simply replace each number with the letter in the
             corresponding position in the alphabet. For example, "3-18-25-16-20-15-7-18-1-16-8-25"
             translates to "CRYPTOGRAPHY".
          </p>
 
-         <h3>How Easy is it to Break?</h3>
+         <h2>How Easy is it to Break?</h2>
          <p>
             As a simple substitution cipher, the A1Z26 cipher is very easy to break if you know the 
             alphabet used.
@@ -97,7 +97,7 @@ function Table() {
    };
 
    return (
-      <div style={{ overflowX: "auto" }}>
+      <div style={{ overflowX: "auto" }} tabIndex="-1">
          <table className="azTable">
             <tbody>
                {alphabetTable()}

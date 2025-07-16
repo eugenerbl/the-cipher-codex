@@ -4,7 +4,7 @@ import Base64Table from '../../assets/Info/Base64Table.png';
 function Base64About() {
    return (
       <>
-         <h3>How to Use</h3>
+         <h2>How to Use</h2>
          <p>
             Enter your message in the top box. Click 'Encode' or 'Decode' to see the transformed 
             text in the results box below. You can also switch between three common encodings:
@@ -26,7 +26,7 @@ function Base64About() {
             </li>
          </ul>
 
-         <h3>What is Base64 Encoding?</h3>
+         <h2>What is Base64 Encoding?</h2>
          <p>
             Base64 encoding is a technique that converts binary data into ASCII text format. It uses
             a set of 64 different characters (hence the name "Base64").
@@ -49,7 +49,7 @@ function Base64About() {
          </p>
 
 
-         <h3>Encode It!</h3>
+         <h2>Encode It!</h2>
          <p>
             Encoding a text string using Base64 begins by converting each character into binary. 
             Take the following example with the plaintext "word":
@@ -151,7 +151,7 @@ function Base64About() {
             Thus, we add two "=" signs to create the final encoded message, <b>d29yZA==</b>.
          </p>
 
-         <h3>Decode It!</h3>
+         <h2>Decode It!</h2>
          <p>
             Decoding Base64 data is the reverse of the encoding process. First, convert each character 
             to its 6-bit binary equivalent. Then, combine these binary values to find the original 
@@ -181,7 +181,7 @@ function Base64About() {
             the 4 characters <b>keys</b>.
          </p>
 
-         <h3>How Easy is it to Break?</h3>
+         <h2>How Easy is it to Break?</h2>
          <p>
             Base64 is not a form of encryption and should not be used to encrypt data. The encoding 
             algorithm can be easily reversed, making it simple to decode text. Base64 encoding is 
@@ -189,7 +189,7 @@ function Base64About() {
             for encryption itself.
          </p>
 
-         <h3>Origins</h3>
+         <h2>Origins</h2>
          <p>
             Early computer systems could only handle 128 ASCII characters. While this worked for 
             English text, it caused problems when transmitting binary data such as images or files. 

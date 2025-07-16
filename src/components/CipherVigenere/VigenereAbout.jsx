@@ -5,7 +5,7 @@ import VigenereSquare from '../../assets/Info/VigenèreSquare.svg';
 function VigenereAbout() {
   return (
     <>
-      <h3>How to Use</h3>
+      <h2>How to Use</h2>
       <p>
         To encrypt or decrypt a message, start by entering the text in the top box. Next, input the 
         Key string. The Key must be at least 2 characters long and should not contain any numbers or 
@@ -13,7 +13,7 @@ function VigenereAbout() {
         will appear in the bottom text box.
       </p>
 
-      <h3>What is the Vigenère Cipher?</h3>
+      <h2>What is the Vigenère Cipher?</h2>
       <p>
         The Vigenère cipher encrypts a message by using several <span><a href="/caesar">Caesar ciphers</a></span> based 
         on a single keyword. It is a polyalphabetic cipher, meaning it uses multiple alphabets to 
@@ -21,27 +21,27 @@ function VigenereAbout() {
       </p>
 
 
-      <h3>Encrypt It!</h3>
+      <h2>Encrypt It!</h2>
       <p>
         Encrypting begins by taking the plaintext and choosing a keyword. Repeat the keyword until 
-        its length matches the length of the plaintext. For example, for the plaintext "<b>secrets</b>" 
-        and the keyword "<b>code</b>", the new keyword is "<b>CODECOD</b>":
+        its length matches the length of the plaintext. For example, for the plaintext "<b>so many secrets</b>" 
+        and the keyword "<b>code</b>", the new keyword is "<b>codecodecodec</b>":
       </p>
 
-      <table>
+      <table className="cipherInfoTable">
         <tbody>
           <tr>
-            <td>secrets</td>
+            <td>so many secrets</td>
           </tr>
           <tr>
-            <td>CODECOD</td>
+            <td>co deco decodec</td>
           </tr>
         </tbody>
       </table><br/>
 
       <p>
-        Next, we can use a table of alphabets known as a <em>tabula recta</em>, <em>Vigenère square</em>, 
-        or <em>Vigenère table</em>. This table writes the alphabet 26 times in 26 rows, with each row 
+        Next, we can use a table of alphabets known as a tabula recta, Vigenère square, 
+        or Vigenère table. This table writes the alphabet 26 times in 26 rows, with each row 
         shifted by one letter compared to the row above it. Each of the 26 rows represents one of the 
         possible Caesar ciphers.<br />
       </p>
@@ -59,10 +59,10 @@ function VigenereAbout() {
       </p>
       <p>
         Continue this process for the remaining letters of the message and the key until the entire 
-        message has been encrypted. In this example, the encrypted message is <b>USFVGHV</b>.
+        message has been encrypted. In this example, the encrypted message is <b>uc pepm viefhxu</b>.
       </p>
 
-      <h3>Decrypt It!</h3>
+      <h2>Decrypt It!</h2>
       <p>
         The process for decrypting is the same as for encrypting. If you know the key used to encrypt 
         a message, you can easily decrypt it using the Vigenère Square. Simply repeat the key until 
@@ -76,11 +76,11 @@ function VigenereAbout() {
         and decrypt the message. Read the next section below for one such method.
       </p>
 
-      <h3>How Easy is it to Break?</h3>
+      <h2>How Easy is it to Break?</h2>
 
       <p>
         While the Vigenère cipher was first described in 1553, it resisted all attempts to break 
-        it until 1863. This earned it the title <em>le chiffrage indéchiffrable</em> (French for 'the 
+        it until 1863. This earned it the title "le chiffrage indéchiffrable" (French for 'the 
         indecipherable cipher'). Eventually, codebreakers developed methods to finally break 
         the cipher.
       </p>
@@ -110,11 +110,11 @@ function VigenereAbout() {
         that length that could be the keyword.
       </p>
 
-      <h3>Origins</h3>
+      <h2>Origins</h2>
       <p>
         The cipher known today as the Vigenère cipher was originally described by Italian 
-        cryptographer Giovan Battista Bellaso in his 1553 book <em>La cifra del Sig. Giovan Battista 
-        Bellaso</em>. He introduced a polyalphabetic cipher (based on the work of Johannes Trithemius) 
+        cryptographer Giovan Battista Bellaso in his 1553 book "La cifra del Sig. Giovan Battista 
+        Bellaso". He introduced a polyalphabetic cipher (based on the work of Johannes Trithemius) 
         but featured a repeating "countersign" (a key) to switch the cipher alphabet for each letter. 
         Unlike today's Vigenère cipher, Bellaso didn't use 26 different Caesar ciphers. Instead, he 
         used 13 shifts for letter pairs (such as 'AB' and 'CD').

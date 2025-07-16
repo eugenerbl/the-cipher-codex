@@ -38,6 +38,7 @@
     width: 30px;
     font-family: monospace;
     white-space: pre-wrap;
+    font-weight: 600;
 }
 
 @media screen and (max-width: 600px) {

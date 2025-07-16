@@ -3,7 +3,7 @@ import React from 'react';
 function CaesarAbout() {
   return (
     <>
-      <h3>How to Use</h3>
+      <h2>How to Use</h2>
       <p>
         To encrypt or decrypt a message, type it in the top box. Then, adjust the slider to set the 
         number of places to shift each letter. Positive and negative values are paired together for 
@@ -19,7 +19,7 @@ function CaesarAbout() {
         there are buttons to display all text in uppercase or lowercase.
       </p>
 
-      <h3>What is the Caesar Cipher?</h3>
+      <h2>What is the Caesar Cipher?</h2>
       <p>
         The Caesar Cipher is one of the simplest and oldest encryption techniques.
         It is a type of substitution cipher where each letter in the plaintext is shifted
@@ -45,7 +45,7 @@ function CaesarAbout() {
         </tbody>
       </table>
 
-      <h3>Encrypt It!</h3>
+      <h2>Encrypt It!</h2>
       <p>
         Encrypting a message with the Caesar cipher involves a simple shift of the alphabet. The 
         cipher alphabet is the plain alphabet shifted left or right by a certain number of positions. 
@@ -77,7 +77,7 @@ function CaesarAbout() {
         is transformed into "<b>KHOOR</b>."
       </p>
 
-      <h3>Decrypt It!</h3>
+      <h2>Decrypt It!</h2>
       <p>
         The first step in decrypting a Caesar ciphertext is determining the shift used to encrypt the 
         plaintext. This step is relatively straightforward (see "How Easy is it to Break?"). To 
@@ -85,7 +85,7 @@ function CaesarAbout() {
         shift is eight letters forward, you decrypt it by shifting eight letters backward.
       </p>
 
-      <h3>How Easy is it to Break?</h3>
+      <h2>How Easy is it to Break?</h2>
       <p>
         The Caesar cipher is very easy to crack. There are only 26 possible letter shifts, so a decoder 
         can use brute force and try all of them. This will reveal the message quickly as the correct 
@@ -93,7 +93,7 @@ function CaesarAbout() {
         letters provides a fast alternative for finding the correct shift.
       </p>
 
-      <h3>Origins</h3>
+      <h2>Origins</h2>
       <p>
         The Caesar cipher is named after the famed Roman general and dictator, Julius Caesar. 
         According to the historian Suetonius, Caesar used the cipher with a shift of three letters 

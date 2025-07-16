@@ -19,9 +19,20 @@
   background-color: burlywood;
   margin: auto -2rem 0rem -2rem;
   padding: 1rem;
-}  
+}
 
-.headerFooterText {
+.headerLogo {
+  font-family: var(--header-font);
+  font-weight: 400;
+  font-style: normal;
+  transition: all 0.3s ease;
+}
+
+.headerLogo:hover {
+  color: blanchedalmond;
+}
+
+.cipherNavLink, .footerText {
   font-family: var(--body-font);
   font-optical-sizing: auto;
   font-weight: 400;
@@ -30,12 +41,12 @@
   transition: all 0.3s ease;
 }
 
-.headerFooterText.active {
+.cipherNavLink.active {
   background-color: blanchedalmond;
   font-weight: bold;
 }
 
-.headerFooterText:hover {
+.cipherNavLink:hover {
   background-color: blanchedalmond;
 }
 
@@ -59,7 +70,7 @@
   border-radius: 5px;
   font-family: var(--body-font);
   font-weight: var(--font-weight-regular);
-  width: 300px;
+  width: 320px;
   padding-left: 5px;
   margin: 0px 10px;
   background-color: white;
@@ -84,43 +95,14 @@
 }
 
 .cipherInfo {
-  width: 95%;
+  width: 80%;
   text-align: initial;
   display: inline-block;
   padding: 0rem 1rem 2rem;
 }
 
-a {
-  font-weight: bold;
-  color: darkblue;
-}
-
-a:hover {
-  color: slateblue;
-}
-
-.headerFont {
-  font-family: var(--header-font);
-  font-weight: 400;
-  font-style: normal;
-}
-
-.headerFontMedium {
-  font-family: var(--header-font);
-  font-weight: 500;
-  font-style: normal;
-}
-
-.headerFontItalic {
-  font-family: var(--header-font);
-  font-weight: 400;
-  font-style: italic;
-}
-
-.headerFontMediumItalic {
-  font-family: var(--header-font);
-  font-weight: 500;
-  font-style: italic;
+.cipherInfoTable {
+  place-self: center;
 }
 
 .hiddenText {
@@ -134,26 +116,32 @@ a:hover {
   }
 }
 
+@media screen and (max-width: 800px) {
+  .cipherInfo {
+    width: 90%;
+  }
+}
+
 body.dark {
   .header, .footer {
     background-color: var(--dark-mode-secondary);
   }
 
-  .headerFont, .headerFooterText {
+  .headerLogo, .cipherNavLink, .footerText {
     color: var(--dark-mode-white);
   }
 
-  .headerFont:hover {
-    color: var(--dark-mode-white);
+  .headerLogo:hover {
+    color: burlywood;
   }
 
-  .headerFooterText.active {
+  .cipherNavLink.active {
     background-color: var(--dark-mode-primary);
     color: var(--dark-mode-white) !important;
     font-weight: bold;
   }
 
-  .headerFooterText:hover {
+  .cipherNavLink:hover {
     background-color: var(--dark-mode-primary);
     color: var(--dark-mode-white);
   }
@@ -180,5 +168,9 @@ body.dark {
 
   .hiddenText {
     color: var(--dark-mode-primary);
+  }
+
+  a:hover {
+    color: lightskyblue;
   }
 }
