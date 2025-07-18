@@ -22,12 +22,10 @@
 .slider .MuiSlider-thumb {
     height: 20px;
     width: 20px;
-    background-color: white;
-    box-shadow: 0 0 2px 0px rgba(0, 0, 0, 0.1);
 }
 
 .slider .MuiSlider-valueLabel {
-    width: 100px;
+    width: 60px;
     background-color: #4F4CC4;
     font-size: 16px;
     font-family: monospace;
@@ -37,8 +35,8 @@
 .slider .MuiSlider-markLabel {
     width: 30px;
     font-family: monospace;
-    white-space: pre-wrap;
     font-weight: 600;
+    white-space: pre-wrap;
 }
 
 @media screen and (max-width: 600px) {

@@ -55,7 +55,7 @@ function Base64About() {
             Take the following example with the plaintext "word":
          </p>
 
-         <div style={{ overflowX: "auto" }}>
+         <div style={{ overflowX: "auto" }} tabIndex="0">
             <table id="b64Example">
                <tbody>
                   <tr>
@@ -81,7 +81,7 @@ function Base64About() {
             The binary digits are grouped into sets of 6 bits, adding extra zeros at the end if necessary.
          </p>
 
-         <div style={{ overflowX: "auto" }}>
+         <div style={{ overflowX: "auto" }} tabIndex="0">
             <table id="b64Example">
                <tbody>
                   <tr>
@@ -111,7 +111,7 @@ function Base64About() {
             encoding standard.
          </p>
 
-         <div style={{ overflowX: "auto" }}>
+         <div style={{ overflowX: "auto" }} tabIndex="0">
             <table id="b64Example">
                <tbody>
                   <tr>

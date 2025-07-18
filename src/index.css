@@ -42,16 +42,6 @@ body {
   }
 }
 
-a {
-  color: royalblue;
-  font-weight: var(--font-weight-bold);
-  text-decoration: inherit;
-}
-
-a:hover {
-  color: darkblue;
-}
-
 h1 {
   
   font-family: var(--header-font);
@@ -82,4 +72,14 @@ ol, ul, li {
 
 b {
   font-weight: 600;
+}
+
+a {
+  color: #4242FF;
+  font-weight: var(--font-weight-bold);
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: darkblue;
 }

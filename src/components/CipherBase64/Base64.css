@@ -1,3 +1,11 @@
+.encodingLabel {
+   font-family: var(--body-font);
+}
+
+.MuiFormControlLabel-label {
+   font-family: var(--body-font);
+}
+
 .base64Table {
    width: 40%;
    float: right;

@@ -92,10 +92,11 @@ function Playfair() {
                   </Stack>
                
                   <FormControl className="letterOption" sx={{ m: 1 }}>
-                     <label htmlFor="omitted-letter-select" className="keyBoxLabel">Letter to omit:</label>
+                     <label id="omit-select" htmlFor="omtLtrSel" className="keyBoxLabel">Letter to omit:</label>
                      <Select
-                        labelId="omitted-letter-select"
-                        id="omitted-letter-select"
+                        labelId="omit-select"
+                        id="omtLtrSel"
+                        aria-label="Choose a letter to omit"
                         className="letterOptionBox"
                         value={omittedLetter}
                         onChange={handleOmitLtrChange}
@@ -108,10 +109,11 @@ function Playfair() {
                      </Select>
                   </FormControl>
                   <FormControl className="letterOption" sx={{ m: 1 }}>
-                     <label htmlFor="replace-letter-select" className="keyBoxLabel">Replacement letter:</label>
+                     <label id="replace-select" htmlFor="repLtrSel" className="keyBoxLabel">Replacement letter:</label>
                      <Select
-                        labelId="replace-letter-select"
-                        id="replace-letter-select"
+                        labelId="replace-select"
+                        id="repLtrSel"
+                        aria-label="Choose a letter to replace omitted letters"
                         value={repLetter}
                         className="letterOptionBox"
                         onChange={(event) => {setRepLetter(event.target.value);}}
@@ -122,10 +124,10 @@ function Playfair() {
                      </Select>
                   </FormControl>
                   <FormControl className="letterOption" sx={{ m: 1 }}>
-                     <label htmlFor="padding-letter-select" className="keyBoxLabel">Padding letter:</label>
+                     <label id="padding-select" htmlFor="padLtrSel" className="keyBoxLabel">Padding letter:</label>
                      <Select
-                        labelId="padding-letter-select"
-                        id="padding-letter-select"
+                        labelId="padding-select"
+                        id="padLtrSel"
                         value={padLetter}
                         className="letterOptionBox"
                         onChange={(event) => {setPadLetter(event.target.value);}}
