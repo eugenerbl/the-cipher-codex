@@ -170,6 +170,10 @@ body.dark {
     color: var(--dark-mode-primary);
   }
 
+  a {
+    color: #4B77FB;
+  }
+
   a:hover {
     color: lightskyblue;
   }

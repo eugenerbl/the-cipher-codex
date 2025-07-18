@@ -97,7 +97,7 @@ function Table() {
    };
 
    return (
-      <div style={{ overflowX: "auto" }} tabIndex="-1">
+      <div style={{ overflowX: "auto" }} tabIndex="0">
          <table className="azTable">
             <tbody>
                {alphabetTable()}

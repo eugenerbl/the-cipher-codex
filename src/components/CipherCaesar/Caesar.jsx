@@ -9,12 +9,12 @@ import CaesarAbout from './CaesarAbout';
 
 // Labels for shift slider
 const marks = [
-  { value: 0, label: '+0\n-0' },
-  { value: 5, label: '+ 5\n-21' },
-  { value: 10, label: '+10\n-16' },
-  { value: 15, label: '+15\n-11' },
-  { value: 20, label: '+20\n- 6' },
-  { value: 25, label: '+25\n- 1' }
+  { value: 0, label: `+0\n-0` },
+  { value: 5, label: `+ 5\n-21` },
+  { value: 10, label: `+10\n-16` },
+  { value: 15, label: `+15\n-11` },
+  { value: 20, label: `+20\n- 6` },
+  { value: 25, label: `+25\n- 1` }
 ];
 
 function Caesar() {
@@ -41,7 +41,7 @@ function Caesar() {
   const valueLabelFormat = (value) => { 
     let valuePad = value.toString().padStart(2, ' ');
     let opposite = value === 0 ? ' 0' : (26-value).toString().padStart(2, ' ');
-    return `+${valuePad}  -${opposite}`;
+    return `+${valuePad}\n-${opposite}`;
   };
 
   // Change text case
@@ -66,7 +66,7 @@ function Caesar() {
         <span className="sliderLabel">Shift Value:</span>
         <Slider
           name="Caesar Shift Value" className="slider"
-          aria-label="Shift Value" getAriaValueText={shiftText} aria-labelledby="shift-label"
+          aria-label="Select number of letters to shift each letter by" getAriaValueText={shiftText}
           valueLabelDisplay="on" defaultValue={0} value={shift}
           marks={marks} track={false}
           shiftStep={5} step={1}
@@ -130,7 +130,7 @@ function encode(text, shift) {
 // Aria text for slider
 function shiftText(shift) {
   let backward = 26 - shift;
-  return `Forward ${shift} letters, backward ${backward} letters`;
+  return `${shift} letters forward, ${backward} letters backward`;
 }
 
 export default Caesar;
