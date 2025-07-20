@@ -60,7 +60,8 @@ function PlayfairAbout() {
 
       <h2>Encrypt It!</h2>
         <p>
-          Encryption starts with a 5x5 grid of letters. Since there are only 25 spots, one letter must 
+          Encryption starts with a 5x5 grid of letters. Each cell in the grid contains one of the 
+          26 letters in the English alphabet. But since there are only 25 cells, one letter must 
           be omitted - usually, this is J, and all instances of J in the plaintext are replaced 
           with I. This tool allows you to select which letter to omit. Figure 1 below is the standard 
           grid with no keyword, and J excluded.
@@ -72,7 +73,8 @@ function PlayfairAbout() {
         </p>
 
         <Container maxWidth="md">
-            <img src={PlayfairGrids} className="playfairGrids" alt="5 by 5 alphabet grids for the Playfair cipher" />
+            <img src={PlayfairGrids} className="playfairGrids"
+            alt="Two 5-by-5 Playfair grids showing how the normal alphabet and a keyword are arranged on the grid" />
         </Container>
         
         <p className="textAfterImage">
@@ -117,13 +119,16 @@ function PlayfairAbout() {
         <Box sx={{ flexGrow: 1 }}>
           <Grid container spacing={2} >
             <Grid size={{ xs: 12, md: 4 }} sx={{ textAlign: "center" }}>
-              <img src={PlayfairRow} className="playfairRules" alt="Rule for shifting letters in the same row" />
+              <img src={PlayfairRow} className="playfairRules" 
+              alt="A Playfair grid demonstrating how letters in the same row are shifted to the right" />
             </Grid>
             <Grid size={{ xs: 12, md: 4 }} sx={{ textAlign: "center" }}>
-              <img src={PlayfairCol} className="playfairRules" alt="Rule for shifting letters in the same column" />
+              <img src={PlayfairCol} className="playfairRules" 
+              alt="A Playfair grid demonstrating how letters in the same column are shifted down" />
             </Grid>
             <Grid size={{ xs: 12, md: 4 }} sx={{ textAlign: "center" }}>
-              <img src={PlayfairRect} className="playfairRules" alt="Rule for shifting letters that make corners of a rectangle" />
+              <img src={PlayfairRect} className="playfairRules" 
+              alt="A Playfair grid demonstrating how letters in the corners of a rectangle are shifted" />
             </Grid>
           </Grid>
         </Box>
@@ -134,7 +139,8 @@ function PlayfairAbout() {
         </p>
 
         <Container maxWidth="md">
-            <img src={PlayfairEx} className="playfairGrids" alt="The complete Playfair cipher example, illustrated" />
+            <img src={PlayfairEx} className="playfairGrids" 
+            alt="A series of diagrams showing the complete process of encrypting using the Playfair grid" />
         </Container>
 
       <h2>Decrypt It!</h2>

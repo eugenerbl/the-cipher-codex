@@ -138,7 +138,8 @@ function Base64About() {
          <br />
 
          <figure>
-            <img src={Base64Table} className="base64Table" alt="Base64 Table" />
+            <img src={Base64Table} className="base64Table" 
+            alt="A table mapping the 64 characters of the Base64 set with their corresponding binary values" />
             <figcaption className="base64TableText">Table 1: A Base64 Table. Image source: Wikipedia.</figcaption>
          </figure>
 

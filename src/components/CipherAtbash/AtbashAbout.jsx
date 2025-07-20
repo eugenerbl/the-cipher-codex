@@ -140,9 +140,10 @@ function AtbashAbout() {
       <h2>Atbash Cipher: Origins</h2>
       <p>
         The Atbash Cipher originates from the Hebrew alphabet. In the alphabet, the first letter, 
-        aleph (א) is replaced with the last letter, tav (ת); the second letter, bet (ב) is replaced 
-        with the second-to-last, shin (ש). These letters create the sequence Aleph-Tav-Bet-Shin, 
-        which becomes A-T-B-SH.
+        <span lang="he">alef (א)</span> is replaced with the last letter, <span lang="he">tav (ת)</span>; 
+        the second letter, <span lang="he">bet (ב)</span> is replaced with the second-to-last, 
+        <span lang="he">shin (ש)</span>. These letters create the sequence 
+        <span lang="he">Aleph-Tav-Bet-Shin</span>, which becomes A-T-B-SH.
       </p>
     </>
   )
