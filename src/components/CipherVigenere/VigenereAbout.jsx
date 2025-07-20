@@ -28,7 +28,7 @@ function VigenereAbout() {
         and the keyword "<b>code</b>", the new keyword is "<b>codecodecodec</b>":
       </p>
 
-      <table className="cipherInfoTable">
+      <table className="cipherInfoTable" style={{fontWeight: '600'}}>
         <tbody>
           <tr>
             <td>so many secrets</td>
@@ -47,7 +47,7 @@ function VigenereAbout() {
       </p>
 
       <figure>
-        <img src={VigenereSquare} className="vigenereSquare" alt="Vigenère Square" />
+        <img src={VigenereSquare} className="vigenereSquare" alt="A 26-row by 26-column Vigenère Square" />
         <figcaption className="vigenereSquareText">Table 1: A 26x26 Vigenère Square. Image source: Wikipedia.</figcaption>
       </figure>
 
@@ -80,9 +80,9 @@ function VigenereAbout() {
 
       <p>
         While the Vigenère cipher was first described in 1553, it resisted all attempts to break 
-        it until 1863. This earned it the title "le chiffrage indéchiffrable" (French for 'the 
-        indecipherable cipher'). Eventually, codebreakers developed methods to finally break 
-        the cipher.
+        it until 1863. This earned it the title <span lang="fr">"le chiffrage indéchiffrable"</span> 
+        (French for "the indecipherable cipher"). Eventually, codebreakers developed methods to 
+        finally break the cipher.
       </p>
       <p>
         In 1863, Friedrich Kasiski published one such method for deciphering Vigenère ciphers. 
@@ -113,17 +113,18 @@ function VigenereAbout() {
       <h2>Origins</h2>
       <p>
         The cipher known today as the Vigenère cipher was originally described by Italian 
-        cryptographer Giovan Battista Bellaso in his 1553 book "La cifra del Sig. Giovan Battista 
-        Bellaso". He introduced a polyalphabetic cipher (based on the work of Johannes Trithemius) 
-        but featured a repeating "countersign" (a key) to switch the cipher alphabet for each letter. 
-        Unlike today's Vigenère cipher, Bellaso didn't use 26 different Caesar ciphers. Instead, he 
-        used 13 shifts for letter pairs (such as 'AB' and 'CD').
+        cryptographer <span lang="it">Giovan Battista Bellaso</span> in his 1553 book 
+        <span lang="it">"La cifra del Sig. Giovan Battista Bellaso"</span>. He introduced a 
+        polyalphabetic cipher (based on the work of Johannes Trithemius) but featured a repeating 
+        "countersign" (a key) to switch the cipher alphabet for each letter. Unlike today's 
+        Vigenère cipher, Bellaso didn't use 26 different Caesar ciphers. Instead, he used 13 
+        shifts for letter pairs (such as 'AB' and 'CD').
       </p>
       <p>
-        In 1586, French cryptographer Blaise de Vigenère described a similar polyalphabetic cipher 
-        known as an autokey cipher, where the key is based on letters from the original plaintext. 
-        However, Vigenère was misattributed as the inventor of Bellaso's cipher in the 19th century, 
-        and the name has remained since.
+        In 1586, French cryptographer <span lang="fr">Blaise de Vigenère</span> described a similar 
+        polyalphabetic cipher known as an autokey cipher, where the key is based on letters from 
+        the original plaintext. However, Vigenère was misattributed as the inventor of Bellaso's 
+        cipher in the 19th century, and the name has remained since.
       </p>
     </>
   )
