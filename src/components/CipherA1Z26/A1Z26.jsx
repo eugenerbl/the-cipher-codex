@@ -52,7 +52,7 @@ function A1Z26() {
          </div>
          
          <Box sx={{ flexGrow: 1 }}>
-            <Grid container direction="row" sx={{ justifyContent: "center", alignItems: "center", marginBottom: "20px" }}>
+            <Grid container direction="row" sx={{ justifyContent: "center", alignItems: "center", marginBottom: "10px" }}>
                <Grid>
                   <label htmlFor="alphabet" className="keyBoxLabel">Alphabet:</label>
                   <input type="text" id="alphabet" value={alphabet} className="keyBox" 
@@ -60,7 +60,7 @@ function A1Z26() {
                </Grid>
             </Grid>
 
-            <Grid container direction="row" spacing={{ sm: 1, md: 2 }} sx={{ justifyContent: "center", alignItems: "center", marginBottom: "20px" }}>
+            <Grid container direction="row" spacing={{ xs: 2, sm: 2, md: 4 }} sx={{ justifyContent: "center", alignItems: "center", marginBottom: "20px" }}>
                <Grid>
                   <label htmlFor="separator" className="keyBoxLabel">Separator between numbers:</label>
                   <input type="text" id="separator" value={separator} className="keyBox separatorBox"

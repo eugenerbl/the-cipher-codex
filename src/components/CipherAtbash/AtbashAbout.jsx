@@ -71,18 +71,18 @@ function AtbashAbout() {
 
       <h2>Encrypt It!</h2>
       <p>
-        The monoalphabetic substitution cipher is used by taking the standard alphabet and replacing 
+        The monoalphabetic substitution cipher is used by taking the classic alphabet and replacing 
         each letter with one from a randomized alphabet. One example is shown below:
       </p>
 
       <table>
         <tbody>
           <tr>
-            <th>Classic Alphabet</th>
+            <th>Classic</th>
             <td>ABCDEFGHIJKLMNOPQRSTUVWXYZ</td>
           </tr>
           <tr>
-            <th>Random Alphabet</th>
+            <th>Random</th>
             <td>YNUKPCLGXSRZEIQAJWTOFVHBMD</td>
           </tr>
         </tbody>
@@ -94,16 +94,16 @@ function AtbashAbout() {
         word 'CIPHER' is encrypted into 'UXAGPW'.
       </p>
       <p>
-        The Atbash cipher uses the reverse of the standard alphabet:
+        The Atbash cipher uses the reverse of the classic alphabet:
       </p>
       <table>
         <tbody>
           <tr>
-            <th>Classic Alphabet</th>
+            <th>Classic</th>
             <td>ABCDEFGHIJKLMNOPQRSTUVWXYZ</td>
           </tr>
           <tr>
-            <th>Atbash Alphabet</th>
+            <th>Atbash</th>
             <td>ZYXWVUTSRQPONMLKJIHGFEDCBA</td>
           </tr>
         </tbody>

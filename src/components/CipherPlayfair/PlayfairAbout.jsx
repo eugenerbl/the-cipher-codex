@@ -73,7 +73,7 @@ function PlayfairAbout() {
         </p>
 
         <Container maxWidth="md">
-            <img src={PlayfairGrids} className="playfairGrids"
+            <img src={PlayfairGrids} className="playfairImage"
             alt="Two 5-by-5 Playfair grids showing how the normal alphabet and a keyword are arranged on the grid" />
         </Container>
         
@@ -139,7 +139,7 @@ function PlayfairAbout() {
         </p>
 
         <Container maxWidth="md">
-            <img src={PlayfairEx} className="playfairGrids" 
+            <img src={PlayfairEx} className="playfairImage" 
             alt="A series of diagrams showing the complete process of encrypting using the Playfair grid" />
         </Container>
 

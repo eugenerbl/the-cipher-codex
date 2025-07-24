@@ -51,7 +51,7 @@ body.dark {
     }
 
     .cardImage {
-        opacity: 0.8;
+        filter: brightness(.7);
     }
 
     .title {

@@ -80,7 +80,8 @@ function Base64() {
          <FormControl>
             <FormLabel id="encoding-radio-buttons" className="encodingLabel">Encoding</FormLabel>
             <RadioGroup row aria-labelledby="encoding-radio-buttons" name="encoding-buttons"
-               value={encoding} onChange={handleEncodingChange} defaultValue="base64" style={{ marginLeft: 15 }}
+               value={encoding} onChange={handleEncodingChange} defaultValue="base64" 
+               style={{ marginLeft: 15, justifyContent: 'center' }}
             >
                <FormControlLabel value="base64" control={<Radio color="blue" />} label="Standard" />
                <FormControlLabel value="urlsafe" control={<Radio color="blue" />} label="URL Safe" />

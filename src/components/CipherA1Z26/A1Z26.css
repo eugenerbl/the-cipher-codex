@@ -1,6 +1,7 @@
 .separatorBox {
    width: 50px;
    margin-right: 0px;
+   margin-bottom: 0px;
 }
 
 .checkBox {
@@ -29,9 +30,6 @@
 @media screen and (max-width: 800px) {
    .azTable {
       justify-self: flex-start;
-   }
-   .keyBox {
-      margin-right: 0px;
    }
 }
 

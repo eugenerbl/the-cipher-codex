@@ -42,7 +42,7 @@ export const DarkToggle = () => {
         localStorage.setItem('DARK_MODE', toggleEvent.target.checked);
       }}
       icons={{ checked: "🌙", unchecked: "🔆" }}
-      aria-label="Dark mode"
+      aria-label="Toggle dark mode"
     />
   );
 };
