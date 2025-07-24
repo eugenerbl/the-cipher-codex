@@ -15,10 +15,6 @@
 }
 
 @media screen and (max-width: 800px) {
-    .keyBox {
-        width: 200px;
-    }
-
     .vigenereSquare {
         width: 100%;
     }
@@ -37,18 +33,11 @@
         float: inherit;
         margin: 0px;
         text-align: center;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .keyBox {
-        width: 260px;
-        margin-bottom: 20px !important;
     }
 }
 
 body.dark {
     .vigenereSquare {
-        opacity: 0.8;
+        filter: brightness(.7);
     }
 }

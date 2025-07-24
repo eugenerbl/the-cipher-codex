@@ -54,7 +54,7 @@
   width: 90%;
   max-width: 100%;
   height: 15vh;
-  margin: 20px;
+  margin: 20px 0px;
   padding: 5px;
   border: 1px solid;
   border-radius: 5px;
@@ -101,10 +101,6 @@
   padding: 0rem 1rem 2rem;
 }
 
-.cipherInfoTable {
-  place-self: center;
-}
-
 .hiddenText {
   color: var(--light-background-color);
   cursor: default;
@@ -118,6 +114,11 @@
 
 @media screen and (max-width: 800px) {
   .cipherInfo {
+    width: 100%;
+  }
+
+  .keyBox {
+    margin-bottom: 10px;
     width: 90%;
   }
 }

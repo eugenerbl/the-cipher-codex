@@ -77,17 +77,17 @@ function Playfair() {
          </div>
          
          <Box sx={{ flexGrow: 1 }}>
-            <Grid container direction="row" sx={{ justifyContent: "center", margin: "0px 10vw 20px" }}>
-               <Grid size={{ xs: 12, sm: 8, lg: 6 }} sx={{ placeItems: "center"}}>
-                  <Stack>
+            <Grid container direction="row" className="optionsGrid">
+               <Grid size={{ xs: 12, sm: 8, lg: 6 }}>
+                  <Stack sx={{ placeItems: "center"}}>
                      <label htmlFor="keyword" className="keyBoxLabel">Keyword:</label>
-                     <input type="text" id="keyword" value={keyword} className="keyBox" 
+                     <input type="text" id="keyword" value={keyword} className="keyBox playfairKey" 
                         onChange={handleKeywordChange} 
                         placeholder="Enter keyword..." name="keywordBox"
                      />
                      <label htmlFor="completeKeyword" className="keyBoxLabel">Playfair Alphabet:</label>
                      <input readOnly type="text" id="completeKeyword" value={alphabet}
-                        className="keyBox completeKey" name="completeKeywordBox"
+                        className="keyBox completeKey playfairKey" name="completeKeywordBox"
                      />
                   </Stack>
                
@@ -139,7 +139,7 @@ function Playfair() {
                   </FormControl>
                </Grid>
             
-               <Grid size={{ xs: 12, sm: 4, lg: 4 }}>
+               <Grid size={{ xs: 12, sm: 4, lg: 6 }} className="playfairGrid">
                   <label className="keyBoxLabel">Playfair Grid:</label>
                   <LetterTable inputString={alphabet} />
                </Grid>

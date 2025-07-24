@@ -1,3 +1,8 @@
+.optionsGrid {
+   justify-content: center;
+   margin: 0px 10vw 20px;
+}
+
 .completeKey {
    background-color: lightgray;
 }
@@ -18,15 +23,20 @@
 }
 
 .textAfterImage {
-    margin-top: 1rem;
+   margin-top: 1rem;
 }
 
-.playfairGrids {
-    width: 100%;
+.playfairImage {
+   width: 100%;
 }
 
 .playfairRules {
-    width: 90%;
+   width: 90%;
+}
+
+.playfairGrid {
+   width: auto;
+   padding-right: 6vw;
 }
 
 .grid {
@@ -44,11 +54,21 @@
    font-family: var(--body-font);
 }
 
+@media screen and (max-width: 800px) {
+   .playfairKey {
+      place-self: center;
+      width: 250px;
+   }
+
+   .playfairGrid {
+      margin: 5vw 0vw;
+      padding-right: 0vw;
+   }
+}
+
 @media screen and (max-width: 600px) {
-   .optionContainer {
-      width: 80%;
-      justify-content: right;
-      justify-self: center;
+   .optionsGrid {
+      margin: 0vw 5vw;
    }
 
    .letterOption {
@@ -83,8 +103,8 @@ body.dark {
       color: black;
    }
 
-   .playfairGrids, .playfairRules {
-      opacity: 0.8;
+   .playfairImage, .playfairRules {
+      filter: brightness(.7);
    }
 
    .grid {

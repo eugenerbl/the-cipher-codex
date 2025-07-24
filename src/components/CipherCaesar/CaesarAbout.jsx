@@ -35,11 +35,11 @@ function CaesarAbout() {
       <table>
         <tbody>
           <tr>
-            <th style={{paddingRight: 20}}>Plain</th>
+            <th style={{paddingRight: 10}}>Plain</th>
             <td>ABCDEFGHIJKLMNOPQRSTUVWXYZ</td>
           </tr>
           <tr>
-            <th style={{paddingRight: 20}}>ROT13 (±13)</th>
+            <th style={{paddingRight: 10}}>ROT13 (±13)</th>
             <td>NOPQRSTUVWXYZABCDEFGHIJKLM</td>
           </tr>
         </tbody>
@@ -60,11 +60,11 @@ function CaesarAbout() {
       <table>
         <tbody>
           <tr>
-            <th style={{paddingRight: 20}}>Plain</th>
+            <th style={{paddingRight: 10}}>Plain</th>
             <td>ABCDEFGHIJKLMNOPQRSTUVWXYZ</td>
           </tr>
           <tr>
-            <th style={{paddingRight: 20}}>Caesar (+3)</th>
+            <th style={{paddingRight: 10}}>Caesar (+3)</th>
             <td>DEFGHIJKLMNOPQRSTUVWXYZABC</td>
           </tr>
         </tbody>

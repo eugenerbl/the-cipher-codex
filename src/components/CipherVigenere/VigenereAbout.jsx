@@ -29,7 +29,7 @@ function VigenereAbout() {
         and the keyword "<b>code</b>", the new keyword is "<b>codecodecodec</b>":
       </p>
 
-      <table className="cipherInfoTable" style={{fontWeight: '600'}}>
+      <table style={{placeSelf: 'center', fontWeight: '600'}}>
         <tbody>
           <tr>
             <td>so many secrets</td>
