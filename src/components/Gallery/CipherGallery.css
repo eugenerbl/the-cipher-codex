@@ -21,6 +21,7 @@
 .cardImage {
     align-self: center;
     margin: 10px;
+    height: 100%;
 }
 
 .titleBody {

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
@@ -18,7 +17,7 @@ function Gallery() {
                         <Card.Body className="titleBody">
                            <Card.Title className="title">{ciphers[index].displayName}</Card.Title>
                         </Card.Body>
-                        <Card.Img variant="bottom" className="cardImage" src={ciphers[index].image} alt=""/>
+                        <Card.Img variant="bottom" className="cardImage" width="300" height="200" src={ciphers[index].image} alt=""/>
                      </Card>
                   </Link>
                </Col>
