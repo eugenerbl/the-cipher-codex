@@ -7,7 +7,7 @@ function Base64About() {
          <h2>How to Use</h2>
          <p>
             Enter your message in the top box. Click 'Encode' or 'Decode' to see the transformed 
-            text in the results box below. You can also switch between three common encodings:
+            text in the results box below. You can switch between three common encodings:
          </p>
          <ul>
             <li>

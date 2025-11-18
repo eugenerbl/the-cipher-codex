@@ -1,22 +1,20 @@
-import React from 'react';
-
 function CaesarAbout() {
   return (
     <>
       <h2>How to Use</h2>
       <p>
-        To encrypt or decrypt a message, type it in the top box. Then, adjust the slider to set the 
+        Type a message to encrypt or decrypt in the top box. Then adjust the slider to set the 
         number of places to shift each letter. Positive and negative values are paired together for 
         convenience. The ciphertext will appear instantly in the bottom box.
       </p>
       <p>
         Three buttons are available to automatically set the slider to common shift values: the 
-        ROT13 cipher (±13), and Julius Caesar's preferred encrypting (+3) and decrypting (-3) values.
+        ROT13 cipher (±13), and Julius Caesar's preferred encryption (+3) and decryption (-3).
       </p>
       <p>
-        Use the "Swap Text" button to switch the contents of the two text boxes. The shift value will 
-        change automatically, making it easy to switch between encrypting and decrypting. Additionally, 
-        there are buttons to display all text in uppercase or lowercase.
+        Click "Swap Text" to switch the contents of the two text boxes. The shift value will change 
+        automatically, making it easy to switch between encrypting and decrypting. You can also 
+        change all text to uppercase or lowercase.
       </p>
 
       <h2>What is the Caesar Cipher?</h2>
@@ -24,7 +22,7 @@ function CaesarAbout() {
         The Caesar Cipher is one of the simplest and oldest encryption techniques.
         It is a type of substitution cipher where each letter in the plaintext is shifted
         a certain number of places forward or backward in the alphabet. For example, with a right 
-        (forward) shift of 10, the letter A is replaced by K, B becomes L, and so on.
+        (forward) shift of 10 letters, the letter A is replaced by K, B becomes L, and so on.
       </p>
       <p>
         The ROT13 cipher is a special case of the Caesar cipher, rotating each letter 13 places 
@@ -53,7 +51,7 @@ function CaesarAbout() {
       </p>
       <p>
         The most common shift involves moving forward 3 letters so that A becomes D (Read "Origins" to 
-        see why). Here's what the encrypted alphabet looks like for a right shift of 3 places (+3), 
+        find out why). Here's what the encrypted alphabet looks like for a right shift of 3 places (+3), 
         equivalent to a left shift of 23 (-23): 
       </p>
 
@@ -80,9 +78,9 @@ function CaesarAbout() {
       <h2>Decrypt It!</h2>
       <p>
         The first step in decrypting a Caesar ciphertext is determining the shift used to encrypt the 
-        plaintext. This step is relatively straightforward (see "How Easy is it to Break?"). To 
-        decrypt, simply go in the opposite direction of the shift. For example, if you know that the 
-        shift is eight letters forward, you decrypt it by shifting eight letters backward.
+        plaintext. This step is relatively straightforward. To decrypt, simply go in the opposite 
+        direction of the shift. For example, if you know that the shift is eight letters forward, 
+        you decrypt it by shifting eight letters backward.
       </p>
 
       <h2>How Easy is it to Break?</h2>

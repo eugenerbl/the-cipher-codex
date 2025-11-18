@@ -13,7 +13,7 @@ function AtbashAbout() {
 
       <ol>
         <li style={{ marginBottom: 10 }}>
-          The "Key" Field: Enter the entire substitution alphabet here. <b> For best results, this 
+          The "Key" Field: Enter the full substitution alphabet here. <b> For best results, this 
           key should be 26 characters long, and no character should be used more than once. </b>
           Letters, numbers, and symbols are allowed. Click "Encrypt/Decrypt with Key" to transform 
           your text using this key.
@@ -26,7 +26,7 @@ function AtbashAbout() {
       </ol>
 
       <p><b>
-        Hint: You can use symbols like an underscore "_" as a wildcard for unknown symbols. An underscore 
+        Tip: You can use symbols like an underscore "_" as a wildcard for unknown symbols. An underscore 
         will be used in the bottom box if a letter does not have a character mapped to it.
       </b></p>
 
@@ -49,7 +49,7 @@ function AtbashAbout() {
 
       <p>
         Finally, you can set the Key value to the classic Atbash cipher (where Z=A), reset to the 
-        English Alphabet (where A=A), or clear the values from both the Key Field and Table.
+        English Alphabet (A=A), or clear the values from both the Key Field and Table.
       </p>
 
       <h2>What is the Monoalphabetic Substitution Cipher?</h2>
@@ -142,8 +142,8 @@ function AtbashAbout() {
         The Atbash Cipher originates from the Hebrew alphabet. In the alphabet, the first letter, 
         <span lang="he">alef (א)</span> is replaced with the last letter, <span lang="he">tav (ת)</span>; 
         the second letter, <span lang="he">bet (ב)</span> is replaced with the second-to-last, 
-        <span lang="he">shin (ש)</span>. These letters create the sequence 
-        <span lang="he">Aleph-Tav-Bet-Shin</span>, which becomes A-T-B-SH.
+        <span lang="he">shin (ש)</span>. These letters create the sequence <span lang="he">Aleph-Tav-Bet-Shin</span>, 
+        which becomes A-T-B-SH.
       </p>
     </>
   )

@@ -15,37 +15,37 @@ function PlayfairAbout() {
         <p>
           To encrypt or decrypt a message, enter the text in the top box, then input the keyword and 
           choose letters for three different options. Click "Encrypt" or "Decrypt" to see the transformed 
-          text in the bottom box. Numbers, spaces, and non-letter characters will be ignored; 
-          however, you may see padding letters.
+          text in the bottom box. <b>Numbers, spaces, and non-letter characters will not be present in 
+          the transformed text;</b> however, you may see padding letters.
         </p>
         <p>
           You'll find the complete 25-letter alphabet in the Playfair Alphabet box. This alphabet will 
           be arranged in the Playfair Grid (5 rows and 5 columns) to the right of the input box for 
-          encryption and decryption. This cipher uses the English alphabet. The omitted letter, all 
-          numbers, and all non-letter characters in the Keyword box will be ignored.
+          encryption and decryption. This cipher uses the English alphabet. All instances of the 
+          omitted letter, numbers, and non-letter characters in the Keyword box will be ignored.
         </p>
         <p>
           Three letter options are provided to customize your cipher:
         </p>
         <ul>
           <li>
-            <b>Letter to omit</b>: Choose one letter to leave out of the alphabet. This letter will be 
+            <b>Letter to Omit</b>: Choose one letter to leave out of the alphabet. This letter will be 
             removed from the keyword and replaced in the message with the replacement letter. This letter 
             cannot be the same as the replacement or padding letter.
           </li>
           <li>
-            <b>Replacement letter</b>: All instances of the omitted letter in the message will be 
+            <b>Replacement Letter</b>: All instances of the omitted letter in the message will be 
             replaced with this letter.
           </li>
           <li>
-            <b>Padding letter</b>: This letter is used to either split pairs of double letters or 
+            <b>Padding Letter</b>: This letter is used to either split pairs of double letters or 
             attach to leftover single letters at the end of the message.<br/> 
-            For example, if the pair 'RR' or the single letter 'A' is found, and the padding letter 
+            For example, if the pair 'RR' or the leftover letter 'A' is found, and the padding letter 
             is 'X', these will change to 'RX R_' and 'AX', respectively.
           </li>
         </ul>
         <p>
-          Additional buttons are available to clear the keyword and reset the letter options to default values.
+          Additional buttons are available to reset the letter options to default values and clear the keyword.
         </p>
 
 
@@ -83,9 +83,11 @@ function PlayfairAbout() {
           there's one letter left at the end, add one more padding letter to make a complete pair.
         </p>
         <p>
-          For example, consider the plaintext <b>"HELLO WORLD."</b> The bigrams are: <b>"HE LX LO 
-          WO RL DX."</b> The bigram "LL" is separated with an X to form "LX LO". We have one 
-          character (D) left at the end, so we add one more pad to make "DX". 
+          For example, consider the plaintext <b>"HELLO WORLD."</b> Breaking this into bigrams gives 
+          us <b>"HE LL OW OR LD"</b>. However, we have a double-letter bigram "LL". We must separate 
+          them with an X to form "LX LO", giving <b>"HE LX LO WO RL D"</b>. Now we have a single 
+          character (D) left at the end, so we add one more X to make "DX". The final bigrams are 
+          thus: <b>"HE LX LO WO RL DX."</b>
         </p>
 
         <p>
@@ -101,7 +103,7 @@ function PlayfairAbout() {
           </li>
           <li>
             If both letters are in the same <b>column</b>, slide one position <b>down</b>. If you go 
-            past the edge, loop back to the top row. "LX" is in the same column, so moving down one 
+            past the bottom, loop back to the top row. "LX" is in the same column, so moving down one 
             gives "AL", where X loops back to the top.
 
           </li>
