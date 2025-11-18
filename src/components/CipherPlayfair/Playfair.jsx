@@ -92,7 +92,7 @@ function Playfair() {
                   </Stack>
                
                   <FormControl className="letterOption" sx={{ m: 1 }}>
-                     <label id="omit-select" htmlFor="omtLtrSel" className="keyBoxLabel">Letter to omit:</label>
+                     <label id="omit-select" htmlFor="omtLtrSel" className="keyBoxLabel">Letter to Omit:</label>
                      <Select
                         labelId="omit-select"
                         id="omtLtrSel"
@@ -109,7 +109,7 @@ function Playfair() {
                      </Select>
                   </FormControl>
                   <FormControl className="letterOption" sx={{ m: 1 }}>
-                     <label id="replace-select" htmlFor="repLtrSel" className="keyBoxLabel">Replacement letter:</label>
+                     <label id="replace-select" htmlFor="repLtrSel" className="keyBoxLabel">Replacement Letter:</label>
                      <Select
                         labelId="replace-select"
                         id="repLtrSel"
@@ -124,7 +124,7 @@ function Playfair() {
                      </Select>
                   </FormControl>
                   <FormControl className="letterOption" sx={{ m: 1 }}>
-                     <label id="padding-select" htmlFor="padLtrSel" className="keyBoxLabel">Padding letter:</label>
+                     <label id="padding-select" htmlFor="padLtrSel" className="keyBoxLabel">Padding Letter:</label>
                      <Select
                         labelId="padding-select"
                         id="padLtrSel"
@@ -140,7 +140,7 @@ function Playfair() {
                </Grid>
             
                <Grid size={{ xs: 12, sm: 4, lg: 6 }} className="playfairGrid">
-                  <label className="keyBoxLabel">Playfair Grid:</label>
+                  <label className="keyBoxLabel">Playfair Grid</label>
                   <LetterTable inputString={alphabet} />
                </Grid>
             </Grid>
@@ -153,10 +153,10 @@ function Playfair() {
                   <Button className="button" variant="contained" disableElevation color="blue" onClick={handleDecryption}>Decrypt</Button>
                </Grid>
                <Grid>
-                  <Button className="button" variant="contained" disableElevation color="red" onClick={resetKeyword}>Clear Keyword</Button>
+                  <Button className="button" variant="contained" disableElevation color="brown" onClick={resetLetters}>Reset Letter Options</Button>
                </Grid>
                <Grid>
-                  <Button className="button" variant="contained" disableElevation color="brown" onClick={resetLetters}>Reset Letter Options</Button>
+                  <Button className="button" variant="contained" disableElevation color="red" onClick={resetKeyword}>Clear Keyword</Button>
                </Grid>
             </Grid>
          </Box>

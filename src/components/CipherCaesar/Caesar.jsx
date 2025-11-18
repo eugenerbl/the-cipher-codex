@@ -83,7 +83,7 @@ function Caesar() {
           <Grid> <Button className="button" variant="contained" disableElevation color="green" onClick={() => preset(23)}> Classic Decryption (-3) </Button> </Grid>
         </Grid>
         <Grid container direction="row" sx={{ justifyContent: "center", alignItems: "center" }}>
-          <Grid> <Button className="button" variant="contained" disableElevation color="blue" onClick={swapText}> Swap Text </Button> </Grid>
+          <Grid> <Button className="button" variant="contained" disableElevation color="brown" onClick={swapText}> Swap Text </Button> </Grid>
           <Grid> <Button className="button" variant="contained" disableElevation color="brown" onClick={() => changeCase(1)}> UPPERCASE </Button> </Grid>
           <Grid> <Button className="button" variant="contained" disableElevation color="brown" onClick={() => changeCase(0)}> lowercase </Button> </Grid>
         </Grid>

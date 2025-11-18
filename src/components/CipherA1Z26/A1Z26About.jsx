@@ -6,21 +6,20 @@ function A1Z26About() {
       <>
          <h2>How to Use</h2>
          <p>
-            To encrypt or decrypt a message, type it in the top box. Then, specify
-            the alphabet for encrypting and decrypting. The default is the English alphabet, but you can
-            use alphabets from other languages and even symbols. Any non-alphabetic characters in your
-            message will remain unchanged. You can go back to the English alphabet anytime by clicking
-            "Reset Alphabet (A-Z)".
+            Type a message to encrypt or decrypt in the top box. Then specify the alphabet for 
+            translation. The default is the English alphabet, but you can use alphabets from other 
+            languages and even symbols. Any non-alphabetic characters in your message will remain 
+            unchanged. You can go back to the English alphabet anytime by clicking "Reset Alphabet (A-Z)".
          </p>
          <p>
             Next, enter a separator character to appear between numbers. Common choices are a dash
-            ("-") or a space. It's best not to leave this blank! If you are decrypting, ensure the
+            ("-") or a space. It's best not to leave this blank! If you're decrypting, ensure the
             separator you use in the top box matches the one you enter here.
          </p>
          <p>
             You can also choose to include spaces when encrypting. If this is checked, spaces
             will appear in the result box (for example, with a dash separator, you will see "- -").
-            Finally, choose whether to Encrypt or Decrypt and view your results in the bottom box.
+            Finally, click "Encrypt" or "Decrypt" to view the transformed text in the bottom box.
          </p>
 
          <h2>What is the A1Z26 Cipher?</h2>

@@ -19,7 +19,9 @@
 }
 
 .alphabetTable th {
-    background-color: lightgreen;
+    background-color: white;
+    font-size: 20px;
+    padding: 1px;
 }
 
 .smallInput {
@@ -53,7 +55,7 @@ td {
 
 body.dark {
     .alphabetTable th {
-        background-color: #187D30;
+        background-color: var(--dark-mode-secondary);
     }
 
     .alphabetTable td {

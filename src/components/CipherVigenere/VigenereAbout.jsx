@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import './Vigenere.css';
 import VigenereSquare from '../../assets/Info/VigenèreSquare.svg';
@@ -8,10 +7,10 @@ function VigenereAbout() {
     <>
       <h2>How to Use</h2>
       <p>
-        To encrypt or decrypt a message, start by entering the text in the top box. Next, input the 
-        Key string. The Key must be at least 2 characters long and should not contain any numbers or 
-        special characters. Finally, choose whether to Encrypt or Decrypt the plaintext. The result 
-        will appear in the bottom text box.
+        Enter the message you wish to encrypt or decrypt in the top box. Next, input the Keyword. 
+        The Keyword must be at least 2 characters long and should not contain any numbers or 
+        special characters. Finally, click "Encrypt" or "Decrypt" to see the transformed text in 
+        the bottom text box.
       </p>
 
       <h2>What is the Vigenère Cipher?</h2>
@@ -114,18 +113,18 @@ function VigenereAbout() {
       <h2>Origins</h2>
       <p>
         The cipher known today as the Vigenère cipher was originally described by Italian 
-        cryptographer <span lang="it">Giovan Battista Bellaso</span> in his 1553 book 
-        <span lang="it">"La cifra del Sig. Giovan Battista Bellaso"</span>. He introduced a 
+        cryptographer <span lang="it">Giovan Battista Bellaso</span> in his 1553
+        book <span lang="it">"La cifra del Sig. Giovan Battista Bellaso"</span>. He introduced a 
         polyalphabetic cipher (based on the work of Johannes Trithemius) but featured a repeating 
         "countersign" (a key) to switch the cipher alphabet for each letter. Unlike today's 
-        Vigenère cipher, Bellaso didn't use 26 different Caesar ciphers. Instead, he used 13 
-        shifts for letter pairs (such as 'AB' and 'CD').
+        Vigenère cipher, <span lang="it">Bellaso</span> didn't use 26 different Caesar ciphers. 
+        Instead, he used 13 shifts for letter pairs (such as 'AB' and 'CD').
       </p>
       <p>
         In 1586, French cryptographer <span lang="fr">Blaise de Vigenère</span> described a similar 
         polyalphabetic cipher known as an autokey cipher, where the key is based on letters from 
-        the original plaintext. However, Vigenère was misattributed as the inventor of Bellaso's 
-        cipher in the 19th century, and the name has remained since.
+        the original plaintext. However, Vigenère was misattributed as the inventor 
+        of <span lang="it">Bellaso's</span> cipher in the 19th century, and the name has remained since.
       </p>
     </>
   )
