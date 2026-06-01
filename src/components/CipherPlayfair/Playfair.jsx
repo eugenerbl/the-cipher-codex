@@ -8,13 +8,20 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import Typography from '@mui/material/Typography';
 
-import { encrypt, decrypt } from './playfairCipher';
+import { transform } from './playfairCipher';
 import './Playfair.css';
 import PlayfairAbout from './PlayfairAbout';
 
 
 function Playfair() {
    useEffect(() => { document.title = 'Playfair Cipher - The Cipher Codex'; }, []);
+   
+   // move a char right or down for encryption: new index (for a 5x5 grid) = (old + 1) % 5
+   const ENCRYPT_OFFSET = 1;
+   // move a char left or up for decryption: new index (for a 5x5 grid) = (old + 4) % 5
+   // this is equal to subtracting index by 1
+   const DECRYPT_OFFSET = 4;
+   
    const [text, setText] = useState('');
    const [keyword, setKeyword] = useState('');
    const [alphabet, setAlphabet] = useState('ABCDEFGHIKLMNOPQRSTUVWXYZ');  // J is omitted
@@ -52,18 +59,11 @@ function Playfair() {
       setAlphabet(completeKeyword(keyword, event.target.value, normalAlphabet));
    }
 
-   const handleEncryption = () => {
-      let [notes, encryptedText] = encrypt(text, alphabet, omittedLetter, repLetter, padLetter);
+   const transformText = (offset) => {
+      let [notes, transformedText] = transform(text, alphabet, omittedLetter, repLetter, padLetter, offset);
 
       setErrorMessage(notes.join('\n'));
-      setCiphertext(encryptedText);
-   };
-
-   const handleDecryption = () => {
-      let [notes, decryptedText] = decrypt(text, alphabet, omittedLetter, repLetter, padLetter);
-
-      setErrorMessage(notes.join('\n'));
-      setCiphertext(decryptedText);
+      setCiphertext(transformedText);
    };
 
    return (
@@ -147,10 +147,10 @@ function Playfair() {
 
             <Grid container direction="row" sx={{ justifyContent: "center", alignItems: "center" }}>
                <Grid>
-                  <Button className="button" variant="contained" disableElevation color="blue" onClick={handleEncryption}>Encrypt</Button>
+                  <Button className="button" variant="contained" disableElevation color="blue" onClick={() => transformText(ENCRYPT_OFFSET)}>Encrypt</Button>
                </Grid>
                <Grid>
-                  <Button className="button" variant="contained" disableElevation color="blue" onClick={handleDecryption}>Decrypt</Button>
+                  <Button className="button" variant="contained" disableElevation color="blue" onClick={() => transformText(DECRYPT_OFFSET)}>Decrypt</Button>
                </Grid>
                <Grid>
                   <Button className="button" variant="contained" disableElevation color="brown" onClick={resetLetters}>Reset Letter Options</Button>

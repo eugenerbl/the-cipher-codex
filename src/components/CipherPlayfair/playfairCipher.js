@@ -1,11 +1,6 @@
 // Playfair Cipher encryption and decryption
 // Modified from quinton-c's implementation (https://github.com/quinton-c/playfaircipher)
 
-// move a char right or down for encryption: formula for new index (5x5 grid) is new = (old + 1) % 5
-const ENCRYPT_OFFSET = 1;
-// move a char left or up for decryption: formula for new index (5x5 grid) is new = (old + 4) % 5
-// (this is equal to subtracting index by 1)
-const DECRYPT_OFFSET = 4;
 // letters most commonly used to pad when there are extra or double characters
 const COMMON_PADDING_LETTERS = ['X', 'Q', 'Z'];
 // List of notes regarding any changes to text and padding characters
@@ -134,25 +129,13 @@ function transformLetters(charPairs, grid, offset) {
 }
 
 
-export function encrypt(plainText, keyword, omitLtr, repLtr, padLtr) {
+export function transform(plainText, keyword, omitLtr, repLtr, padLtr, offset) {
     
     notes.length = 0;   // Clear notes array
     const playfairGrid = createGrid(keyword);                       // Create 5x5 playfair grid
     const cleanPlain = cleanText(plainText, omitLtr, repLtr);       // Remove non-letters and omitted letter
     const inputArray = groupChars(cleanPlain, omitLtr, padLtr);     // Add padding and group characters into pairs
-    const transformedText = transformLetters(inputArray, playfairGrid, ENCRYPT_OFFSET);     // encrypt chars with grid
-    
-    return [notes, transformedText];
-};
-
-// Decrypt follows same processing steps as in encrypt, but with DECRYPT_OFFSET
-export function decrypt(plainText, keyword, omitLtr, repLtr, padLtr) {
-    
-    notes.length = 0;
-    const playfairGrid = createGrid(keyword);
-    const cleanPlain = cleanText(plainText, omitLtr, repLtr);
-    const inputArray = groupChars(cleanPlain, omitLtr, padLtr);
-    const transformedText = transformLetters(inputArray, playfairGrid, DECRYPT_OFFSET);
+    const transformedText = transformLetters(inputArray, playfairGrid, offset);     // encrypt chars with grid
     
     return [notes, transformedText];
 };

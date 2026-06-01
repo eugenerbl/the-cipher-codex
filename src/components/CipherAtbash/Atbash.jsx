@@ -7,7 +7,7 @@ import './Atbash.css';
 import AtbashAbout from './AtbashAbout';
 
 function Atbash() {
-   useEffect(() => { document.title = 'Atbash and Monoalphabetic Substitution Cipher - The Cipher Codex'; }, []);
+   useEffect(() => { document.title = 'Atbash Cipher - The Cipher Codex'; }, []);
    const [text, setText] = useState('');
    const [ciphertext, setCiphertext] = useState('');
    const [key, setKey] = useState('');
