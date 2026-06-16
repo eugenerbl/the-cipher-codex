@@ -41,7 +41,7 @@ function cleanText(text, omitLetter, repLetter) {
 function choosePadChar(omitLetter, padLetter) {
     for (let ltr of COMMON_PADDING_LETTERS) {
         if (ltr !== padLetter && ltr !== omitLetter) {
-            addNote(`Note: Double padding letter '${padLetter}${padLetter}' was created. Used '${ltr}' as padding letter here to make '${padLetter}${ltr} ${padLetter}'.`);
+            addNote(`Note: Adding pad '${padLetter}' created another double padding letter '${padLetter}${padLetter}'. This pair has been split with '${ltr}' to make '${padLetter}${ltr} ${padLetter}'.`);
             return ltr;
         }
     }
@@ -129,13 +129,13 @@ function transformLetters(charPairs, grid, offset) {
 }
 
 
-export function transform(plainText, keyword, omitLtr, repLtr, padLtr, offset) {
-    
+export function transform(plainText, keyword, options, offset) {
+
     notes.length = 0;   // Clear notes array
-    const playfairGrid = createGrid(keyword);                       // Create 5x5 playfair grid
-    const cleanPlain = cleanText(plainText, omitLtr, repLtr);       // Remove non-letters and omitted letter
-    const inputArray = groupChars(cleanPlain, omitLtr, padLtr);     // Add padding and group characters into pairs
-    const transformedText = transformLetters(inputArray, playfairGrid, offset);     // encrypt chars with grid
+    const playfairGrid = createGrid(keyword);                                   // Create 5x5 playfair grid
+    const cleanPlain = cleanText(plainText, options.omit, options.replace);     // Remove non-letters and omitted letter
+    const inputArray = groupChars(cleanPlain, options.omit, options.pad);       // Add padding and group characters into pairs
+    const transformedText = transformLetters(inputArray, playfairGrid, offset); // encrypt chars with grid
     
     return [notes, transformedText];
 };

@@ -15,8 +15,8 @@ function PlayfairAbout() {
         <p>
           To encrypt or decrypt a message, enter the text in the top box, then input the keyword and 
           choose letters for three different options. Click "Encrypt" or "Decrypt" to see the transformed 
-          text in the bottom box. <b>Numbers, spaces, and non-letter characters will not be present in 
-          the transformed text;</b> however, you may see padding letters.
+          text in the bottom box. <b>Numbers, spaces, and non-letter characters in the top box will be 
+          ignored and will not be present in the transformed text;</b> however, you may see padding letters.
         </p>
         <p>
           You'll find the complete 25-letter alphabet in the Playfair Alphabet box. This alphabet will 
@@ -39,9 +39,15 @@ function PlayfairAbout() {
           </li>
           <li>
             <b>Padding Letter</b>: This letter is used to either split pairs of double letters or 
-            attach to leftover single letters at the end of the message.<br/> 
-            For example, if the pair 'RR' or the leftover letter 'A' is found, and the padding letter 
-            is 'X', these will change to 'RX R_' and 'AX', respectively.
+            attach to leftover single letters at the end of the message. For example, if the pair 
+            'RR' or a single letter 'A' is found, and the padding letter is 'X', these will be
+            'RX R_' and 'AX', respectively.
+            <ul>
+              <li>If adding a padding letter creates another double letter pair, a different padding 
+                letter (either 'X', 'Q', or 'Z') will be used to split this pair. A note will appear 
+                above the bottom text box to indicate this.
+              </li>
+            </ul>
           </li>
         </ul>
         <p>
