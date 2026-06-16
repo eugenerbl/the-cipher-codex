@@ -26,9 +26,13 @@ function Playfair() {
    const [keyword, setKeyword] = useState('');
    const [alphabet, setAlphabet] = useState('ABCDEFGHIKLMNOPQRSTUVWXYZ');  // J is omitted
 
-   const [omittedLetter, setOmittedLetter] = useState('J');
-   const [repLetter, setRepLetter] = useState('I');
-   const [padLetter, setPadLetter] = useState('X');
+   // options to determine which letters will be omitted, replaced, and used for padding
+   // default values are for the standard Playfair
+   const [options, setOptions] = useState({
+      omit: 'J',
+      replace: 'I',
+      pad: 'X'
+   });
 
    const [ciphertext, setCiphertext] = useState('');
    const [errorMessage, setErrorMessage] = useState('');
@@ -38,29 +42,31 @@ function Playfair() {
    const resetKeyword = () => {
       setKeyword('');
       // omitted letter doesn't change, so must keep existing letter
-      setAlphabet(completeKeyword('', omittedLetter, normalAlphabet));
+      setAlphabet(completeKeyword('', options.omit, normalAlphabet));
    }
 
    const resetLetters = () => {
-      setOmittedLetter('J');
-      setRepLetter('I');
-      setPadLetter('X');
+      setOptions({ omit: 'J', replace: 'I', pad: 'X' });
       // keyword doesn't change, so must keep keyword in front of alphabet
       setAlphabet(completeKeyword(keyword, 'J', 'ABCDEFGHIKLMNOPQRSTUVWXYZ'));
    }
 
    const handleKeywordChange = (event) => {
       setKeyword(event.target.value);
-      setAlphabet(completeKeyword(event.target.value, omittedLetter, normalAlphabet));
+      setAlphabet(completeKeyword(event.target.value, options.omit, normalAlphabet));
    }
 
-   const handleOmitLtrChange = (event) => {
-      setOmittedLetter(event.target.value);
-      setAlphabet(completeKeyword(keyword, event.target.value, normalAlphabet));
+   const handleOptionsChange = (optionName, event) => {
+      const newValue = event.target.value;
+      setOptions((prevOptions) => ({ ...prevOptions, [optionName]: newValue }));
+
+      if (optionName === 'omit') {
+         setAlphabet(completeKeyword(keyword, newValue, normalAlphabet));
+      }
    }
 
    const transformText = (offset) => {
-      let [notes, transformedText] = transform(text, alphabet, omittedLetter, repLetter, padLetter, offset);
+      let [notes, transformedText] = transform(text, alphabet, options, offset);
 
       setErrorMessage(notes.join('\n'));
       setCiphertext(transformedText);
@@ -96,13 +102,13 @@ function Playfair() {
                      <Select
                         labelId="omit-select"
                         id="omtLtrSel"
-                        aria-label="Choose a letter to omit"
+                        aria-label="Choose a letter to omit from the alphabet."
                         className="letterOptionBox"
-                        value={omittedLetter}
-                        onChange={handleOmitLtrChange}
+                        value={options.omit}
+                        onChange={(event) => handleOptionsChange("omit", event)}
                      >
                         {normalAlphabet.split('').map((letter) => (
-                           <MenuItem key={letter} value={letter} disabled={letter === repLetter || letter === padLetter}> 
+                           <MenuItem key={letter} value={letter} disabled={letter === options.replace || letter === options.pad}> 
                               {letter}
                            </MenuItem>
                         ))}
@@ -113,13 +119,13 @@ function Playfair() {
                      <Select
                         labelId="replace-select"
                         id="repLtrSel"
-                        aria-label="Choose a letter to replace omitted letters"
-                        value={repLetter}
+                        aria-label="Choose a letter to replace the omitted letter."
                         className="letterOptionBox"
-                        onChange={(event) => {setRepLetter(event.target.value);}}
+                        value={options.replace}
+                        onChange={(event) => handleOptionsChange("replace", event)}
                      >
                         {normalAlphabet.split('').map((letter) => (
-                           <MenuItem key={letter} value={letter} disabled={letter === omittedLetter}> {letter} </MenuItem>
+                           <MenuItem key={letter} value={letter} disabled={letter === options.omit}> {letter} </MenuItem>
                         ))}
                      </Select>
                   </FormControl>
@@ -128,12 +134,13 @@ function Playfair() {
                      <Select
                         labelId="padding-select"
                         id="padLtrSel"
-                        value={padLetter}
+                        aria-label="Choose a letter to use as padding for double letters or leftover single letters."
                         className="letterOptionBox"
-                        onChange={(event) => {setPadLetter(event.target.value);}}
+                        value={options.pad}
+                        onChange={(event) => handleOptionsChange("pad", event)}
                      >
                         {normalAlphabet.split('').map((letter) => (
-                           <MenuItem key={letter} value={letter} disabled={letter === omittedLetter}> {letter} </MenuItem>
+                           <MenuItem key={letter} value={letter} disabled={letter === options.omit}> {letter} </MenuItem>
                         ))}
                      </Select>
                   </FormControl>
